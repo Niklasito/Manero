@@ -1,8 +1,12 @@
+using Manero.Models.Contexts;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDbContext<ProductContext>(x =>
+x.UseSqlServer(builder.Configuration.GetConnectionString("Products")));
 
 
 var app = builder.Build();
