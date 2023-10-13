@@ -6,7 +6,7 @@
 <div>
     <div asp-validation-summary="ModelOnly" class="text-danger d-flex justify-content-center"></div>
 </div>
-<form method="post" class="row g-3">
+<form method="post" class="row g-3" novalidate>
     <div class="col-auto">
         <label asp-for="Name">Name</label>
         <input asp-for="Name" class="form-control">
@@ -24,6 +24,6 @@
         <input asp-for="ConfirmPassword" class="form-control">
     </div>
     <div class="col-auto">
-        <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+        <button type="submit" class="btn btn-primary mb-3">Register</button>
     </div>
 </form>
