@@ -1,4 +1,6 @@
-﻿namespace Manero.Models.Entities;
+﻿using Manero.Models.Entities.LinkEntities;
+
+namespace Manero.Models.Entities;
 
 public class ColorEntity
 {
