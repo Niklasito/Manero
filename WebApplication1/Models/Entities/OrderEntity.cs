@@ -7,6 +7,6 @@ public class OrderEntity
     public DateTime CreatedDate { get; set; } = DateTime.Now;
 
     public ICollection<ProductOrderEntity> ProductOrders { get; set; } = new HashSet<ProductOrderEntity>();
+    public ICollection<UserOrderEntity> UserOrders { get; set; } = new HashSet<UserOrderEntity>();
 
-    
 }
