@@ -5,3 +5,5 @@
 @using Microsoft.AspNetCore.Identity;
 @using Manero.Models.Entities.Identity;
 @using Manero.Models.ViewModels;
+@inject UserManager<ManeroUser> userManager
+@inject SignInManager<ManeroUser> signInManager
