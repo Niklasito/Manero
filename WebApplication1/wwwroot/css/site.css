@@ -20,3 +20,537 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+@import"https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap";
+
+.btn {
+    color: #000;
+    background-color: red
+}
+
+.size {
+    color: red;
+    color: #9898e9;
+    color: #fce5e5;
+    color: #00008b;
+    color: #000
+}
+
+.price {
+    color: green;
+    color: #dfc547;
+    color: purple
+}
+
+.sign-up-section {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+    .sign-up-section .sign-up-container .sign-up-upper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        margin-top: 5dvh
+    }
+
+        .sign-up-section .sign-up-container .sign-up-upper .sign-up-home-link {
+            color: #111;
+            position: absolute;
+            left: 0;
+            text-decoration: none
+        }
+
+            .sign-up-section .sign-up-container .sign-up-upper .sign-up-home-link p {
+                display: none
+            }
+
+    .sign-up-section .sign-up-container .sign-up-title {
+        font: 400;
+        font-size: x-large;
+        color: #111;
+        margin-bottom: 7dvh
+    }
+
+    .sign-up-section .sign-up-container .sign-up-vertical-line {
+        background-color: #111;
+        height: 3vh;
+        width: 1px
+    }
+
+    .sign-up-section .sign-up-container .sign-up-heading {
+        font: 700;
+        font-size: 6dvh
+    }
+
+    .sign-up-section .sign-up-container .sign-up-form {
+        margin: 5dvh 0 2dvh 0
+    }
+
+        .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto auto
+        }
+
+@media(max-width: 767px) {
+    .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
+        width: 80vw
+    }
+}
+
+@media(min-width: 768px) {
+    .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
+        width: 70vw
+    }
+}
+
+@media(min-width: 992px) {
+    .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
+        width: 60vw
+    }
+}
+
+@media(min-width: 1200px) {
+    .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
+        width: 45vw
+    }
+}
+
+@media(min-width: 1400px) {
+    .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
+        width: 30vw
+    }
+}
+
+@media(min-width: 1920px) {
+    .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
+        width: 20vw
+    }
+}
+
+.sign-up-section .sign-up-container .sign-up-form .sign-up-form-div .sign-up-label {
+    grid-column: 1/2;
+    grid-row: auto;
+    padding: 0 1dvh 0;
+    font-size: 1.3dvh;
+    position: absolute;
+    top: .1dvh;
+    left: 2dvh;
+    z-index: 10;
+    background-color: #fff
+}
+
+.sign-up-section .sign-up-container .sign-up-form .sign-up-form-div .sign-up-input {
+    grid-column: 1/2;
+    grid-row: auto;
+    height: 6dvh;
+    border-radius: 3dvh;
+    border-color: #dbe3f5;
+    padding: 0 3dvh 0 3dvh;
+    margin: 1dvh 0 1dvh 0
+}
+
+.sign-up-section .sign-up-container .sign-up-form .sign-up-form-div .sign-up-icon {
+    position: absolute;
+    top: 2.5dvh;
+    right: 3dvh
+}
+
+.sign-up-section .sign-up-container .sign-up-form .sign-up-form-div .sign-up-icon-button {
+    position: absolute;
+    top: 2.5dvh;
+    right: 2.4dvh
+}
+
+    .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div .sign-up-icon-button button {
+        background-color: rgba(0,0,0,0);
+        border: none
+    }
+
+        .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div .sign-up-icon-button button i {
+            color: #111
+        }
+
+.sign-up-section .sign-up-container .sign-up-form button {
+    color: #fff;
+    background-color: #111;
+    border: none
+}
+
+.sign-up-section .sign-up-container .sign-up-login-link {
+    text-decoration: none;
+    color: #111;
+    font-size: large
+}
+
+.sign-up-section .sign-up-container .sign-up-media {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+    .sign-up-section .sign-up-container .sign-up-media .sign-up-soc-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10dvh;
+        width: 10dvh;
+        border: solid 1px;
+        border-color: #dbe3f5;
+        border-radius: 5dvh;
+        margin: 7dvh 1dvh
+    }
+
+        .sign-up-section .sign-up-container .sign-up-media .sign-up-soc-link .sign-up-facebook-link {
+            color: #4267b2
+        }
+
+        .sign-up-section .sign-up-container .sign-up-media .sign-up-soc-link .sign-up-x-link {
+            color: #1da1f2
+        }
+
+        .sign-up-section .sign-up-container .sign-up-media .sign-up-soc-link .sign-up-google-link {
+            color: #db4437
+        }
+
+.sign-up-section .sign-up-container .sign-up-horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2dvh
+}
+
+@media(max-width: 767px) {
+    .sign-up-section .sign-up-container .sign-up-horizontal {
+        width: 80vw
+    }
+}
+
+@media(min-width: 768px) {
+    .sign-up-section .sign-up-container .sign-up-horizontal {
+        width: 70vw
+    }
+}
+
+@media(min-width: 992px) {
+    .sign-up-section .sign-up-container .sign-up-horizontal {
+        width: 60vw
+    }
+}
+
+@media(min-width: 1200px) {
+    .sign-up-section .sign-up-container .sign-up-horizontal {
+        width: 45vw
+    }
+}
+
+@media(min-width: 1400px) {
+    .sign-up-section .sign-up-container .sign-up-horizontal {
+        width: 30vw
+    }
+}
+
+@media(min-width: 1920px) {
+    .sign-up-section .sign-up-container .sign-up-horizontal {
+        width: 20vw
+    }
+}
+
+.sign-up-section .sign-up-container .sign-up-horizontal .sign-up-horizontal-line {
+    height: 1dvh;
+    width: 35%;
+    border-radius: .5dvh;
+    background-color: #111
+}
+
+.my-profile-headroomholder {
+    display: flex
+}
+
+.my-profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px
+}
+
+    .my-profile-container .my-profile-small-holders {
+        display: flex;
+        height: 5vh;
+        border: 1px solid gray
+    }
+
+    .my-profile-container .my-profile-icons-holder {
+        width: 10vw;
+        margin-left: 5vw
+    }
+
+    .my-profile-container .my-profile-profile-links {
+        text-decoration: none;
+        color: #000;
+        font-family: "Mulish",sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: left;
+        margin-left: 10vw
+    }
+
+.sign-in-section {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+    .sign-in-section .sign-in-container .sign-in-upper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        margin-top: 5dvh
+    }
+
+        .sign-in-section .sign-in-container .sign-in-upper .sign-in-home-link {
+            color: #111;
+            position: absolute;
+            left: 0;
+            text-decoration: none
+        }
+
+            .sign-in-section .sign-in-container .sign-in-upper .sign-in-home-link p {
+                display: none
+            }
+
+    .sign-in-section .sign-in-container .sign-in-title {
+        font: 400;
+        font-size: x-large;
+        color: #626262;
+        margin-bottom: 7dvh
+    }
+
+    .sign-in-section .sign-in-container .sign-in-vertical-line {
+        background-color: #626262;
+        height: 3vh;
+        width: 1px
+    }
+
+    .sign-in-section .sign-in-container .sign-in-heading {
+        font: 700;
+        font-size: 6dvh
+    }
+
+    .sign-in-section .sign-in-container .sign-in-sub-titel {
+        color: #626262
+    }
+
+    .sign-in-section .sign-in-container .sign-in-form {
+        margin: 5dvh 0 2dvh 0
+    }
+
+        .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto
+        }
+
+@media(max-width: 767px) {
+    .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
+        width: 80vw
+    }
+}
+
+@media(min-width: 768px) {
+    .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
+        width: 70vw
+    }
+}
+
+@media(min-width: 992px) {
+    .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
+        width: 60vw
+    }
+}
+
+@media(min-width: 1200px) {
+    .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
+        width: 45vw
+    }
+}
+
+@media(min-width: 1400px) {
+    .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
+        width: 30vw
+    }
+}
+
+@media(min-width: 1920px) {
+    .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
+        width: 20vw
+    }
+}
+
+.sign-in-section .sign-in-container .sign-in-form .sign-in-form-div .sign-in-label {
+    grid-column: 1/2;
+    grid-row: auto;
+    padding: 0 1dvh 0;
+    font-size: 1.3dvh;
+    position: absolute;
+    top: .1dvh;
+    left: 2dvh;
+    z-index: 10;
+    background-color: #fff
+}
+
+.sign-in-section .sign-in-container .sign-in-form .sign-in-form-div .sign-in-input {
+    grid-column: 1/2;
+    grid-row: auto;
+    height: 6dvh;
+    border-radius: 3dvh;
+    border-color: #dbe3f5;
+    padding: 0 3dvh 0 3dvh;
+    margin: 1dvh 0 1dvh 0
+}
+
+.sign-in-section .sign-in-container .sign-in-form .sign-in-form-div .sign-in-icon {
+    position: absolute;
+    top: 2.5dvh;
+    right: 3dvh
+}
+
+.sign-in-section .sign-in-container .sign-in-form .sign-in-form-div .sign-in-icon-button {
+    position: absolute;
+    top: 2.5dvh;
+    right: 2.4dvh
+}
+
+    .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div .sign-in-icon-button button {
+        background-color: rgba(0,0,0,0);
+        border: none
+    }
+
+        .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div .sign-in-icon-button button i {
+            color: #111
+        }
+
+.sign-in-section .sign-in-container .sign-in-form button {
+    color: #fff;
+    background-color: #111;
+    border: none
+}
+
+.sign-in-section .sign-in-container .sign-in-remember-container {
+    position: relative;
+    margin: 3dvh 0
+}
+
+    .sign-in-section .sign-in-container .sign-in-remember-container .sign-in-checkbox .sign-in-input-checkbox {
+        transform: scale(1.4)
+    }
+
+    .sign-in-section .sign-in-container .sign-in-remember-container .sign-in-checkbox .sign-in-label-checkbox {
+        color: #626262;
+        font-size: large
+    }
+
+    .sign-in-section .sign-in-container .sign-in-remember-container .sign-in-forgot-password {
+        text-decoration: none;
+        color: #626262;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: large
+    }
+
+.sign-in-section .sign-in-container .sign-in-login-link {
+    text-decoration: none;
+    color: #626262;
+    font-size: large
+}
+
+.sign-in-section .sign-in-container .sign-in-media {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+    .sign-in-section .sign-in-container .sign-in-media .sign-in-soc-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10dvh;
+        width: 10dvh;
+        border: solid 1px;
+        border-color: #dbe3f5;
+        border-radius: 5dvh;
+        margin: 7dvh 1dvh
+    }
+
+        .sign-in-section .sign-in-container .sign-in-media .sign-in-soc-link .sign-in-facebook-link {
+            color: #4267b2
+        }
+
+        .sign-in-section .sign-in-container .sign-in-media .sign-in-soc-link .sign-in-x-link {
+            color: #1da1f2
+        }
+
+        .sign-in-section .sign-in-container .sign-in-media .sign-in-soc-link .sign-in-google-link {
+            color: #db4437
+        }
+
+.sign-in-section .sign-in-container .sign-in-horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2dvh
+}
+
+@media(max-width: 767px) {
+    .sign-in-section .sign-in-container .sign-in-horizontal {
+        width: 80vw
+    }
+}
+
+@media(min-width: 768px) {
+    .sign-in-section .sign-in-container .sign-in-horizontal {
+        width: 70vw
+    }
+}
+
+@media(min-width: 992px) {
+    .sign-in-section .sign-in-container .sign-in-horizontal {
+        width: 60vw
+    }
+}
+
+@media(min-width: 1200px) {
+    .sign-in-section .sign-in-container .sign-in-horizontal {
+        width: 45vw
+    }
+}
+
+@media(min-width: 1400px) {
+    .sign-in-section .sign-in-container .sign-in-horizontal {
+        width: 30vw
+    }
+}
+
+@media(min-width: 1920px) {
+    .sign-in-section .sign-in-container .sign-in-horizontal {
+        width: 20vw
+    }
+}
+
+.sign-in-section .sign-in-container .sign-in-horizontal .sign-in-horizontal-line {
+    height: 1dvh;
+    width: 35%;
+    border-radius: .5dvh;
+    background-color: #111
+}

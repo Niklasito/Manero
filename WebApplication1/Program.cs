@@ -19,7 +19,8 @@ builder.Services.AddIdentity<ManeroUser, IdentityRole>(x =>
     x.Password.RequiredLength = 8;
     x.User.RequireUniqueEmail = true;
 })
-.AddEntityFrameworkStores<DataContext>();
+.AddEntityFrameworkStores<DataContext>()
+.AddClaimsPrincipalFactory<CustomClaimsPrincipalFactory>();
 
 
 var app = builder.Build();
