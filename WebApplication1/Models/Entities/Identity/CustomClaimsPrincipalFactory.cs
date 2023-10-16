@@ -17,7 +17,7 @@ public class CustomClaimsPrincipalFactory : UserClaimsPrincipalFactory<ManeroUse
     {
         var claimsIdentity = await base.GenerateClaimsAsync(user);
 
-        claimsIdentity.AddClaim(new Claim("DisplayName", $"{user.Name} {user.Email}"));
+        claimsIdentity.AddClaim(new Claim("DisplayName", $"{user.Name}"));
 
         return claimsIdentity;
     }
