@@ -1,0 +1,32 @@
+﻿@model UserLoginViewModel
+
+
+
+<form class="sign-in-form">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="sign-in-form-div">
+        <label class="sign-in-label" asp-for="Email"></label>
+        <input class="sign-in-input" asp-for="Email">
+        <div class="sign-in-icon">
+            <i class="fa-sharp fa-regular fa-check"></i>
+        </div>
+    </div>
+    <div class="sign-in-form-div">
+        <label class="sign-in-label" for="password">password</label>
+        <input class="sign-in-input" type="password" name="password" id="sign-in-password" placeholder="password">
+        <div class="sign-in-icon-button">
+            <button><i class="fa-regular fa-eye-slash"></i></button>
+        </div>
+    </div>
+    <div class="sign-in-remember-container">
+        <div class="sign-in-checkbox">
+            <input class="sign-in-input-checkbox" type="checkbox" name="checkbox" id="sign-in-checkbox-id" placeholder="Remember me">
+            <label class="sign-in-label-checkbox" for="checkbox">Remember me</label>
+        </div>
+        <a class="sign-in-forgot-password">Forgot password?</a>
+    </div>
+    <div class="sign-in-form-div">
+        <button class="sign-in-input" type="submit">Sign in</button>
+    </div>
+</form>
+<a class="sign-in-login-link" asp-controller="account" asp-action="register">Don´t have an account? Sign up.</a>
