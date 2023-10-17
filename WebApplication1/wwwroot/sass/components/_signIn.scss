@@ -1,0 +1,214 @@
+.sign-in-section{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    .sign-in-container {
+        
+        .sign-in-upper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            margin-top: 5dvh;
+            
+            .sign-in-home-link {
+                color: #111111;
+                position: absolute;
+                left: 0;
+                text-decoration: none;
+                
+                p {
+                    display: none;
+                }
+            }
+
+            }
+            .sign-in-title{
+                font: $font-weight-regular;
+                font-size: x-large;
+                color: $color-login;
+                margin-bottom: 7dvh;
+            }
+            .sign-in-vertical-line{
+                background-color: $color-login;
+                height: 3vh;
+                width: 1px;
+            }
+            .sign-in-heading{
+                font: $font-weight-bold;
+                font-size: 6dvh;
+            }
+            .sign-in-sub-titel{
+                color: $color-login;
+            }
+        
+        .sign-in-form{
+            margin: 5dvh 0 2dvh 0;
+            .sign-in-form-div{
+                @include xsd {
+                    width: 80vw;
+                }
+        
+                @include sd {
+                    width: 70vw;
+                }
+        
+                @include ms {
+                    width: 60vw;
+                }
+        
+                @include xd {
+                    width: 45vw;
+                }
+        
+                @include xxd {
+                    width: 30vw;
+                }
+        
+                @include xxxd {
+                    width: 20vw;
+                }
+                position: relative;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+                .sign-in-label{
+                    grid-column: 1 / 2; 
+                    grid-row: auto;
+                    padding: 0 1dvh 0;
+                    font-size: 1.3dvh;
+                    position: absolute;
+                    top:0.1dvh;
+                    left: 2dvh;
+                    z-index: 10;
+                    background-color: white;
+                }
+                
+                .sign-in-input{
+                    grid-column: 1 / 2; 
+                    grid-row: auto;
+                    height: 6dvh;
+                    border-radius: 3dvh;
+                    border-color: #DBE3F5;
+                    padding: 0 3dvh 0 3dvh;
+                    margin: 1dvh 0 1dvh 0; 
+
+                }
+                .sign-in-icon{
+                    position: absolute;
+                    top: 2.5dvh;
+                    right: 3dvh;
+                }
+                .sign-in-icon-button{
+                    position: absolute;
+                    top: 2.5dvh;
+                    right: 2.4dvh;
+                    button{
+                        background-color: transparent;
+                        border: none;
+                        i{
+                            color: #111111;
+                        }
+                    }
+                }
+                
+            }
+
+            
+            button{
+                color: white;
+                background-color: #111111;
+                border: none;
+            }
+
+        }
+        .sign-in-remember-container{
+            position: relative;
+            margin: 3dvh 0;
+            .sign-in-checkbox{
+                .sign-in-input-checkbox{
+                    transform: scale(1.4);
+                }
+                .sign-in-label-checkbox{
+                    color: $color-login;
+                    font-size: large;
+                }
+            }
+            .sign-in-forgot-password{
+                text-decoration: none;
+                color: $color-login;
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: large;
+            }
+        }
+        .sign-in-login-link{
+            text-decoration: none;
+            color: $color-login;
+            font-size: large;
+        }
+        .sign-in-media{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .sign-in-soc-link{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 10dvh;
+                width: 10dvh;
+                border: solid 1px;
+                border-color: #DBE3F5;
+                border-radius: 5dvh;
+                margin: 7dvh 1dvh ;
+                .sign-in-facebook-link{
+                    color: #4267B2;
+                }
+                .sign-in-x-link{
+                    color: #1DA1F2;
+                }
+                .sign-in-google-link{
+                    color: #DB4437;
+                }
+            }
+        }
+        .sign-in-horizontal{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2dvh;
+            @include xsd {
+                width: 80vw;
+            }
+    
+            @include sd {
+                width: 70vw;
+            }
+    
+            @include ms {
+                width: 60vw;
+            }
+    
+            @include xd {
+                width: 45vw;
+            }
+    
+            @include xxd {
+                width: 30vw;
+            }
+    
+            @include xxxd {
+                width: 20vw;
+            }
+            .sign-in-horizontal-line{
+                height: 1dvh;
+                width: 35%;
+                border-radius: 0.5dvh;
+                background-color: #111111;
+            }
+        }
+    }
+}
+    
