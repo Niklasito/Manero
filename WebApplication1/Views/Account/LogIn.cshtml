@@ -4,55 +4,11 @@
     ViewData["Title"] = "Sign In";
 }
 
+
 <section class="sign-in-section">
     <div class="sign-in-container">
-        <div class="sign-in-upper">
-            <a class="sign-in-home-link" href="/home"><i class="fa-solid fa-angle-left"></i><p>Go to Shop</p></a>
-            <p class="sign-in-title">Sign in</p>
-            <div class="sign-in-vertical-line"></div>
-            <h2 class="sign-in-heading">Welcome Back!</h2>
-            <p class="sign-in-sub-titel">Sign in to continue</p>
-        </div>
-        <form class="sign-in-form">
-            <div class="sign-in-form-div">
-                <label class="sign-in-label" for="email">Email</label>
-                <input class="sign-in-input" type="email" name="email" id="sign-in-email" placeholder="email">
-                <div class="sign-in-icon">
-                    <i class="fa-sharp fa-regular fa-check"></i>
-                </div>
-            </div>
-            <div class="sign-in-form-div">
-                <label class="sign-in-label" for="password">password</label>
-                <input class="sign-in-input" type="password" name="password" id="sign-in-password" placeholder="password">
-                <div class="sign-in-icon-button">
-                    <button><i class="fa-regular fa-eye-slash"></i></button>
-                </div>
-            </div>
-            <div class="sign-in-remember-container">
-                <div class="sign-in-checkbox">
-                    <input class="sign-in-input-checkbox" type="checkbox" name="checkbox" id="sign-in-checkbox-id" placeholder="Remember me">
-                    <label class="sign-in-label-checkbox" for="checkbox">Remember me</label>
-                </div>
-                <a class="sign-in-forgot-password">Forgot password?</a>
-            </div>
-            <div class="sign-in-form-div">
-                <button class="sign-in-input" type="submit">Sign in</button>
-            </div>
-        </form>
-        <a class="sign-in-login-link" asp-controller="account" asp-action="register">Don´t have an account? Sign up.</a>
-        <div class="sign-in-media">
-            <div class="sign-in-soc-link">
-                <a class="sign-in-facebook-link"><i class="fa-brands fa-facebook-f fa-2xl"></i></a>
-            </div>
-            <div class="sign-in-soc-link">
-                <a class="sign-in-x-link"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
-            </div>
-            <div class="sign-in-soc-link">
-                <a class="sign-in-google-link"><i class="fa-brands fa-google fa-2xl"></i></a>
-            </div>
-        </div>
-        <div class="sign-in-horizontal">
-            <div class="sign-in-horizontal-line"></div>
-        </div>
+        <partial name="/Views/Partials/_AccountHeader.cshtml" />
+        <partial name="/Views/Partials/Forms/_LoginForm.cshtml" />
+        <partial name="/Views/Partials/_SocialMediaLogin.cshtml" />
     </div>
 </section>
