@@ -1,0 +1,73 @@
+//mixins
+
+@import "./mixins/buttons.scss";
+@import "./mixins/colors.scss";
+@import "./mixins/fonts.scss";
+
+
+
+@import "./mixins/mixins.scss";
+
+
+
+//components
+
+
+@import "./components/signUp";
+@import "./components/myProfile";
+@import "./components/signIn";
+
+@import "./components/header";
+@import "./components/Footer";
+
+
+@import "./components/accountCreated";
+@import "./components/socialMedia.scss";
+
+
+// header{
+//     padding: 16px;
+//     width: 375px;
+//     border-radius: 25px;
+//     background-color: $color-background;
+//     .containter{
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         gap: 17px;
+//     }
+// }
+
+// footer{
+//     width: 375px;
+//     height: auto;
+//     position: relative;
+//     margin-top: 1380px; 
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     #menu{ 
+//         width: 100%;
+//         border-radius: 25px;
+//         border-top: 1px solid $color-background;
+//         position: absolute;
+//         nav{
+//             background-color: $color-white;
+//             padding: 10px ;
+//             display: flex;
+//             align-items: center;
+//             justify-content: space-between;
+//            a{
+//                 text-decoration: none;
+//                 color: $color-login;
+//             }
+//             a:active{
+//                 color: black;
+//             }
+//           }
+//     }
+//}
+
+
+
+

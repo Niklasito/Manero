@@ -1,0 +1,37 @@
+﻿@model UserCreateAccountViewModel
+
+<form class="sign-up-form" method="post" novalidate>
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="sign-up-form-div">
+        <label class="sign-up-label" asp-for="Name"></label>
+        <input class="sign-up-input" asp-for="Name" placeholder="name">
+        <div class="sign-up-icon">
+            <i class="fa-sharp fa-regular fa-check"></i>
+        </div>
+    </div>
+    <div class="sign-up-form-div">
+        <label class="sign-up-label" asp-for="Email"></label>
+        <input class="sign-up-input" asp-for="Email" placeholder="email">
+        <div class="sign-up-icon">
+            <i class="fa-sharp fa-regular fa-check"></i>
+        </div>
+    </div>
+    <div class="sign-up-form-div">
+        <label class="sign-up-label" asp-for="Password"></label>
+        <input class="sign-up-input" asp-for="Password" placeholder="password">
+        <div class="sign-up-icon-button">
+            <button><i class="fa-regular fa-eye-slash"></i></button>
+        </div>
+    </div>
+    <div class="sign-up-form-div">
+        <label class="sign-up-label" asp-for="ConfirmPassword"></label>
+        <input class="sign-up-input" asp-for="ConfirmPassword" placeholder="confirm password">
+        <div class="sign-up-icon-button">
+            <button><i class="fa-regular fa-eye-slash"></i></button>
+        </div>
+    </div>
+    <div class="sign-up-form-div">
+        <button class="sign-up-input" type="submit">Sign up</button>
+    </div>
+</form>
+<a class="sign-up-login-link" asp-controller="account" asp-action="index">Already have an account? Sign in.</a>

@@ -1,0 +1,12 @@
+header{
+    padding: 16px;
+    width: 375px;
+    border-radius: 25px;
+    background-color: $color-background;
+    .containter{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 17px;
+    }
+}
