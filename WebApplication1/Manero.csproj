@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.12" />
     <PackageReference Include="microsoft.aspnetcore.identity.ui" Version="7.0.12" />
     <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="7.0.12" />
@@ -17,7 +21,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Helpers\Repositories\" />
+    <Folder Include="wwwroot\css\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
   </ItemGroup>
 
 </Project>

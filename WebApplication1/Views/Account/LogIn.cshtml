@@ -4,29 +4,11 @@
     ViewData["Title"] = "Sign In";
 }
 
-<form method="post" novalidate asp-route-ReturnUrl="@Model.ReturnUrl">
 
-    <div asp-validation-summary="ModelOnly" class="text-danger d-flex justify-content-center"></div>
-
-    <div class="email form-group">
-        <label asp-for="Email"></label>
-        <a class="form-link" asp-action="Register" asp-controller="Account">Don't Have An Account Yet?</a>
-        <input asp-for="Email" autocomplete="off">
-        <small><span asp-validation-for="Email" class="error"></span></small>
+<section class="sign-in-section">
+    <div class="sign-in-container">
+        <partial name="/Views/Partials/_LoginHeader.cshtml" />
+        <partial name="/Views/Partials/Forms/_LoginForm.cshtml" />
+        <partial name="/Views/Partials/_SocialMediaLogin.cshtml" />
     </div>
-    <div class="password form-group">
-        <label asp-for="Password"></label>
-        <input asp-for="Password" autocomplete="off">
-        <small><span asp-validation-for="Password" class="error"></span></small>
-    </div>
-    <div class="terms form-checkbox-group">
-        <label class="custom-checkbox">
-            <label asp-for="RememberMe"></label>
-            <input asp-for="RememberMe">
-            <span class="checkmark"></span>
-        </label>
-    </div>
-    <div class="form-btn">
-        <button class="theme-button form-submit-btn">Log In</button>
-    </div>
-</form>
+</section>

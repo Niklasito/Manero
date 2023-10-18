@@ -1,0 +1,29 @@
+footer{
+    width: 375px;
+    height: auto;
+    position: relative;
+    margin-top: 1380px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #menu{ 
+        width: 100%;
+        border-radius: 25px;
+        border-top: 1px solid $color-background;
+        position: absolute;
+        nav{
+            background-color: $color-white;
+            padding: 10px ;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+           a{
+                text-decoration: none;
+                color: $color-login;
+            }
+            a:active{
+                color: black;
+            }
+          }
+    }
+}
