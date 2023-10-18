@@ -60,7 +60,7 @@ namespace Manero.Controllers
             if (ModelState.IsValid)
             {
                 if (await _auth.LogInAsync(viewModel))
-                    return LocalRedirect(viewModel.ReturnUrl);
+                    return RedirectToAction("Index", "Home");
 
                 ModelState.AddModelError("", "Incorrect E-mail or Password");
             }
