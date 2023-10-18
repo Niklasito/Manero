@@ -1,556 +1,619 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
-}
-
-@import"https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap";
-
+﻿@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
 .btn {
-    color: #000;
-    background-color: red
+  color: black;
+  background-color: red;
 }
 
 .size {
-    color: red;
-    color: #9898e9;
-    color: #fce5e5;
-    color: #00008b;
-    color: #000
+  color: red;
+  color: rgb(152, 152, 233);
+  color: rgb(252, 229, 229);
+  color: darkblue;
+  color: black;
 }
 
 .price {
-    color: green;
-    color: #dfc547;
-    color: purple
+  color: green;
+  color: rgb(223, 197, 71);
+  color: purple;
 }
 
 .sign-up-section {
-    display: flex;
-    justify-content: center;
-    align-items: center
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-    .sign-up-section .sign-up-container .sign-up-upper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        position: relative;
-        margin-top: 5dvh
-    }
-
-        .sign-up-section .sign-up-container .sign-up-upper .sign-up-home-link {
-            color: #111;
-            position: absolute;
-            left: 0;
-            text-decoration: none
-        }
-
-            .sign-up-section .sign-up-container .sign-up-upper .sign-up-home-link p {
-                display: none
-            }
-
-    .sign-up-section .sign-up-container .sign-up-title {
-        font: 400;
-        font-size: x-large;
-        color: #111;
-        margin-bottom: 7dvh
-    }
-
-    .sign-up-section .sign-up-container .sign-up-vertical-line {
-        background-color: #111;
-        height: 3vh;
-        width: 1px
-    }
-
-    .sign-up-section .sign-up-container .sign-up-heading {
-        font: 700;
-        font-size: 6dvh
-    }
-
-    .sign-up-section .sign-up-container .sign-up-form {
-        margin: 5dvh 0 2dvh 0
-    }
-
-        .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
-            position: relative;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto auto auto auto
-        }
-
-@media(max-width: 767px) {
-    .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
-        width: 80vw
-    }
+.sign-up-section .sign-up-container .sign-up-upper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-top: 5dvh;
 }
-
-@media(min-width: 768px) {
-    .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
-        width: 70vw
-    }
+.sign-up-section .sign-up-container .sign-up-upper .sign-up-home-link {
+  color: #111111;
+  position: absolute;
+  left: 0;
+  text-decoration: none;
 }
-
-@media(min-width: 992px) {
-    .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
-        width: 60vw
-    }
+.sign-up-section .sign-up-container .sign-up-upper .sign-up-home-link p {
+  display: none;
 }
-
-@media(min-width: 1200px) {
-    .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
-        width: 45vw
-    }
+.sign-up-section .sign-up-container .sign-up-title {
+  font: 400;
+  font-size: x-large;
+  color: #111111;
+  margin-bottom: 7dvh;
 }
-
-@media(min-width: 1400px) {
-    .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
-        width: 30vw
-    }
+.sign-up-section .sign-up-container .sign-up-vertical-line {
+  background-color: #111111;
+  height: 3vh;
+  width: 1px;
 }
-
-@media(min-width: 1920px) {
-    .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
-        width: 20vw
-    }
+.sign-up-section .sign-up-container .sign-up-heading {
+  font: 700;
+  font-size: 6dvh;
 }
-
+.sign-up-section .sign-up-container .sign-up-form {
+  margin: 5dvh 0 2dvh 0;
+}
+.sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto;
+}
+@media (max-width: 767px) {
+  .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
+    width: 80vw;
+  }
+}
+@media (min-width: 768px) {
+  .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
+    width: 70vw;
+  }
+}
+@media (min-width: 992px) {
+  .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
+    width: 60vw;
+  }
+}
+@media (min-width: 1200px) {
+  .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
+    width: 45vw;
+  }
+}
+@media (min-width: 1400px) {
+  .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
+    width: 30vw;
+  }
+}
+@media (min-width: 1920px) {
+  .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div {
+    width: 20vw;
+  }
+}
 .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div .sign-up-label {
-    grid-column: 1/2;
-    grid-row: auto;
-    padding: 0 1dvh 0;
-    font-size: 1.3dvh;
-    position: absolute;
-    top: .1dvh;
-    left: 2dvh;
-    z-index: 10;
-    background-color: #fff
+  grid-column: 1/2;
+  grid-row: auto;
+  padding: 0 1dvh 0;
+  font-size: 1.3dvh;
+  position: absolute;
+  top: 0.1dvh;
+  left: 2dvh;
+  z-index: 10;
+  background-color: white;
 }
-
 .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div .sign-up-input {
-    grid-column: 1/2;
-    grid-row: auto;
-    height: 6dvh;
-    border-radius: 3dvh;
-    border-color: #dbe3f5;
-    padding: 0 3dvh 0 3dvh;
-    margin: 1dvh 0 1dvh 0
+  grid-column: 1/2;
+  grid-row: auto;
+  height: 6dvh;
+  border-radius: 3dvh;
+  border-color: #DBE3F5;
+  padding: 0 3dvh 0 3dvh;
+  margin: 1dvh 0 1dvh 0;
 }
-
 .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div .sign-up-icon {
-    position: absolute;
-    top: 2.5dvh;
-    right: 3dvh
+  position: absolute;
+  top: 2.5dvh;
+  right: 3dvh;
 }
-
 .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div .sign-up-icon-button {
-    position: absolute;
-    top: 2.5dvh;
-    right: 2.4dvh
+  position: absolute;
+  top: 2.5dvh;
+  right: 2.4dvh;
 }
-
-    .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div .sign-up-icon-button button {
-        background-color: rgba(0,0,0,0);
-        border: none
-    }
-
-        .sign-up-section .sign-up-container .sign-up-form .sign-up-form-div .sign-up-icon-button button i {
-            color: #111
-        }
-
+.sign-up-section .sign-up-container .sign-up-form .sign-up-form-div .sign-up-icon-button button {
+  background-color: transparent;
+  border: none;
+}
+.sign-up-section .sign-up-container .sign-up-form .sign-up-form-div .sign-up-icon-button button i {
+  color: #111111;
+}
 .sign-up-section .sign-up-container .sign-up-form button {
-    color: #fff;
-    background-color: #111;
-    border: none
+  color: white;
+  background-color: #111111;
+  border: none;
 }
-
 .sign-up-section .sign-up-container .sign-up-login-link {
-    text-decoration: none;
-    color: #111;
-    font-size: large
+  text-decoration: none;
+  color: #111111;
+  font-size: large;
 }
 
-.sign-up-section .sign-up-container .sign-up-media {
-    display: flex;
-    justify-content: center;
-    align-items: center
+.my-profile-headroom-row {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
 }
-
-    .sign-up-section .sign-up-container .sign-up-media .sign-up-soc-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 10dvh;
-        width: 10dvh;
-        border: solid 1px;
-        border-color: #dbe3f5;
-        border-radius: 5dvh;
-        margin: 7dvh 1dvh
-    }
-
-        .sign-up-section .sign-up-container .sign-up-media .sign-up-soc-link .sign-up-facebook-link {
-            color: #4267b2
-        }
-
-        .sign-up-section .sign-up-container .sign-up-media .sign-up-soc-link .sign-up-x-link {
-            color: #1da1f2
-        }
-
-        .sign-up-section .sign-up-container .sign-up-media .sign-up-soc-link .sign-up-google-link {
-            color: #db4437
-        }
-
-.sign-up-section .sign-up-container .sign-up-horizontal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2dvh
-}
-
-@media(max-width: 767px) {
-    .sign-up-section .sign-up-container .sign-up-horizontal {
-        width: 80vw
-    }
-}
-
-@media(min-width: 768px) {
-    .sign-up-section .sign-up-container .sign-up-horizontal {
-        width: 70vw
-    }
-}
-
-@media(min-width: 992px) {
-    .sign-up-section .sign-up-container .sign-up-horizontal {
-        width: 60vw
-    }
-}
-
-@media(min-width: 1200px) {
-    .sign-up-section .sign-up-container .sign-up-horizontal {
-        width: 45vw
-    }
-}
-
-@media(min-width: 1400px) {
-    .sign-up-section .sign-up-container .sign-up-horizontal {
-        width: 30vw
-    }
-}
-
-@media(min-width: 1920px) {
-    .sign-up-section .sign-up-container .sign-up-horizontal {
-        width: 20vw
-    }
-}
-
-.sign-up-section .sign-up-container .sign-up-horizontal .sign-up-horizontal-line {
-    height: 1dvh;
-    width: 35%;
-    border-radius: .5dvh;
-    background-color: #111
+@media (min-width: 1200px) {
+  .my-profile-headroom-row {
+    width: 50vw;
+  }
 }
 
 .my-profile-headroomholder {
-    display: flex
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  border-bottom: 1px solid #dbe3f5;
+  padding-bottom: 1vh;
+}
+@media (min-width: 1200px) {
+  .my-profile-headroomholder {
+    width: 50vw;
+  }
+}
+.my-profile-headroomholder .my-profile-burger-icon {
+  margin-left: 5vw;
+}
+.my-profile-headroomholder .my-profile-pagetitle-holder {
+  display: flex;
+  justify-content: center;
+}
+.my-profile-headroomholder .my-profile-cart-holder {
+  display: flex;
+  justify-content: flex-end;
+}
+.my-profile-headroomholder .my-profile-cart-holder .my-profile-cart-icon {
+  margin-right: 5vw;
 }
 
 .my-profile-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
-
-    .my-profile-container .my-profile-small-holders {
-        display: flex;
-        height: 5vh;
-        border: 1px solid gray
-    }
-
-    .my-profile-container .my-profile-icons-holder {
-        width: 10vw;
-        margin-left: 5vw
-    }
-
-    .my-profile-container .my-profile-profile-links {
-        text-decoration: none;
-        color: #000;
-        font-family: "Mulish",sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        text-align: left;
-        margin-left: 10vw
-    }
+.my-profile-container a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+.my-profile-container p {
+  margin: 0;
+}
+.my-profile-container .my-profile-image-container {
+  margin-top: 8vh;
+  margin-bottom: 3vh;
+}
+.my-profile-container .my-profile-image-holder {
+  display: flex;
+  justify-content: center;
+}
+.my-profile-container .my-profile-info-holder {
+  margin-top: 3vh;
+  text-align: center;
+}
+.my-profile-container .my-profile-info-holder .my-profile-profile-name {
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+  margin-bottom: 0;
+}
+.my-profile-container .my-profile-info-holder .my-profile-email-address {
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  color: black;
+}
+.my-profile-container .my-profile-options-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #dbe3f5;
+  width: 100vw;
+  height: 10vh;
+}
+@media (min-width: 1200px) {
+  .my-profile-container .my-profile-options-row {
+    width: 50vw;
+    justify-content: flex-start;
+    border: none;
+  }
+}
+@media (min-width: 1400px) {
+  .my-profile-container .my-profile-options-row {
+    width: 40vw;
+    justify-content: center;
+    border: none;
+  }
+}
+@media (min-width: 768px) {
+  .my-profile-container .my-profile-options-row {
+    width: 60vw;
+    justify-content: start;
+  }
+}
+.my-profile-container .options-row-bottom {
+  border-bottom: 1px solid gray;
+  height: 6vh;
+}
+.my-profile-container .my-profile-small-holders {
+  display: flex;
+  height: 5vh;
+  align-items: center;
+}
+@media (min-width: 1400px) {
+  .my-profile-container .my-profile-small-holders {
+    width: 40vw;
+  }
+}
+.my-profile-container .my-profile-small-holders .my-profile-icons-holder {
+  display: flex;
+  width: 10vw;
+  margin-left: 5vw;
+  justify-content: flex-end;
+}
+.my-profile-container .my-profile-small-holders .my-profile-profile-links {
+  text-decoration: none;
+  color: black;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: left;
+  margin-left: 10vw;
+}
+@media (min-width: 1200px) {
+  .my-profile-container .my-profile-small-holders .my-profile-profile-links {
+    margin-left: 4vw;
+  }
+}
+@media (min-width: 768px) {
+  .my-profile-container .my-profile-small-holders .my-profile-profile-links {
+    margin-left: 5vw;
+  }
+}
+.my-profile-container .my-profile-small-holders .my-profile-profile-links .my-profile-chevron-holder {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 2vw;
+}
+@media (min-width: 1200px) {
+  .my-profile-container .my-profile-small-holders .my-profile-profile-links .my-profile-chevron-holder {
+    margin-left: 0;
+  }
+}
+.my-profile-container .my-profile-small-holders .my-profile-profile-links .my-profile-chevron-holder i {
+  color: gray;
+}
 
 .sign-in-section {
-    display: flex;
-    justify-content: center;
-    align-items: center
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-    .sign-in-section .sign-in-container .sign-in-upper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        position: relative;
-        margin-top: 5dvh
-    }
-
-        .sign-in-section .sign-in-container .sign-in-upper .sign-in-home-link {
-            color: #111;
-            position: absolute;
-            left: 0;
-            text-decoration: none
-        }
-
-            .sign-in-section .sign-in-container .sign-in-upper .sign-in-home-link p {
-                display: none
-            }
-
-    .sign-in-section .sign-in-container .sign-in-title {
-        font: 400;
-        font-size: x-large;
-        color: #626262;
-        margin-bottom: 7dvh
-    }
-
-    .sign-in-section .sign-in-container .sign-in-vertical-line {
-        background-color: #626262;
-        height: 3vh;
-        width: 1px
-    }
-
-    .sign-in-section .sign-in-container .sign-in-heading {
-        font: 700;
-        font-size: 6dvh
-    }
-
-    .sign-in-section .sign-in-container .sign-in-sub-titel {
-        color: #626262
-    }
-
-    .sign-in-section .sign-in-container .sign-in-form {
-        margin: 5dvh 0 2dvh 0
-    }
-
-        .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
-            position: relative;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto auto
-        }
-
-@media(max-width: 767px) {
-    .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
-        width: 80vw
-    }
+.sign-in-section .sign-in-container .sign-in-upper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-top: 5dvh;
 }
-
-@media(min-width: 768px) {
-    .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
-        width: 70vw
-    }
+.sign-in-section .sign-in-container .sign-in-upper .sign-in-home-link {
+  color: #111111;
+  position: absolute;
+  left: 0;
+  text-decoration: none;
 }
-
-@media(min-width: 992px) {
-    .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
-        width: 60vw
-    }
+.sign-in-section .sign-in-container .sign-in-upper .sign-in-home-link p {
+  display: none;
 }
-
-@media(min-width: 1200px) {
-    .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
-        width: 45vw
-    }
+.sign-in-section .sign-in-container .sign-in-title {
+  font: 400;
+  font-size: x-large;
+  color: #626262;
+  margin-bottom: 7dvh;
 }
-
-@media(min-width: 1400px) {
-    .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
-        width: 30vw
-    }
+.sign-in-section .sign-in-container .sign-in-vertical-line {
+  background-color: #626262;
+  height: 3vh;
+  width: 1px;
 }
-
-@media(min-width: 1920px) {
-    .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
-        width: 20vw
-    }
+.sign-in-section .sign-in-container .sign-in-heading {
+  font: 700;
+  font-size: 6dvh;
 }
-
+.sign-in-section .sign-in-container .sign-in-sub-titel {
+  color: #626262;
+}
+.sign-in-section .sign-in-container .sign-in-form {
+  margin: 5dvh 0 2dvh 0;
+}
+.sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+}
+@media (max-width: 767px) {
+  .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
+    width: 80vw;
+  }
+}
+@media (min-width: 768px) {
+  .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
+    width: 70vw;
+  }
+}
+@media (min-width: 992px) {
+  .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
+    width: 60vw;
+  }
+}
+@media (min-width: 1200px) {
+  .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
+    width: 45vw;
+  }
+}
+@media (min-width: 1400px) {
+  .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
+    width: 30vw;
+  }
+}
+@media (min-width: 1920px) {
+  .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div {
+    width: 20vw;
+  }
+}
 .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div .sign-in-label {
-    grid-column: 1/2;
-    grid-row: auto;
-    padding: 0 1dvh 0;
-    font-size: 1.3dvh;
-    position: absolute;
-    top: .1dvh;
-    left: 2dvh;
-    z-index: 10;
-    background-color: #fff
+  grid-column: 1/2;
+  grid-row: auto;
+  padding: 0 1dvh 0;
+  font-size: 1.3dvh;
+  position: absolute;
+  top: 0.1dvh;
+  left: 2dvh;
+  z-index: 10;
+  background-color: white;
 }
-
 .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div .sign-in-input {
-    grid-column: 1/2;
-    grid-row: auto;
-    height: 6dvh;
-    border-radius: 3dvh;
-    border-color: #dbe3f5;
-    padding: 0 3dvh 0 3dvh;
-    margin: 1dvh 0 1dvh 0
+  grid-column: 1/2;
+  grid-row: auto;
+  height: 6dvh;
+  border-radius: 3dvh;
+  border-color: #DBE3F5;
+  padding: 0 3dvh 0 3dvh;
+  margin: 1dvh 0 1dvh 0;
 }
-
 .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div .sign-in-icon {
-    position: absolute;
-    top: 2.5dvh;
-    right: 3dvh
+  position: absolute;
+  top: 2.5dvh;
+  right: 3dvh;
 }
-
 .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div .sign-in-icon-button {
-    position: absolute;
-    top: 2.5dvh;
-    right: 2.4dvh
+  position: absolute;
+  top: 2.5dvh;
+  right: 2.4dvh;
 }
-
-    .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div .sign-in-icon-button button {
-        background-color: rgba(0,0,0,0);
-        border: none
-    }
-
-        .sign-in-section .sign-in-container .sign-in-form .sign-in-form-div .sign-in-icon-button button i {
-            color: #111
-        }
-
+.sign-in-section .sign-in-container .sign-in-form .sign-in-form-div .sign-in-icon-button button {
+  background-color: transparent;
+  border: none;
+}
+.sign-in-section .sign-in-container .sign-in-form .sign-in-form-div .sign-in-icon-button button i {
+  color: #111111;
+}
 .sign-in-section .sign-in-container .sign-in-form button {
-    color: #fff;
-    background-color: #111;
-    border: none
+  color: white;
+  background-color: #111111;
+  border: none;
 }
-
 .sign-in-section .sign-in-container .sign-in-remember-container {
-    position: relative;
-    margin: 3dvh 0
+  position: relative;
+  margin: 3dvh 0;
 }
-
-    .sign-in-section .sign-in-container .sign-in-remember-container .sign-in-checkbox .sign-in-input-checkbox {
-        transform: scale(1.4)
-    }
-
-    .sign-in-section .sign-in-container .sign-in-remember-container .sign-in-checkbox .sign-in-label-checkbox {
-        color: #626262;
-        font-size: large
-    }
-
-    .sign-in-section .sign-in-container .sign-in-remember-container .sign-in-forgot-password {
-        text-decoration: none;
-        color: #626262;
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: large
-    }
-
+.sign-in-section .sign-in-container .sign-in-remember-container .sign-in-checkbox .sign-in-input-checkbox {
+  transform: scale(1.4);
+}
+.sign-in-section .sign-in-container .sign-in-remember-container .sign-in-checkbox .sign-in-label-checkbox {
+  color: #626262;
+  font-size: large;
+}
+.sign-in-section .sign-in-container .sign-in-remember-container .sign-in-forgot-password {
+  text-decoration: none;
+  color: #626262;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: large;
+}
 .sign-in-section .sign-in-container .sign-in-login-link {
-    text-decoration: none;
-    color: #626262;
-    font-size: large
+  text-decoration: none;
+  color: #626262;
+  font-size: large;
 }
 
-.sign-in-section .sign-in-container .sign-in-media {
-    display: flex;
-    justify-content: center;
-    align-items: center
+header {
+  padding: 16px;
+  width: 375px;
+  border-radius: 25px;
+  background-color: #dbe3f5;
+}
+header .containter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 17px;
 }
 
-    .sign-in-section .sign-in-container .sign-in-media .sign-in-soc-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 10dvh;
-        width: 10dvh;
-        border: solid 1px;
-        border-color: #dbe3f5;
-        border-radius: 5dvh;
-        margin: 7dvh 1dvh
-    }
-
-        .sign-in-section .sign-in-container .sign-in-media .sign-in-soc-link .sign-in-facebook-link {
-            color: #4267b2
-        }
-
-        .sign-in-section .sign-in-container .sign-in-media .sign-in-soc-link .sign-in-x-link {
-            color: #1da1f2
-        }
-
-        .sign-in-section .sign-in-container .sign-in-media .sign-in-soc-link .sign-in-google-link {
-            color: #db4437
-        }
-
-.sign-in-section .sign-in-container .sign-in-horizontal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2dvh
+footer {
+  width: 375px;
+  height: auto;
+  position: relative;
+  margin-top: 1380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer #menu {
+  width: 100%;
+  border-radius: 25px;
+  border-top: 1px solid #dbe3f5;
+  position: absolute;
+}
+footer #menu nav {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer #menu nav a {
+  text-decoration: none;
+  color: #626262;
+}
+footer #menu nav a:active {
+  color: black;
 }
 
-@media(max-width: 767px) {
-    .sign-in-section .sign-in-container .sign-in-horizontal {
-        width: 80vw
-    }
+.account-created-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 80vw;
 }
 
-@media(min-width: 768px) {
-    .sign-in-section .sign-in-container .sign-in-horizontal {
-        width: 70vw
-    }
+.account-created-button {
+  color: white;
+  background-color: #111111;
+  border: none;
+  border-radius: 25px;
+  height: 50px;
+  width: 95%;
+  max-width: 500px;
 }
 
-@media(min-width: 992px) {
-    .sign-in-section .sign-in-container .sign-in-horizontal {
-        width: 60vw
-    }
+.account-created-button:hover {
+  background-color: #242424;
 }
 
-@media(min-width: 1200px) {
-    .sign-in-section .sign-in-container .sign-in-horizontal {
-        width: 45vw
-    }
+.account-created-divider-horizontal {
+  margin: 10px;
+  height: 2px;
+  width: 30px;
+  border-radius: 10px;
+  background-color: #111111;
 }
 
-@media(min-width: 1400px) {
-    .sign-in-section .sign-in-container .sign-in-horizontal {
-        width: 30vw
-    }
+.account-created-divider-vertical {
+  margin: 25px;
+  height: 30px;
+  width: 1px;
+  border-radius: 10px;
+  background-color: #111111;
 }
 
-@media(min-width: 1920px) {
-    .sign-in-section .sign-in-container .sign-in-horizontal {
-        width: 20vw
-    }
+.account-created-font-mulish {
+  font-family: "Mulish", sans-serif;
+  text-align: center;
 }
 
-.sign-in-section .sign-in-container .sign-in-horizontal .sign-in-horizontal-line {
-    height: 1dvh;
-    width: 35%;
-    border-radius: .5dvh;
-    background-color: #111
+.account-created-font-bold {
+  font-weight: bold;
+}
+
+.account-created-font-16 {
+  font-size: 16px;
+}
+
+.account-created-font-24 {
+  font-size: 24px;
+}
+
+.sign-social-media .sign-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-social-media .sign-media .sign-soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10dvh;
+  width: 10dvh;
+  border: solid 1px;
+  border-color: #DBE3F5;
+  border-radius: 5dvh;
+  margin: 7dvh 1dvh;
+}
+.sign-social-media .sign-media .sign-soc-link .sign-facebook-link {
+  color: #4267B2;
+}
+.sign-social-media .sign-media .sign-soc-link .sign-x-link {
+  color: #1DA1F2;
+}
+.sign-social-media .sign-media .sign-soc-link .sign-google-link {
+  color: #DB4437;
+}
+.sign-social-media .sign-horizontal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-social-media .sign-horizontal-container .sign-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2dvh;
+}
+@media (max-width: 767px) {
+  .sign-social-media .sign-horizontal-container .sign-horizontal {
+    width: 80vw;
+  }
+}
+@media (min-width: 768px) {
+  .sign-social-media .sign-horizontal-container .sign-horizontal {
+    width: 70vw;
+  }
+}
+@media (min-width: 992px) {
+  .sign-social-media .sign-horizontal-container .sign-horizontal {
+    width: 60vw;
+  }
+}
+@media (min-width: 1200px) {
+  .sign-social-media .sign-horizontal-container .sign-horizontal {
+    width: 45vw;
+  }
+}
+@media (min-width: 1400px) {
+  .sign-social-media .sign-horizontal-container .sign-horizontal {
+    width: 30vw;
+  }
+}
+@media (min-width: 1920px) {
+  .sign-social-media .sign-horizontal-container .sign-horizontal {
+    width: 20vw;
+  }
+}
+.sign-social-media .sign-horizontal-container .sign-horizontal .sign-horizontal-line {
+  height: 1dvh;
+  width: 35%;
+  border-radius: 0.5dvh;
+  background-color: #111111;
 }
