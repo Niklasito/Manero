@@ -1,0 +1,231 @@
+.homepage-part-1-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+    .homepage-part-1-headroom-row {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+
+  
+
+}
+
+
+}
+
+
+        .homepage-part-1-headroomholder {
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        border-bottom: 1px solid $color-background;
+        padding-bottom: 1vh;
+        margin-top: 2vh;
+        @include xd {
+            width: 100vw;
+            height: 8vh;
+        }
+    
+
+        .homepage-part-1-burger-icon {
+            margin-left: 5vw;
+        }
+
+        .homepage-part-1-pagetitle-holder {
+            display: flex;
+            justify-content: center;
+
+            .homepage-part-1-headroomtitle {
+               width: 18vw;
+               height: 3vh;
+
+               @include xd {
+                width: 7vw;
+                height: 4vh;
+               }
+
+               @include xxd {
+                   width: 5vw;
+                   height: 3vh;
+               }
+            }
+            
+        }
+
+        .homepage-part-1-cart-holder{
+            display: flex;
+            justify-content: flex-end;
+
+            .homepage-part-1-cart-icon {
+                margin-right: 5vw;
+            }
+        }
+    
+}
+
+.homepage-carousel-container{
+    display: flex;
+    padding: 0;
+    
+    @include xd {
+        margin-left: 15vw;
+    }
+    .homepage-carousel-slide {
+        
+        
+
+        .homepage-carousel-row {
+            display: flex;
+            flex-direction: row;
+            width: 90vw;
+            overflow: scroll;
+            scrollbar-width: none;  /* Firefox */
+            -ms-overflow-style: none;
+            margin-left: 0;
+            margin-top: 3vh;
+
+    
+
+            @include ms {
+                width: 80vw;
+                justify-content: start;
+            }
+           
+            @include xd {
+                width: 90vw;
+                margin-top: 7vh;
+                
+            }
+
+            @include xxxd {
+                width: 100vw;
+                justify-content: start;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+           
+            img {
+                width: 18vw;
+
+                @include ms {
+                    width: 12vw;
+                }
+                
+                @include xd {
+                    width: 7vw;
+                }
+            }
+
+            .homepage-carousel-tags-holder {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-right: 3vw;
+
+                h6 {
+                    font-size: 13px;
+                    margin-top: 1.5vh;
+                }
+            }
+        }
+
+        .homepage-carousel-row::-webkit-scrollbar {
+            display: none;
+        }
+
+       
+          
+        
+    }
+}
+
+.homepage-top-banner {
+    margin-top: 4vh;
+    width: 90%;
+    background-image: url("/images/topbanner-sale-img.jpg");
+    background-size: cover;
+
+    @include ms {
+        width: 80%;
+    }
+
+    @include xd {
+        background-position: center;
+    }
+
+    .homepage-top-banner-column-1 {
+        padding: 0;
+    }
+
+    .homepage-top-banner-column-2 {
+        padding: 0;
+    }
+
+    .homepage-top-banner-info-holder {
+        display: flex;
+        height:25vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        text-align: center;
+
+        @include ms {
+            height: 40vh;
+            align-items: center;
+        }
+        
+        @include xd {
+            height: 55vh;
+            align-items: center;
+        }
+
+        h4 {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000000;
+
+            @include xd {
+                font-size: 45px;
+            }
+        }
+
+        button {
+            color: black;
+            background-color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 25px 12px 25px;
+
+            @include ms {
+                font-size: 12px;
+                margin-top: 1vh;
+                padding: 10px 20px 10px 20px;
+            }
+
+            @include xd {
+                font-size: 25px;
+                margin-top: 2vh;
+                padding: 20px 40px 20px 40px;
+                border-radius: 35px;
+            }
+        }
+
+    }
+
+}
+
+
+
+
+
+
