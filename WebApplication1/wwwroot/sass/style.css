@@ -209,17 +209,6 @@
   background-color: #111111;
 }
 
-.my-profile-headroom-row {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-}
-@media (min-width: 1200px) {
-  .my-profile-headroom-row {
-    width: 50vw;
-  }
-}
-
 .my-profile-headroomholder {
   display: flex;
   justify-content: space-between;

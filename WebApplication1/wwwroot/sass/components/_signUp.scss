@@ -1,0 +1,191 @@
+.sign-up-section{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    .sign-up-container {
+        
+        .sign-up-upper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            margin-top: 5dvh;
+            
+            .sign-up-home-link {
+                color: #111111;
+                position: absolute;
+                left: 0;
+                text-decoration: none;
+                
+                p {
+                    display: none;
+                }
+            }
+
+            }
+            .sign-up-title{
+                font: $font-weight-regular;
+                font-size: x-large;
+                color: #111111;
+                margin-bottom: 7dvh;
+            }
+            .sign-up-vertical-line{
+                background-color: #111111;
+                height: 3vh;
+                width: 1px;
+            }
+            .sign-up-heading{
+                font: $font-weight-bold;
+                font-size: 6dvh;
+            }
+        
+        
+        .sign-up-form{
+            margin: 5dvh 0 2dvh 0;
+            .sign-up-form-div{
+                @include xsd {
+                    width: 80vw;
+                }
+        
+                @include sd {
+                    width: 70vw;
+                }
+        
+                @include ms {
+                    width: 60vw;
+                }
+        
+                @include xd {
+                    width: 45vw;
+                }
+        
+                @include xxd {
+                    width: 30vw;
+                }
+        
+                @include xxxd {
+                    width: 20vw;
+                }
+                position: relative;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto auto auto;
+                .sign-up-label{
+                    grid-column: 1 / 2; 
+                    grid-row: auto;
+                    padding: 0 1dvh 0;
+                    font-size: 1.3dvh;
+                    position: absolute;
+                    top:0.1dvh;
+                    left: 2dvh;
+                    z-index: 10;
+                    background-color: white;
+                }
+                
+                .sign-up-input{
+                    grid-column: 1 / 2; 
+                    grid-row: auto;
+                    height: 6dvh;
+                    border-radius: 3dvh;
+                    border-color: #DBE3F5;
+                    padding: 0 3dvh 0 3dvh;
+                    margin: 1dvh 0 1dvh 0; 
+
+                }
+                .sign-up-icon{
+                    position: absolute;
+                    top: 2.5dvh;
+                    right: 3dvh;
+                }
+                .sign-up-icon-button{
+                    position: absolute;
+                    top: 2.5dvh;
+                    right: 2.4dvh;
+                    button{
+                        background-color: transparent;
+                        border: none;
+                        i{
+                            color: #111111;
+                        }
+                    }
+                }
+                
+            }
+
+            
+            button{
+                color: white;
+                background-color: #111111;
+                border: none;
+            }
+
+        }
+        .sign-up-login-link{
+            text-decoration: none;
+            color: #111111;
+            font-size: large;
+        }
+        .sign-in-media{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .sign-in-soc-link{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 10dvh;
+                width: 10dvh;
+                border: solid 1px;
+                border-color: #DBE3F5;
+                border-radius: 5dvh;
+                margin: 7dvh 1dvh ;
+                .sign-in-facebook-link{
+                    color: #4267B2;
+                }
+                .sign-in-x-link{
+                    color: #1DA1F2;
+                }
+                .sign-in-google-link{
+                    color: #DB4437;
+                }
+            }
+        }
+        .sign-in-horizontal{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2dvh;
+            @include xsd {
+                width: 80vw;
+            }
+    
+            @include sd {
+                width: 70vw;
+            }
+    
+            @include ms {
+                width: 60vw;
+            }
+    
+            @include xd {
+                width: 45vw;
+            }
+    
+            @include xxd {
+                width: 30vw;
+            }
+    
+            @include xxxd {
+                width: 20vw;
+            }
+            .sign-in-horizontal-line{
+                height: 1dvh;
+                width: 35%;
+                border-radius: 0.5dvh;
+                background-color: #111111;
+            }
+        }
+    }
+}
+    

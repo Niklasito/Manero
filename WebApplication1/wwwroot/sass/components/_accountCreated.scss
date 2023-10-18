@@ -1,0 +1,55 @@
+
+.account-created-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80vw
+}
+
+.account-created-button {
+    color: white;
+    background-color: #111111;
+    border: none;
+    border-radius: 25px;
+    height: 50px;
+    width: 95%;
+    max-width: 500px;
+}
+
+.account-created-button:hover {
+    background-color: #242424;
+}
+
+.account-created-divider-horizontal {
+    margin: 10px;
+    height: 2px;
+    width: 30px;
+    border-radius: 10px;
+    background-color: #111111;
+}
+
+.account-created-divider-vertical {
+    margin: 25px;
+    height: 30px;
+    width: 1px;
+    border-radius: 10px;
+    background-color: #111111;
+}
+
+.account-created-font-mulish {
+    font-family: $font-Mulish;
+    text-align: center;
+}
+
+.account-created-font-bold {
+    font-weight: bold;
+}
+
+.account-created-font-16 {
+    font-size: 16px;
+}
+
+.account-created-font-24 {
+    font-size: 24px;
+}
+
