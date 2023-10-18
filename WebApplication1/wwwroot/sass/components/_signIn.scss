@@ -149,66 +149,6 @@
             color: $color-login;
             font-size: large;
         }
-        .sign-in-media{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .sign-in-soc-link{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 10dvh;
-                width: 10dvh;
-                border: solid 1px;
-                border-color: #DBE3F5;
-                border-radius: 5dvh;
-                margin: 7dvh 1dvh ;
-                .sign-in-facebook-link{
-                    color: #4267B2;
-                }
-                .sign-in-x-link{
-                    color: #1DA1F2;
-                }
-                .sign-in-google-link{
-                    color: #DB4437;
-                }
-            }
-        }
-        .sign-in-horizontal{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 2dvh;
-            @include xsd {
-                width: 80vw;
-            }
-    
-            @include sd {
-                width: 70vw;
-            }
-    
-            @include ms {
-                width: 60vw;
-            }
-    
-            @include xd {
-                width: 45vw;
-            }
-    
-            @include xxd {
-                width: 30vw;
-            }
-    
-            @include xxxd {
-                width: 20vw;
-            }
-            .sign-in-horizontal-line{
-                height: 1dvh;
-                width: 35%;
-                border-radius: 0.5dvh;
-                background-color: #111111;
-            }
-        }
     }
 }
     

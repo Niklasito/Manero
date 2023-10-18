@@ -141,73 +141,6 @@
   color: #111111;
   font-size: large;
 }
-.sign-up-section .sign-up-container .sign-in-media {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sign-up-section .sign-up-container .sign-in-media .sign-in-soc-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10dvh;
-  width: 10dvh;
-  border: solid 1px;
-  border-color: #DBE3F5;
-  border-radius: 5dvh;
-  margin: 7dvh 1dvh;
-}
-.sign-up-section .sign-up-container .sign-in-media .sign-in-soc-link .sign-in-facebook-link {
-  color: #4267B2;
-}
-.sign-up-section .sign-up-container .sign-in-media .sign-in-soc-link .sign-in-x-link {
-  color: #1DA1F2;
-}
-.sign-up-section .sign-up-container .sign-in-media .sign-in-soc-link .sign-in-google-link {
-  color: #DB4437;
-}
-.sign-up-section .sign-up-container .sign-in-horizontal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2dvh;
-}
-@media (max-width: 767px) {
-  .sign-up-section .sign-up-container .sign-in-horizontal {
-    width: 80vw;
-  }
-}
-@media (min-width: 768px) {
-  .sign-up-section .sign-up-container .sign-in-horizontal {
-    width: 70vw;
-  }
-}
-@media (min-width: 992px) {
-  .sign-up-section .sign-up-container .sign-in-horizontal {
-    width: 60vw;
-  }
-}
-@media (min-width: 1200px) {
-  .sign-up-section .sign-up-container .sign-in-horizontal {
-    width: 45vw;
-  }
-}
-@media (min-width: 1400px) {
-  .sign-up-section .sign-up-container .sign-in-horizontal {
-    width: 30vw;
-  }
-}
-@media (min-width: 1920px) {
-  .sign-up-section .sign-up-container .sign-in-horizontal {
-    width: 20vw;
-  }
-}
-.sign-up-section .sign-up-container .sign-in-horizontal .sign-in-horizontal-line {
-  height: 1dvh;
-  width: 35%;
-  border-radius: 0.5dvh;
-  background-color: #111111;
-}
 
 .my-profile-headroom-row {
   display: flex;
@@ -514,73 +447,6 @@
   color: #626262;
   font-size: large;
 }
-.sign-in-section .sign-in-container .sign-in-media {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sign-in-section .sign-in-container .sign-in-media .sign-in-soc-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10dvh;
-  width: 10dvh;
-  border: solid 1px;
-  border-color: #DBE3F5;
-  border-radius: 5dvh;
-  margin: 7dvh 1dvh;
-}
-.sign-in-section .sign-in-container .sign-in-media .sign-in-soc-link .sign-in-facebook-link {
-  color: #4267B2;
-}
-.sign-in-section .sign-in-container .sign-in-media .sign-in-soc-link .sign-in-x-link {
-  color: #1DA1F2;
-}
-.sign-in-section .sign-in-container .sign-in-media .sign-in-soc-link .sign-in-google-link {
-  color: #DB4437;
-}
-.sign-in-section .sign-in-container .sign-in-horizontal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2dvh;
-}
-@media (max-width: 767px) {
-  .sign-in-section .sign-in-container .sign-in-horizontal {
-    width: 80vw;
-  }
-}
-@media (min-width: 768px) {
-  .sign-in-section .sign-in-container .sign-in-horizontal {
-    width: 70vw;
-  }
-}
-@media (min-width: 992px) {
-  .sign-in-section .sign-in-container .sign-in-horizontal {
-    width: 60vw;
-  }
-}
-@media (min-width: 1200px) {
-  .sign-in-section .sign-in-container .sign-in-horizontal {
-    width: 45vw;
-  }
-}
-@media (min-width: 1400px) {
-  .sign-in-section .sign-in-container .sign-in-horizontal {
-    width: 30vw;
-  }
-}
-@media (min-width: 1920px) {
-  .sign-in-section .sign-in-container .sign-in-horizontal {
-    width: 20vw;
-  }
-}
-.sign-in-section .sign-in-container .sign-in-horizontal .sign-in-horizontal-line {
-  height: 1dvh;
-  width: 35%;
-  border-radius: 0.5dvh;
-  background-color: #111111;
-}
 
 header {
   padding: 16px;
@@ -677,4 +543,77 @@ footer #menu nav a:active {
 
 .account-created-font-24 {
   font-size: 24px;
+}
+
+.sign-social-media .sign-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-social-media .sign-media .sign-soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10dvh;
+  width: 10dvh;
+  border: solid 1px;
+  border-color: #DBE3F5;
+  border-radius: 5dvh;
+  margin: 7dvh 1dvh;
+}
+.sign-social-media .sign-media .sign-soc-link .sign-facebook-link {
+  color: #4267B2;
+}
+.sign-social-media .sign-media .sign-soc-link .sign-x-link {
+  color: #1DA1F2;
+}
+.sign-social-media .sign-media .sign-soc-link .sign-google-link {
+  color: #DB4437;
+}
+.sign-social-media .sign-horizontal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-social-media .sign-horizontal-container .sign-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2dvh;
+}
+@media (max-width: 767px) {
+  .sign-social-media .sign-horizontal-container .sign-horizontal {
+    width: 80vw;
+  }
+}
+@media (min-width: 768px) {
+  .sign-social-media .sign-horizontal-container .sign-horizontal {
+    width: 70vw;
+  }
+}
+@media (min-width: 992px) {
+  .sign-social-media .sign-horizontal-container .sign-horizontal {
+    width: 60vw;
+  }
+}
+@media (min-width: 1200px) {
+  .sign-social-media .sign-horizontal-container .sign-horizontal {
+    width: 45vw;
+  }
+}
+@media (min-width: 1400px) {
+  .sign-social-media .sign-horizontal-container .sign-horizontal {
+    width: 30vw;
+  }
+}
+@media (min-width: 1920px) {
+  .sign-social-media .sign-horizontal-container .sign-horizontal {
+    width: 20vw;
+  }
+}
+.sign-social-media .sign-horizontal-container .sign-horizontal .sign-horizontal-line {
+  height: 1dvh;
+  width: 35%;
+  border-radius: 0.5dvh;
+  background-color: #111111;
 }
