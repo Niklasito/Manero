@@ -111,13 +111,12 @@
             justify-content: center;
             border: none;
         }
-        
+
 
         @include sd {
             width: 60vw;
             justify-content: start;
         }
-
     }
 
     .options-row-bottom {
@@ -135,35 +134,37 @@
         }
 
         .my-profile-icons-holder {
-        display: flex;
-        width: 10vw;
-        margin-left: 5vw;
-        justify-content: flex-end;
+            display: flex;
+            width: 10vw;
+            margin-left: 5vw;
+            justify-content: flex-end;
         }
 
-       
+
 
         .my-profile-profile-links {
-        text-decoration: none;
-        color: black;
-        font-family: $font-Mulish;
-        font-weight: $font-weight-regular;
-        font-size: 16px;
-        text-align: left; 
-        margin-left: 10vw;
+            text-decoration: none;
+            color: black;
+            font-family: $font-Mulish;
+            font-weight: $font-weight-regular;
+            font-size: 16px;
+            text-align: left;
+            margin-left: 10vw;
 
-        @include xd {
-            margin-left: 4vw;
-        }
+            @include xd {
+                margin-left: 4vw;
+            }
 
-        @include sd {
-            margin-left: 5vw;
+            @include sd {
+                margin-left: 5vw;
+            }
         }
 
         .my-profile-chevron-holder {
             display: flex;
             justify-content: flex-end;
-            margin-left: 2vw;
+
+
 
             @include xd {
                 margin-left: 0;
@@ -173,9 +174,5 @@
                 color: gray;
             }
         }
-
-
     }
-
-} 
 }

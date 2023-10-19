@@ -288,17 +288,16 @@
     margin-left: 5vw;
   }
 }
-.my-profile-container .my-profile-small-holders .my-profile-profile-links .my-profile-chevron-holder {
+.my-profile-container .my-profile-small-holders .my-profile-chevron-holder {
   display: flex;
   justify-content: flex-end;
-  margin-left: 2vw;
 }
 @media (min-width: 1200px) {
-  .my-profile-container .my-profile-small-holders .my-profile-profile-links .my-profile-chevron-holder {
+  .my-profile-container .my-profile-small-holders .my-profile-chevron-holder {
     margin-left: 0;
   }
 }
-.my-profile-container .my-profile-small-holders .my-profile-profile-links .my-profile-chevron-holder i {
+.my-profile-container .my-profile-small-holders .my-profile-chevron-holder i {
   color: gray;
 }
 
