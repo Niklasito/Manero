@@ -1,0 +1,78 @@
+.my-address-top-container {
+    margin-top: 2vh;
+
+    a {
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        color: black;
+    }
+
+    h5 {
+        font-size: 17px;
+        font-weight: 500;
+    }
+}
+
+.my-address-address-container {
+    margin-top: 5vh;
+
+    .my-address-row {
+        border-bottom: 1px solid $color-background;
+        display: flex;
+        height: 10vh;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            color: black;
+        }
+
+        .my-address-address-holder {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2vh;
+
+            h6 {
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 0;
+            }
+
+            p {
+                font-size: 12px;
+                color: $color-login;
+            }
+        }
+    }
+
+    .my-address-add-address-row {
+
+        display: flex;
+        margin-top: 4vh;
+
+        a{
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            color: black;
+        }
+        
+
+        .my-address-add-address-holder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+            p {
+                font-size: 14px;
+                margin-bottom: 0;
+                color: $color-login;
+            }
+        }
+    }
+}

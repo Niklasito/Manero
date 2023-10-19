@@ -876,3 +876,69 @@ footer #menu nav a:active {
   border-radius: 0.5dvh;
   background-color: #111111;
 }
+
+.my-address-top-container {
+  margin-top: 2vh;
+}
+.my-address-top-container a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+.my-address-top-container h5 {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.my-address-address-container {
+  margin-top: 5vh;
+}
+.my-address-address-container .my-address-row {
+  border-bottom: 1px solid #dbe3f5;
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+.my-address-address-container .my-address-row a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+.my-address-address-container .my-address-row .my-address-address-holder {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vh;
+}
+.my-address-address-container .my-address-row .my-address-address-holder h6 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.my-address-address-container .my-address-row .my-address-address-holder p {
+  font-size: 12px;
+  color: #626262;
+}
+.my-address-address-container .my-address-add-address-row {
+  display: flex;
+  margin-top: 4vh;
+}
+.my-address-address-container .my-address-add-address-row a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+.my-address-address-container .my-address-add-address-row .my-address-add-address-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.my-address-address-container .my-address-add-address-row .my-address-add-address-holder p {
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #626262;
+}
