@@ -288,17 +288,16 @@
     margin-left: 5vw;
   }
 }
-.my-profile-container .my-profile-small-holders .my-profile-profile-links .my-profile-chevron-holder {
+.my-profile-container .my-profile-small-holders .my-profile-chevron-holder {
   display: flex;
   justify-content: flex-end;
-  margin-left: 2vw;
 }
 @media (min-width: 1200px) {
-  .my-profile-container .my-profile-small-holders .my-profile-profile-links .my-profile-chevron-holder {
+  .my-profile-container .my-profile-small-holders .my-profile-chevron-holder {
     margin-left: 0;
   }
 }
-.my-profile-container .my-profile-small-holders .my-profile-profile-links .my-profile-chevron-holder i {
+.my-profile-container .my-profile-small-holders .my-profile-chevron-holder i {
   color: gray;
 }
 
@@ -506,6 +505,11 @@ footer #menu nav a:active {
   height: 50px;
   width: 95%;
   max-width: 500px;
+  margin-bottom: 35dvh;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .account-created-button:hover {
@@ -820,4 +824,55 @@ footer #menu nav a:active {
     padding: 20px 40px 20px 40px;
     border-radius: 35px;
   }
+}
+
+.horizontal-line-section {
+  margin: 10dvh 0 0 0;
+}
+.horizontal-line-section .horizontal-line-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.horizontal-line-section .horizontal-line-container .horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2dvh;
+}
+@media (max-width: 767px) {
+  .horizontal-line-section .horizontal-line-container .horizontal {
+    width: 80vw;
+  }
+}
+@media (min-width: 768px) {
+  .horizontal-line-section .horizontal-line-container .horizontal {
+    width: 70vw;
+  }
+}
+@media (min-width: 992px) {
+  .horizontal-line-section .horizontal-line-container .horizontal {
+    width: 60vw;
+  }
+}
+@media (min-width: 1200px) {
+  .horizontal-line-section .horizontal-line-container .horizontal {
+    width: 45vw;
+  }
+}
+@media (min-width: 1400px) {
+  .horizontal-line-section .horizontal-line-container .horizontal {
+    width: 30vw;
+  }
+}
+@media (min-width: 1920px) {
+  .horizontal-line-section .horizontal-line-container .horizontal {
+    width: 20vw;
+  }
+}
+.horizontal-line-section .horizontal-line-container .horizontal .horizontal-line {
+  height: 1dvh;
+  width: 35%;
+  border-radius: 0.5dvh;
+  background-color: #111111;
 }
