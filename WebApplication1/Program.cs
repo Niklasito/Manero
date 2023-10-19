@@ -6,10 +6,15 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+string projectFilePath = Environment.CurrentDirectory;
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<DataContext>(x =>
-x.UseSqlServer(builder.Configuration.GetConnectionString("Sql")));
+x.UseSqlServer(
+    builder.Configuration.GetConnectionString("DynamicPartOne") +
+    projectFilePath +
+    builder.Configuration.GetConnectionString("DynamicPartTwo")));
 
 builder.Services.AddScoped<AuthenticationService>();
 
