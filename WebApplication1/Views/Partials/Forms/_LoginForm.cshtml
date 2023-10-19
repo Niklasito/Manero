@@ -6,22 +6,25 @@
     <div asp-validation-summary="ModelOnly"></div>
     <div class="sign-in-form-div">
         <label class="sign-in-label" asp-for="Email"></label>
-        <input class="sign-in-input" asp-for="Email">
+        <input class="sign-in-input" asp-for="Email" placeholder="email" onkeyup="validate(event)">
         <div class="sign-in-icon">
             <i class="fa-sharp fa-regular fa-check"></i>
         </div>
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     <div class="sign-in-form-div">
-        <label class="sign-in-label" asp-for="Password">password</label>
-        <input class="sign-in-input" asp-for="Password" type="password" name="password" id="sign-in-password" placeholder="password">
+        <label class="sign-in-label" asp-for="Password"></label>
+        <input class="sign-in-input" asp-for="Password" onkeyup="validate(event)" placeholder="password">
         <div class="sign-in-icon-button">
             <button><i class="fa-regular fa-eye-slash"></i></button>
         </div>
+        <span asp-validation-for="Password" class="text-danger"></span>
     </div>
     <div class="sign-in-remember-container">
         <div class="sign-in-checkbox">
-            <input class="sign-in-input-checkbox" asp-for="RememberMe" type="checkbox" name="checkbox" id="sign-in-checkbox-id" placeholder="Remember me">
-            <label class="sign-in-label-checkbox" asp-for="RememberMe">Remember me</label>
+            <input class="sign-in-input-checkbox" asp-for="RememberMe"  placeholder="Remember me">
+            <label class="sign-in-label-checkbox" asp-for="RememberMe"></label>
+            <span asp-validation-for="RememberMe"></span>
         </div>
         <a class="sign-in-forgot-password">Forgot password?</a>
     </div>
