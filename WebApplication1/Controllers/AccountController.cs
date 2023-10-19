@@ -27,6 +27,10 @@ namespace Manero.Controllers
         {
             return View();
         }
+        public IActionResult Created()
+        {
+            return View();
+        }
 
         [HttpPost]
         public async Task<IActionResult> Register(UserCreateAccountViewModel viewModel)
@@ -39,7 +43,7 @@ namespace Manero.Controllers
                 }
 
                 if (await _auth.RegisterUserAsync(viewModel))
-                    return RedirectToAction("Login", "Account");
+                    return RedirectToAction("Created", "Account");
             }
             return View();
         }

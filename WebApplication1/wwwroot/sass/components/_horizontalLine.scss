@@ -1,0 +1,47 @@
+﻿.horizontal-line-section {
+    margin: 10dvh 0 0 0;
+
+    .horizontal-line-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .horizontal {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2dvh;
+
+            @include xsd {
+                width: 80vw;
+            }
+
+            @include sd {
+                width: 70vw;
+            }
+
+            @include ms {
+                width: 60vw;
+            }
+
+            @include xd {
+                width: 45vw;
+            }
+
+            @include xxd {
+                width: 30vw;
+            }
+
+            @include xxxd {
+                width: 20vw;
+            }
+
+            .horizontal-line {
+                height: 1dvh;
+                width: 35%;
+                border-radius: 0.5dvh;
+                background-color: #111111;
+            }
+        }
+    }
+}
