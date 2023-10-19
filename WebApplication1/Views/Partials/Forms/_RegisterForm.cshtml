@@ -11,24 +11,27 @@
     </div>
     <div class="sign-up-form-div">
         <label class="sign-up-label" asp-for="Email"></label>
-        <input class="sign-up-input" asp-for="Email" placeholder="email">
+        <input class="sign-up-input" asp-for="Email" onkeyup="validate(event)" placeholder="email">
         <div class="sign-up-icon">
             <i class="fa-sharp fa-regular fa-check"></i>
         </div>
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     <div class="sign-up-form-div">
         <label class="sign-up-label" asp-for="Password"></label>
-        <input class="sign-up-input" asp-for="Password" placeholder="password">
+        <input class="sign-up-input" asp-for="Password" onkeyup="validate(event)" placeholder="password">
         <div class="sign-up-icon-button">
             <button><i class="fa-regular fa-eye-slash"></i></button>
         </div>
+        <span asp-validation-for="Password" class="text-danger"></span>
     </div>
     <div class="sign-up-form-div">
         <label class="sign-up-label" asp-for="ConfirmPassword"></label>
-        <input class="sign-up-input" asp-for="ConfirmPassword" placeholder="confirm password">
+        <input class="sign-up-input" asp-for="ConfirmPassword" onkeyup="validate(event)" placeholder="confirm password">
         <div class="sign-up-icon-button">
             <button><i class="fa-regular fa-eye-slash"></i></button>
         </div>
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
     </div>
     <div class="sign-up-form-div">
         <button class="sign-up-input" type="submit">Sign up</button>
