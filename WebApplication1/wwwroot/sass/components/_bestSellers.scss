@@ -1,0 +1,31 @@
+.best-sellers-font {
+    font-family: $font-Mulish;
+}
+
+.best-sellers-img {
+    background-color: #DBE3F5;
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.best-sellers h3 {
+    font-size: 32px;
+}
+
+.best-sellers p {
+    font-size: 24px;
+}
+
+.best-sellers .row {
+    margin: 0px;
+}
+
+.best-sellers-link {
+    text-decoration: none;
+    color: black;
+}
+
+.best-sellers-stars i {
+    color: #ffd139
+}
