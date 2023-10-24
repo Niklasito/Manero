@@ -1,12 +1,21 @@
-﻿using Manero.Models.Entities.Identity;
+﻿using Manero.Models.Entities;
+using Manero.Models.Entities.Identity;
 using Manero.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 using System.Linq.Expressions;
 
 namespace Manero.Helpers.Services;
 
-public class AuthenticationService
+public interface InterfaceAuthenticationService
+{
+    Task<bool> UserAlreadyExistsAsync(Expression<Func<ManeroUser, bool>> expression);
+    Task<bool> RegisterUserAsync(UserCreateAccountViewModel viewModel);
+    Task<bool> LogInAsync(UserLoginViewModel viewModel);
+}
+
+public class AuthenticationService : InterfaceAuthenticationService
 {
     private readonly UserManager<ManeroUser> _userManager;
     private readonly SignInManager<ManeroUser> _signInManager;
@@ -19,27 +28,50 @@ public class AuthenticationService
 
     public async Task<bool> UserAlreadyExistsAsync(Expression<Func<ManeroUser, bool>> expression)
     {
-        return await _userManager.Users.AnyAsync(expression);
+        try
+        {
+            return await _userManager.Users.AnyAsync(expression);
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine(ex.Message);
+            return false;
+        }
     }
 
     public async Task<bool> RegisterUserAsync(UserCreateAccountViewModel viewModel)
     {
         ManeroUser maneroUser = viewModel;
-
-        var result = await _userManager.CreateAsync(maneroUser, viewModel.Password);
-        if (result.Succeeded)
-            return true;
-        return false;
+        try
+        {
+            var result = await _userManager.CreateAsync(maneroUser, viewModel.Password);
+            if (result.Succeeded)
+                return true;
+            return false;
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine(ex.Message);
+            return false;
+        }
     }
 
     public async Task<bool> LogInAsync(UserLoginViewModel viewModel)
     {
-        var user = await _userManager.FindByEmailAsync(viewModel.Email);
-        if (user != null)
+        try
         {
-            var result = await _signInManager.PasswordSignInAsync(user, viewModel.Password, viewModel.RememberMe, false);
-            return result.Succeeded;
+            var user = await _userManager.FindByEmailAsync(viewModel.Email);
+            if (user != null)
+            {
+                var result = await _signInManager.PasswordSignInAsync(user, viewModel.Password, viewModel.RememberMe, false);
+                return result.Succeeded;
+            }
+            return false;
         }
-        return false;
+        catch (Exception ex)
+        {
+            Debug.WriteLine(ex.Message);
+            return false;
+        }
     }
 }
