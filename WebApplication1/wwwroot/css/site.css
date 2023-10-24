@@ -709,12 +709,13 @@ footer #menu nav a:active {
   .homepage-carousel-container .homepage-carousel-slide .homepage-carousel-row {
     width: 90vw;
     margin-top: 7vh;
+    justify-content: center;
   }
 }
 @media (min-width: 1920px) {
   .homepage-carousel-container .homepage-carousel-slide .homepage-carousel-row {
-    width: 100vw;
-    justify-content: start;
+    width: 65vw;
+    justify-content: center;
   }
 }
 .homepage-carousel-container .homepage-carousel-slide .homepage-carousel-row a {
