@@ -2,10 +2,16 @@
 using Manero.Models.Entities.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
 namespace Manero.Helpers.Services;
 
-public class UserService
+public interface InterfaceUserService
+{
+    Task<ManeroUser> GetUserInfoAsync(string Email);
+}
+
+public class UserService 
 {
     private readonly UserManager<ManeroUser> _userManager;
     private readonly DataContext _context;
@@ -18,7 +24,17 @@ public class UserService
 
     public async Task<ManeroUser> GetUserInfoAsync(string Email)
     {
-        var user = await _context.Users.FirstOrDefaultAsync(x => x.Email == Email);
-        return user;
+        try
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.Email == Email);
+            if (user != null) 
+                return user;
+            return null!;
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine(ex.Message);
+            return null!;
+        }
     }
 }

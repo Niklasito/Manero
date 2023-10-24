@@ -36,6 +36,11 @@ namespace Manero.Controllers
         {
             return View();
         }
+        [Authorize]
+        public IActionResult EditProfile()
+        {
+            return View();
+        }
 
         [HttpPost]
         public async Task<IActionResult> Register(UserCreateAccountViewModel viewModel)
