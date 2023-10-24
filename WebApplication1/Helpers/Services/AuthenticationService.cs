@@ -56,6 +56,7 @@ public class AuthenticationService : InterfaceAuthenticationService
         }
     }
 
+
     public async Task<bool> LogInAsync(UserLoginViewModel viewModel)
     {
         try

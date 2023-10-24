@@ -1,0 +1,191 @@
+﻿.edit-profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .edit-profile-container {
+
+        .edit-profile-upper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            margin-top: 5dvh;
+
+            .edit-profile-home-link {
+                color: #111111;
+                position: absolute;
+                left: 0;
+                text-decoration: none;
+
+                p {
+                    display: none;
+                }
+            }
+        }
+
+        .edit-profile-title {
+            font: $font-weight-regular;
+            font-size: x-large;
+            color: $color-login;
+            margin-bottom: 7dvh;
+        }
+
+        .edit-profile-vertical-line {
+            background-color: $color-login;
+            height: 3vh;
+            width: 1px;
+        }
+
+        .edit-profile-image-container {
+            position: relative;
+            margin: 3dvh 0 0 0;
+
+            .edit-profile-image-big-circle {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 18dvh;
+                width: 18dvh;
+                border-radius: 9dvh;
+                background-color: #DBE3F5;
+
+                .eidt-profile-image {
+                    width: 15dvh;
+                    height: 15dvh;
+                    border-radius: 7.5dvh;
+                }
+            }
+
+            .edit-profile-small-circle {
+                height: 5dvh;
+                width: 5dvh;
+                background-color: #DBE3F5;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2.5dvh;
+                position: absolute;
+                right: 0;
+                bottom: 1dvh;
+            }
+        }
+
+        .edit-profile-form {
+            margin: 5dvh 0 2dvh 0;
+
+            .edit-profile-form-div {
+                @include xsd {
+                    width: 80vw;
+                }
+
+                @include sd {
+                    width: 70vw;
+                }
+
+                @include ms {
+                    width: 60vw;
+                }
+
+                @include xd {
+                    width: 45vw;
+                }
+
+                @include xxd {
+                    width: 30vw;
+                }
+
+                @include xxxd {
+                    width: 20vw;
+                }
+
+                position: relative;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+
+                .edit-profile-label {
+                    grid-column: 1 / 2;
+                    grid-row: auto;
+                    padding: 0 1dvh 0;
+                    font-size: 1.3dvh;
+                    position: absolute;
+                    top: 0.1dvh;
+                    left: 2dvh;
+                    z-index: 10;
+                    background-color: white;
+                }
+
+                .edit-profile-input {
+                    grid-column: 1 / 2;
+                    grid-row: auto;
+                    height: 6dvh;
+                    border-radius: 3dvh;
+                    border-color: #DBE3F5;
+                    padding: 0 3dvh 0 3dvh;
+                    margin: 1dvh 0 1dvh 0;
+                }
+
+                .edit-profile-icon {
+                    position: absolute;
+                    top: 2.5dvh;
+                    right: 3dvh;
+                }
+
+                .edit-profile-icon-button {
+                    position: absolute;
+                    top: 2.5dvh;
+                    right: 2.4dvh;
+
+                    button {
+                        background-color: transparent;
+                        border: none;
+
+                        i {
+                            color: #111111;
+                        }
+                    }
+                }
+            }
+
+
+            button {
+                color: white;
+                background-color: #111111;
+                border: none;
+            }
+        }
+
+        .edit-profile-remember-container {
+            position: relative;
+            margin: 3dvh 0;
+
+            .edit-profile-checkbox {
+                .edit-profile-input-checkbox {
+                    transform: scale(1.4);
+                }
+
+                .edit-profile-label-checkbox {
+                    color: $color-login;
+                    font-size: large;
+                }
+            }
+
+            .edit-profile-forgot-password {
+                text-decoration: none;
+                color: $color-login;
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: large;
+            }
+        }
+
+        .edit-profile-login-link {
+            text-decoration: none;
+            color: $color-login;
+            font-size: large;
+        }
+    }
+}
