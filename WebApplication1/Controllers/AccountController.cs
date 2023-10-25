@@ -37,6 +37,13 @@ namespace Manero.Controllers
         {
             return View();
         }
+
+        [Authorize]
+        public IActionResult OrderHistory()
+        {
+            return View();
+        }
+
         [Authorize]
         public IActionResult EditProfile()
         {
