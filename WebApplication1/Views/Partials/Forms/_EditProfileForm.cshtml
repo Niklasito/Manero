@@ -1,0 +1,25 @@
+﻿@model EditProfileViewModel
+
+
+<form class="edit-profile-form" method="post" novalidate
+>
+    <div class="edit-profile-form-div">
+        <label class="edit-profile-label" asp-for="User.Name"></label>
+        <input class="edit-profile-input" asp-for="User.Name">
+    </div>
+    <div class="edit-profile-form-div">
+        <label class="edit-profile-label" asp-for="User.Email"></label>
+        <input class="edit-profile-input" asp-for="User.Email">
+    </div>
+    <div class="edit-profile-form-div">
+        <label class="edit-profile-label" asp-for="User.PhoneNumber"></label>
+        <input class="edit-profile-input" asp-for="User.PhoneNumber">
+    </div>
+    <div class="edit-profile-form-div">
+        <label class="edit-profile-label" asp-for="Address.City"></label>
+        <input class="edit-profile-input" asp-for="Address.City">
+    </div>
+    <div class="edit-profile-form-div">
+        <button class="edit-profile-input" type="submit">save changes</button>
+    </div>
+</form>
