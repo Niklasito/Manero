@@ -32,12 +32,19 @@ namespace Manero.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult MyAddress()
         {
             return View();
         }
         [Authorize]
         public IActionResult EditProfile()
+        {
+            return View();
+        }
+
+        [Authorize]
+        public IActionResult MyPromocodes()
         {
             return View();
         }
