@@ -1,0 +1,180 @@
+
+.order-history-container {
+    padding: 0;
+}
+
+.order-history-top-container {
+    @include sd {
+        margin-bottom: 15vh;
+    }
+}
+
+
+.order-history-chevron-holder {
+    padding-left: 0;
+}
+
+.order-history-top-row {
+    display: flex;
+    margin: 2vh 0 4vh 0;
+    
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    h5 {
+        font-family: $font-Mulish;
+        font-size: 18px;
+        margin-left: 4vw;
+    }
+
+    i {
+        font-size: 14px;
+    }
+}
+
+.order-history-content-row {
+    border-bottom: 2px solid #DBE3F5;
+}
+
+.order-history-order-number {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 2vh;
+    font-weight: semi-bold;
+}
+
+.order-history-order-date {
+    font-size: 10px;
+    color: gray
+}
+
+
+.order-history-content-holder-right {
+    margin-top: 4vh;
+
+    @include sd {
+        display: flex;
+        
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.order-history-content-holder-left {
+    margin-top: 4vh;
+}
+
+
+.order-history-status {
+    font-size: 14px;
+    margin-right: 2vw;
+
+    
+}
+
+.shipping {
+  color: #FFBE00; 
+}
+
+.delivered {
+    color: green;
+}
+
+.canceled {
+    color: red;
+}
+
+.fa-truck {
+    color: #FFBE00;
+}
+
+.fa-check {
+    color: green; 
+}
+
+.fa-xmark {
+    color: red;
+}
+
+.order-history-sum {
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    justify-content: end;
+    margin-right: 7vw;
+}
+
+.order-specifics {
+    display: flex;
+    margin-bottom: 2vh;
+    background-color: #dbe3f5;
+
+    .order-history-order-specifics-holder-left {
+        margin-bottom: 2vh;
+
+        p {
+            font-size: 14px;
+            margin-bottom: 0.5vh;
+        }
+        
+    }
+    .order-history-repeat-order {
+        display: flex;
+        text-decoration: none;
+        color: black;
+        align-items: center;
+        margin-top: 4vh;
+    }
+
+    .repeat-paragraph {
+        margin-left: 2vw;
+        font-family: $font-Mulish;
+
+        @include sd {
+            margin-left: 0.5vw;
+        }
+    }
+
+    .order-history-order-specifics-holder-right {
+        margin-bottom: 2vh;
+
+        @include sd {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+
+        p {
+            font-size: 14px;
+            margin-bottom: 0.5vh;
+        }
+
+        .order-history-review {
+            display: flex;
+            text-decoration: none;
+            color: black;
+            align-items: center;
+            margin-top: 4vh;
+
+            p {
+                margin-left: 2px;
+                font-family: $font-Mulish;
+            }
+            i {
+                font-size: 10px;
+                margin-bottom: 0.5vh;
+                margin-left: 1vw;
+
+                @include sd {
+                    margin-left: 0.5vw;
+                }
+            }
+        }
+    }
+
+}
