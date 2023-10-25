@@ -944,6 +944,104 @@ footer #menu nav a:active {
   color: #626262;
 }
 
+.best-sellers-font {
+  font-family: "Mulish", sans-serif;
+}
+
+.best-sellers-img {
+  background-color: #DBE3F5;
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.best-sellers h3 {
+  font-size: 32px;
+}
+
+.best-sellers p {
+  font-size: 24px;
+}
+
+.best-sellers .row {
+  margin: 0px;
+}
+
+.best-sellers-link {
+  text-decoration: none;
+  color: black;
+}
+
+.best-sellers-stars i {
+  color: #ffd139;
+}
+
+.my-address-top-container {
+  margin-top: 2vh;
+}
+.my-address-top-container a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+.my-address-top-container h5 {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.my-address-address-container {
+  margin-top: 5vh;
+}
+.my-address-address-container .my-address-row {
+  border-bottom: 1px solid #dbe3f5;
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+.my-address-address-container .my-address-row a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+.my-address-address-container .my-address-row .my-address-address-holder {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vh;
+}
+.my-address-address-container .my-address-row .my-address-address-holder h6 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.my-address-address-container .my-address-row .my-address-address-holder p {
+  font-size: 12px;
+  color: #626262;
+}
+.my-address-address-container .my-address-add-address-row {
+  display: flex;
+  margin-top: 4vh;
+}
+.my-address-address-container .my-address-add-address-row a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+.my-address-address-container .my-address-add-address-row .my-address-add-address-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.my-address-address-container .my-address-add-address-row .my-address-add-address-holder p {
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #626262;
+}
+
 .edit-profile-section {
   display: flex;
   justify-content: center;
@@ -1111,4 +1209,111 @@ footer #menu nav a:active {
   text-decoration: none;
   color: #626262;
   font-size: large;
+}
+
+.my-promocodes-container {
+  padding: 0;
+}
+
+.my-promocodes-top-row {
+  display: flex;
+  margin: 2vh 0 4vh 0;
+}
+.my-promocodes-top-row a {
+  text-decoration: none;
+  color: black;
+}
+.my-promocodes-top-row h5 {
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+}
+.my-promocodes-top-row i {
+  font-size: 14px;
+}
+
+.my-promocodes-buttons-row {
+  border-bottom: 1px solid #dbe3f5;
+  margin-bottom: 2vh;
+}
+
+.my-promocodes-row {
+  border-bottom: 1px solid #dbe3f5;
+  margin-top: 2vh;
+  margin-bottom: 3vh;
+}
+
+.my-promocodes-buttons-holder {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+.my-promocodes-buttons-holder a {
+  margin-right: 2vw;
+}
+.my-promocodes-buttons-holder .my-promocodes-button-current {
+  color: white;
+  background-color: black;
+  border-radius: 35px;
+  font-size: 12px;
+  padding: 2px 14px 2px 14px;
+  border: none;
+}
+.my-promocodes-buttons-holder .my-promocodes-button-used {
+  color: black;
+  background-color: #dbe3f5;
+  border-radius: 35px;
+  font-size: 12px;
+  padding: 2px 10px 2px 10px;
+  border: none;
+}
+
+.my-promocodes-promocode-holder {
+  margin-bottom: 2vh;
+}
+.my-promocodes-promocode-holder a {
+  text-decoration: none;
+  color: black;
+}
+.my-promocodes-promocode-holder h6 {
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  margin-bottom: 1vh;
+}
+.my-promocodes-promocode-holder .my-promocodes-percentage-50 {
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  color: red;
+  margin-bottom: 1vh;
+}
+.my-promocodes-promocode-holder .my-promocodes-percentage-30 {
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  color: yellow;
+  margin-bottom: 1vh;
+}
+.my-promocodes-promocode-holder .my-promocodes-percentage-15 {
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  color: green;
+  margin-bottom: 1vh;
+}
+.my-promocodes-promocode-holder .my-promocodes-valid-date {
+  font-size: 10px;
+  color: dimgray;
+}
+
+.my-promocodes-copy-icon-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.my-promocodes-copy-icon-holder a {
+  text-decoration: none;
+  color: black;
+  margin-bottom: 4vh;
+}
+.my-promocodes-copy-icon-holder a i {
+  margin-right: 1vw;
+  font-size: 20px;
 }
