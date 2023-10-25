@@ -827,6 +827,42 @@ footer #menu nav a:active {
   }
 }
 
+
+.onboarding-section {
+  background-color: #dbe3f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.onboarding-section .rectangle {
+  background-color: #111111;
+  height: 3vh;
+  width: 1px;
+  margin-top: 90%;
+  margin-bottom: 2dvh;
+}
+.onboarding-section .carousel .carousel-indicators button {
+  width: 20px;
+  height: 5px;
+  border-radius: 50%;
+}
+.onboarding-section #onboarding-carousel .carousel-indicators {
+  margin-block: auto;
+}
+.onboarding-section .carousel-inner .carousel-item .onboarding-header {
+  font: "Mulish", sans-serif;
+  font-weight: 700;
+}
+.onboarding-section #onboarding-btn {
+  width: 255px;
+  height: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.onboarding-line {
+
 .horizontal-line-section {
   margin: 10dvh 0 0 0;
 }
@@ -872,10 +908,16 @@ footer #menu nav a:active {
   }
 }
 .horizontal-line-section .horizontal-line-container .horizontal .horizontal-line {
+
   height: 1dvh;
   width: 35%;
   border-radius: 0.5dvh;
   background-color: #111111;
+
+  margin-bottom: 2dvh;
+  margin-top: 5dvh;
+  position: flex;
+
 }
 
 .my-address-top-container {
@@ -1316,4 +1358,5 @@ footer #menu nav a:active {
 .my-promocodes-copy-icon-holder a i {
   margin-right: 1vw;
   font-size: 20px;
+
 }
