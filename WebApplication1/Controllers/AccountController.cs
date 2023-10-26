@@ -4,24 +4,31 @@ using Manero.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Manero.Controllers
 {
-    public class AccountController : Controller
+   
+    public  class AccountController : Controller
     {
+
         private readonly AuthenticationService _auth;
         private readonly SignInManager<ManeroUser> _signInManager;
+
 
         public AccountController(AuthenticationService auth, SignInManager<ManeroUser> signInManager)
         {
             _auth = auth;
             _signInManager = signInManager;
+            
         }
+
+
 
         [Authorize]
         public IActionResult Index()
         {
-            return View();
+            return View("Index");
         }
         public IActionResult Register()
         {
@@ -35,7 +42,7 @@ namespace Manero.Controllers
         [Authorize]
         public IActionResult MyAddress()
         {
-            return View();
+            return View("MyAddress");
         }
 
         [Authorize]
@@ -53,7 +60,7 @@ namespace Manero.Controllers
         [Authorize]
         public IActionResult MyPromocodes()
         {
-            return View();
+            return View("MyPromocodes");
         }
 
         [HttpPost]
