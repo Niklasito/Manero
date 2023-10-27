@@ -17,9 +17,14 @@ public interface InterfaceAuthenticationService
 
 public class AuthenticationService : InterfaceAuthenticationService
 {
-    private readonly UserManager<ManeroUser> _userManager;
-    private readonly SignInManager<ManeroUser> _signInManager;
+    private readonly UserManager<ManeroUser> _userManager = null!;
+    private readonly SignInManager<ManeroUser> _signInManager =null!;
 
+
+    public AuthenticationService()
+    {
+        
+    }
     public AuthenticationService(UserManager<ManeroUser> userManager, SignInManager<ManeroUser> signInManager)
     {
         _userManager = userManager;
