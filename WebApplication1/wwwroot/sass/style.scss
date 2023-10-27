@@ -19,11 +19,14 @@
 
 @import "./components/header";
 @import "./components/Footer";
+@import "./components/_meny.scss";
 
 
 @import "./components/accountCreated";
 @import "./components/socialMedia.scss";
 @import "./components/_homepagepart1.scss";
+@import "components/_homepagepart2.scss";
+
 
 @import "./components/_onboarding.scss";
 
