@@ -1,4 +1,5 @@
 ﻿@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,500;0,9..40,800;0,9..40,900;1,9..40,500&family=Inter:wght@300;400;500;700;900&family=Roboto:wght@300;500;700&display=swap");
 .btn {
   color: black;
   background-color: red;
@@ -1523,4 +1524,99 @@ footer #menu nav a:active {
   .order-specifics .order-history-order-specifics-holder-right .order-history-review i {
     margin-left: 0.5vw;
   }
+}
+
+.Featured-products {
+  padding-top: 40px;
+  width: 100vw;
+}
+.Featured-products .containter .title {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding-left: 90px;
+  width: 100vw;
+}
+.Featured-products .containter .title P {
+  font-family: "DM Sans", sans-serif;
+  font-size: 35px;
+}
+.Featured-products .containter .title a {
+  color: black;
+  text-decoration: none;
+  padding-right: 120px;
+}
+.Featured-products .containter .Products {
+  padding-left: 100px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 65px;
+  width: 100vw;
+  height: 8vh;
+}
+@media (min-width: 246px) {
+  .Featured-products .containter .Products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.Featured-products .containter .Products article {
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.Featured-products .containter .Products article img {
+  width: 300px;
+  height: 300px;
+  background: #dbe3f5;
+}
+.Featured-products .containter .Products article .sale {
+  position: absolute;
+  margin-right: 130px;
+  background-color: darkgreen;
+  color: #dbe3f5;
+  height: 20px;
+  width: auto;
+}
+.Featured-products .containter .Products article .sale p {
+  font-size: 12px;
+}
+.Featured-products .containter .Products article .images-icon {
+  position: absolute;
+  margin-left: 250px;
+}
+.Featured-products .containter .Products article .article-title {
+  width: 100px;
+  height: 21px;
+  font-family: "Mulish";
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+  font-style: normal;
+  text-align: left;
+  color: #626262;
+}
+.Featured-products .containter .Products article .article-title .rating {
+  color: gold;
+}
+
+footer {
+  width: 100vw;
+  height: auto;
+  position: relative;
+  margin-top: 1380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer #menu {
+  width: 80%;
+  border-radius: 25px;
+  position: absolute;
+}
+footer #menu nav {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
