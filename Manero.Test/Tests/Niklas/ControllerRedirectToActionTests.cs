@@ -20,7 +20,7 @@ public class ControllerRedirectToActionTests
     #region Profile->AddressPage
 
     [Fact]
-    
+
     public void Logged_In_User_Navigates_To_Address_Information()
     {
         //arange
@@ -39,18 +39,22 @@ public class ControllerRedirectToActionTests
         var _authServiceMock = new Mock<AuthenticationService>();
 
         _signInManagerMock.Setup(x => x.IsSignedIn(It.IsAny<ClaimsPrincipal>())).Returns(true);
-        
+
         var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object);
 
-        
+
         //act
-        var result = controller.MyAddress();
+        var result = controller.MyAddress() as ViewResult;
 
         //assert
 
         Assert.IsType<ViewResult>(result);
         var viewResult = (ViewResult)result;
         Assert.Equal("MyAddress", viewResult.ViewName);
+        var myAddressLink = viewResult.ViewData["MyAddressLink"] as string;
+        var expectedLink = "<a asp-controller=\"account\" asp-action=\"myaddress\">";
+        Assert.Equal(expectedLink, myAddressLink);
+
     }
     
     [Fact]
@@ -150,8 +154,80 @@ public class ControllerRedirectToActionTests
         var viewResult = (ViewResult)result;
         Assert.Equal("Index", viewResult.ViewName);
     }
+    #endregion
 
+
+    #region Profile->Order History
+
+
+    [Fact]
+
+    public void Logged_In_User_Navigates_From_My_Profile_Page_To_My_Order_History_Page()
+    {
+        //Arrange
+        var _signInManagerMock = new Mock<SignInManager<ManeroUser>>(
+            new Mock<UserManager<ManeroUser>>(
+                new Mock<IUserStore<ManeroUser>>().Object,
+                null, null, null, null, null, null, null, null
+            ).Object,
+            new HttpContextAccessor(),
+            new Mock<IUserClaimsPrincipalFactory<ManeroUser>>().Object,
+            null, null, null, null
+        );
+
+        var _authServiceMock = new Mock<AuthenticationService>();
+
+        _signInManagerMock.Setup(x => x.IsSignedIn(It.IsAny<ClaimsPrincipal>())).Returns(true);
+
+        var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object);
+        //Act
+
+        var result = controller.OrderHistory();
+
+        //Assert
+
+        Assert.IsType<ViewResult>(result);
+        var viewResult = (ViewResult)result;
+        Assert.Equal("OrderHistory", viewResult.ViewName);
+
+    }
+
+    public void Logged_In_User_Navigates_Back_From_Order_History_Page_To_My_Profile_Page()
+    {
+        //Arrange
+        var _signInManagerMock = new Mock<SignInManager<ManeroUser>>(
+            new Mock<UserManager<ManeroUser>>(
+                new Mock<IUserStore<ManeroUser>>().Object,
+                null, null, null, null, null, null, null, null
+            ).Object,
+            new HttpContextAccessor(),
+            new Mock<IUserClaimsPrincipalFactory<ManeroUser>>().Object,
+            null, null, null, null
+        );
+
+        var _authServiceMock = new Mock<AuthenticationService>();
+
+        _signInManagerMock.Setup(x => x.IsSignedIn(It.IsAny<ClaimsPrincipal>())).Returns(true);
+
+        var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object);
+        //Act
+
+        var result = controller.Index();
+
+        //Assert
+
+        Assert.IsType<ViewResult>(result);
+        var viewResult = (ViewResult)result;
+        Assert.Equal("Index", viewResult.ViewName);
+
+    }
+
+
+
+
+    #endregion
 
 
 }
-    #endregion
+
+
