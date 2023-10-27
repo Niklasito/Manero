@@ -42,13 +42,14 @@ namespace Manero.Controllers
         [Authorize]
         public IActionResult MyAddress()
         {
+            ViewData["MyAddressLink"] = "<a asp-controller=\"account\" asp-action=\"myaddress\">";
             return View("MyAddress");
         }
 
         [Authorize]
         public IActionResult OrderHistory()
         {
-            return View();
+            return View("OrderHistory");
         }
 
         [Authorize]
