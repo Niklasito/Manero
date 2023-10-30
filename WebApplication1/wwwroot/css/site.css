@@ -1,4 +1,5 @@
 ﻿@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,500;0,9..40,800;0,9..40,900;1,9..40,500&family=Inter:wght@300;400;500;700;900&family=Roboto:wght@300;500;700&display=swap");
 .btn {
   color: black;
   background-color: red;
@@ -830,44 +831,103 @@ footer #menu nav a:active {
 .onboarding-section {
   background-color: #dbe3f5;
   display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100dvh;
+  width: 100%;
+}
+.onboarding-section .onboarding-ring {
+  position: absolute;
+  width: 475px;
+  height: 475px;
+  border-radius: 50%;
+  border-width: 4px;
+  border-style: solid;
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: #FFFFFF;
+  margin-top: 600px;
+}
+.onboarding-section .onboarding-circle {
+  position: relative;
+  width: 415px;
+  height: 415px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.onboarding-section .onboarding-content {
+  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-.onboarding-section .rectangle {
+.onboarding-section .onboarding-content .rectangle {
   background-color: #111111;
   height: 3vh;
   width: 1px;
-  margin-top: 90%;
+  margin-top: 10px;
   margin-bottom: 2dvh;
 }
-.onboarding-section .carousel .carousel-indicators button {
-  width: 20px;
-  height: 5px;
-  border-radius: 50%;
+.onboarding-section .onboarding-content .carousel .carousel-indicators button {
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: black;
 }
-.onboarding-section #onboarding-carousel .carousel-indicators {
+.onboarding-section .onboarding-content .carousel .carousel-indicators .active {
+  width: 20px;
+  height: 6px;
+  border-radius: 40%;
+}
+.onboarding-section .onboarding-content .carousel-indicators {
   margin-block: auto;
 }
-.onboarding-section .carousel-inner .carousel-item .onboarding-header {
+.onboarding-section .onboarding-content .carousel {
+  justify-content: center;
+  align-items: center;
+}
+.onboarding-section .onboarding-content .carousel-inner .carousel-item .onboarding-header {
   font: "Mulish", sans-serif;
   font-weight: 700;
+  font-size: 32px;
+  width: 187px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.onboarding-section #onboarding-btn {
-  width: 255px;
+.onboarding-section .onboarding-content .carousel-inner .carousel-item .onboarding-description {
+  font: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  width: 306px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.onboarding-section .onboarding-content .carousel-inner .carousel-item .onboarding-button {
+  color: white;
+  background-color: #111111;
+  border: none;
+  border-radius: 25px;
   height: 50px;
-  margin-bottom: 40px;
-  text-align: center;
+  width: 255px;
+  margin-bottom: 25px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.onboarding-line {
+.onboarding-section .onboarding-content .onboarding-line {
   height: 1dvh;
   width: 35%;
   border-radius: 0.5dvh;
   background-color: #111111;
-  margin-bottom: 2dvh;
-  margin-top: 5dvh;
-  position: flex;
 }
 
 .horizontal-line-section {
@@ -1523,4 +1583,99 @@ footer #menu nav a:active {
   .order-specifics .order-history-order-specifics-holder-right .order-history-review i {
     margin-left: 0.5vw;
   }
+}
+
+.Featured-products {
+  padding-top: 40px;
+  width: 100vw;
+}
+.Featured-products .containter .title {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding-left: 90px;
+  width: 100vw;
+}
+.Featured-products .containter .title P {
+  font-family: "DM Sans", sans-serif;
+  font-size: 35px;
+}
+.Featured-products .containter .title a {
+  color: black;
+  text-decoration: none;
+  padding-right: 120px;
+}
+.Featured-products .containter .Products {
+  padding-left: 100px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 65px;
+  width: 100vw;
+  height: 8vh;
+}
+@media (min-width: 246px) {
+  .Featured-products .containter .Products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.Featured-products .containter .Products article {
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.Featured-products .containter .Products article img {
+  width: 300px;
+  height: 300px;
+  background: #dbe3f5;
+}
+.Featured-products .containter .Products article .sale {
+  position: absolute;
+  margin-right: 130px;
+  background-color: darkgreen;
+  color: #dbe3f5;
+  height: 20px;
+  width: auto;
+}
+.Featured-products .containter .Products article .sale p {
+  font-size: 12px;
+}
+.Featured-products .containter .Products article .images-icon {
+  position: absolute;
+  margin-left: 250px;
+}
+.Featured-products .containter .Products article .article-title {
+  width: 100px;
+  height: 21px;
+  font-family: "Mulish";
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+  font-style: normal;
+  text-align: left;
+  color: #626262;
+}
+.Featured-products .containter .Products article .article-title .rating {
+  color: gold;
+}
+
+footer {
+  width: 100vw;
+  height: auto;
+  position: relative;
+  margin-top: 1380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer #menu {
+  width: 80%;
+  border-radius: 25px;
+  position: absolute;
+}
+footer #menu nav {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

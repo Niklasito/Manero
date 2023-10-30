@@ -4,44 +4,54 @@ using Manero.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Manero.Controllers
 {
-    public class AccountController : Controller
+   
+    public  class AccountController : Controller
     {
+
         private readonly AuthenticationService _auth;
         private readonly SignInManager<ManeroUser> _signInManager;
+
 
         public AccountController(AuthenticationService auth, SignInManager<ManeroUser> signInManager)
         {
             _auth = auth;
             _signInManager = signInManager;
+            
         }
+
+
 
         [Authorize]
         public IActionResult Index()
         {
-            return View();
+            ViewData["BackToAccountLink"] = "<a asp-controller=\"account\" asp-action=\"index\"></a>";
+            return View("Index");
         }
         public IActionResult Register()
         {
-            return View();
+            return View("Register");
         }
         public IActionResult Created()
         {
-            return View();
+            return View("Created");
         }
 
         [Authorize]
         public IActionResult MyAddress()
         {
-            return View();
+            ViewData["MyAddressLink"] = "<a asp-controller=\"account\" asp-action=\"myaddress\">";
+            return View("MyAddress");
         }
 
         [Authorize]
         public IActionResult OrderHistory()
         {
-            return View();
+            ViewData["OrderHistoryLink"] = "<a asp-controller=\"account\" asp-action=\"orderhistory\">";
+            return View("OrderHistory");
         }
 
         [Authorize]
@@ -53,7 +63,8 @@ namespace Manero.Controllers
         [Authorize]
         public IActionResult MyPromocodes()
         {
-            return View();
+            ViewData["MyPromocodesLink"] = "<a asp-controller=\"account\" asp-action=\"mypromocodes\">";
+            return View("MyPromocodes");
         }
 
         [HttpPost]

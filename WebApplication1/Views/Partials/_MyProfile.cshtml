@@ -1,6 +1,7 @@
 ﻿@using Manero.Helpers.Services;
 @{
     ViewData["Title"] = User.FindFirst("DisplayName")?.Value;
+    ViewData["MyAddressLink"] = "<a asp-controller=\"account\" asp-action=\"myaddress\">";
 }
 
 <div class="my-profile-container containter-fluid">

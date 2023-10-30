@@ -1,64 +1,124 @@
 
 
-    .onboarding-section {
-        background-color: $color-background;
+.onboarding-section {
+    background-color: $color-background;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100dvh;
+    width: 100%;
+
+    .onboarding-ring {
+        position: absolute;
+        width: 475px;
+        height: 475px;
+        border-radius: 50%;
+        border-width: 4px;
+        border-style: solid;
+        background-color: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-color: #FFFFFF;
+        margin-top: 600px;
+
+        
+    }
+
+    .onboarding-circle {
+        position: relative;
+        width: 415px;
+        height: 415px;
+        border-radius: 50%;
+        background-color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .onboarding-content {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        
+
 
 
         .rectangle {
             background-color: #111111;
             height: 3vh;
             width: 1px;
-            margin-top: 90%;
+            margin-top: 10px;
             margin-bottom: 2dvh;
         }
 
         .carousel .carousel-indicators button {
-            width: 20px;
-            height: 5px;
-            border-radius: 50%;
-            
+            width: 6px;
+            height: 6px;
+            border-radius: 100%;
+            background-color: black;
         }
 
-        #onboarding-carousel {
+        .carousel .carousel-indicators .active {
+            width: 20px;
+            height: 6px;
+            border-radius: 40%;
+        }
 
 
+        .carousel-indicators {
+            margin-block: auto;
+        }
 
-
-
-            .carousel-indicators {
-                margin-block: auto;
-            }
+        .carousel {
+            justify-content: center;
+            align-items: center;
         }
 
 
         .carousel-inner .carousel-item .onboarding-header {
-                    font: $font-Mulish;
-                    font-weight: $font-weight-bold;
-                }
-
-                #onboarding-btn {
-                    width: 255px;
-                    height: 50px;
-                    margin-bottom: 40px;
-                    text-align:center;
-                }
-            
+            font: $font-Mulish;
+            font-weight: $font-weight-bold;
+            font-size: 32px;
+            width: 187px;
+            margin-left: auto;
+            margin-right: auto;
         }
-    
+
+        .carousel-inner .carousel-item .onboarding-description {
+            font: $font-Mulish;
+            font-weight: $font-weight-regular;
+            font-size: 16px;
+            width: 306px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .carousel-inner .carousel-item .onboarding-button {
+            color: white;
+            background-color: #111111;
+            border: none;
+            border-radius: 25px;
+            height: 50px;
+            width: 255px;
+            margin-bottom: 25px;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
 
 
-    .onboarding-line {
-        height: 1dvh;
-        width: 35%;
-        border-radius: 0.5dvh;
-        background-color: #111111;
-        margin-bottom: 2dvh;
-        margin-top: 5dvh;
-        position: flex;
+
+        .onboarding-line {
+            height: 1dvh;
+            width: 35%;
+            border-radius: 0.5dvh;
+            background-color: #111111;
+        }
     }
+}
