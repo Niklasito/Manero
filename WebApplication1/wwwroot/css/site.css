@@ -830,6 +830,7 @@ footer #menu nav a:active {
 
 .onboarding-section {
   background-color: #dbe3f5;
+  position: fixed;
   display: flex;
   align-items: center;
   text-align: center;
@@ -849,7 +850,8 @@ footer #menu nav a:active {
   justify-content: center;
   align-items: center;
   border-color: #FFFFFF;
-  margin-top: 600px;
+  margin-top: 70dvh;
+  margin-bottom: 15dvh;
 }
 .onboarding-section .onboarding-circle {
   position: relative;
