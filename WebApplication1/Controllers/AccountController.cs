@@ -28,6 +28,7 @@ namespace Manero.Controllers
         [Authorize]
         public IActionResult Index()
         {
+            ViewData["BackToAccountLink"] = "<a asp-controller=\"account\" asp-action=\"index\"></a>";
             return View("Index");
         }
         public IActionResult Register()
@@ -49,6 +50,7 @@ namespace Manero.Controllers
         [Authorize]
         public IActionResult OrderHistory()
         {
+            ViewData["OrderHistoryLink"] = "<a asp-controller=\"account\" asp-action=\"orderhistory\">";
             return View("OrderHistory");
         }
 
@@ -61,6 +63,7 @@ namespace Manero.Controllers
         [Authorize]
         public IActionResult MyPromocodes()
         {
+            ViewData["MyPromocodesLink"] = "<a asp-controller=\"account\" asp-action=\"mypromocodes\">";
             return View("MyPromocodes");
         }
 

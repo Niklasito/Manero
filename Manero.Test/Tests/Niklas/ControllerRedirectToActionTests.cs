@@ -29,11 +29,11 @@ public class ControllerRedirectToActionTests
         var _signInManagerMock = new Mock<SignInManager<ManeroUser>>(
                 new Mock<UserManager<ManeroUser>>(
                     new Mock<IUserStore<ManeroUser>>().Object,
-                    null, null, null, null, null, null, null, null
+                    null!, null!, null!, null!, null!, null!, null!, null!
                 ).Object,
                 new HttpContextAccessor(),
                 new Mock<IUserClaimsPrincipalFactory<ManeroUser>>().Object,
-                null, null, null, null
+                null!, null!, null!, null!
             );
 
         var _authServiceMock = new Mock<AuthenticationService>();
@@ -66,11 +66,11 @@ public class ControllerRedirectToActionTests
         var _signInManagerMock = new Mock<SignInManager<ManeroUser>>(
             new Mock<UserManager<ManeroUser>>(
                 new Mock<IUserStore<ManeroUser>>().Object,
-                null, null, null, null, null, null, null, null
+                null!, null!, null!, null!, null!, null!, null!, null!
             ).Object,
             new HttpContextAccessor(),
             new Mock<IUserClaimsPrincipalFactory<ManeroUser>>().Object,
-            null, null, null, null
+            null!, null!, null!, null!
         );
 
         var _authServiceMock = new Mock<AuthenticationService>();
@@ -80,14 +80,17 @@ public class ControllerRedirectToActionTests
         var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object);
 
         //Act
-        var result = controller.Index();
+        var result = controller.Index() as ViewResult;
 
 
         //Assert
         Assert.IsType<ViewResult>(result);
         var viewResult = (ViewResult)result;
         Assert.Equal("Index", viewResult.ViewName);
-        
+        var backToAccountLink = viewResult.ViewData["BackToAccountLink"] as string;
+        var expectedLink = "<a asp-controller=\"account\" asp-action=\"index\"></a>";
+        Assert.Equal(expectedLink, backToAccountLink);
+
     }
 
     #endregion
@@ -101,11 +104,11 @@ public class ControllerRedirectToActionTests
         var _signInManagerMock = new Mock<SignInManager<ManeroUser>>(
             new Mock<UserManager<ManeroUser>>(
                 new Mock<IUserStore<ManeroUser>>().Object,
-                null, null, null, null, null, null, null, null
+                null!, null!, null!, null!, null!, null!, null!, null!
             ).Object,
             new HttpContextAccessor(),
             new Mock<IUserClaimsPrincipalFactory<ManeroUser>>().Object,
-            null, null, null, null
+            null!, null!, null!, null!
         );
 
         var _authServiceMock = new Mock<AuthenticationService>();
@@ -115,13 +118,16 @@ public class ControllerRedirectToActionTests
         var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object);
         //Act
 
-        var result = controller.MyPromocodes();
+        var result = controller.MyPromocodes() as ViewResult;
 
         //Assert
 
         Assert.IsType<ViewResult>(result);
         var viewResult = (ViewResult)result;
         Assert.Equal("MyPromocodes", viewResult.ViewName);
+        var myPromocodesLink = viewResult.ViewData["MyPromocodesLink"] as string;
+        var expectedLink = "<a asp-controller=\"account\" asp-action=\"mypromocodes\">";
+        Assert.Equal(expectedLink, myPromocodesLink);
     }
 
     [Fact]
@@ -132,11 +138,11 @@ public class ControllerRedirectToActionTests
         var _signInManagerMock = new Mock<SignInManager<ManeroUser>>(
             new Mock<UserManager<ManeroUser>>(
                 new Mock<IUserStore<ManeroUser>>().Object,
-                null, null, null, null, null, null, null, null
+                null!, null!, null!, null!, null!, null!, null!, null!
             ).Object,
             new HttpContextAccessor(),
             new Mock<IUserClaimsPrincipalFactory<ManeroUser>>().Object,
-            null, null, null, null
+            null!, null!, null!, null!
         );
 
         var _authServiceMock = new Mock<AuthenticationService>();
@@ -146,13 +152,16 @@ public class ControllerRedirectToActionTests
         var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object);
         //Act
 
-        var result = controller.Index();
+        var result = controller.Index() as ViewResult;
 
         //Assert
 
         Assert.IsType<ViewResult>(result);
         var viewResult = (ViewResult)result;
         Assert.Equal("Index", viewResult.ViewName);
+        var backToAccountLink = viewResult.ViewData["BackToAccountLink"] as string;
+        var expectedLink = "<a asp-controller=\"account\" asp-action=\"index\"></a>";
+        Assert.Equal(expectedLink, backToAccountLink);
     }
     #endregion
 
@@ -168,11 +177,11 @@ public class ControllerRedirectToActionTests
         var _signInManagerMock = new Mock<SignInManager<ManeroUser>>(
             new Mock<UserManager<ManeroUser>>(
                 new Mock<IUserStore<ManeroUser>>().Object,
-                null, null, null, null, null, null, null, null
+                null!, null!, null!, null!, null!, null!, null!, null!
             ).Object,
             new HttpContextAccessor(),
             new Mock<IUserClaimsPrincipalFactory<ManeroUser>>().Object,
-            null, null, null, null
+            null!, null!, null!, null!
         );
 
         var _authServiceMock = new Mock<AuthenticationService>();
@@ -182,27 +191,30 @@ public class ControllerRedirectToActionTests
         var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object);
         //Act
 
-        var result = controller.OrderHistory();
+        var result = controller.OrderHistory() as ViewResult;
 
         //Assert
 
         Assert.IsType<ViewResult>(result);
         var viewResult = (ViewResult)result;
         Assert.Equal("OrderHistory", viewResult.ViewName);
-
+        var orderHistoryLink = viewResult.ViewData["OrderHistoryLink"] as string;
+        var expectedLink = "<a asp-controller=\"account\" asp-action=\"orderhistory\">";
+        Assert.Equal(expectedLink, orderHistoryLink);
     }
 
+    [Fact]
     public void Logged_In_User_Navigates_Back_From_Order_History_Page_To_My_Profile_Page()
     {
         //Arrange
         var _signInManagerMock = new Mock<SignInManager<ManeroUser>>(
             new Mock<UserManager<ManeroUser>>(
                 new Mock<IUserStore<ManeroUser>>().Object,
-                null, null, null, null, null, null, null, null
+                null!, null!, null!, null!, null!, null!, null!, null!
             ).Object,
             new HttpContextAccessor(),
             new Mock<IUserClaimsPrincipalFactory<ManeroUser>>().Object,
-            null, null, null, null
+            null!, null!, null!, null!
         );
 
         var _authServiceMock = new Mock<AuthenticationService>();
@@ -212,14 +224,16 @@ public class ControllerRedirectToActionTests
         var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object);
         //Act
 
-        var result = controller.Index();
+        var result = controller.Index() as ViewResult;
 
         //Assert
 
         Assert.IsType<ViewResult>(result);
         var viewResult = (ViewResult)result;
         Assert.Equal("Index", viewResult.ViewName);
-
+        var backToAccountLink = viewResult.ViewData["backToAccountLink"] as string;
+        var expectedLink = "<a asp-controller=\"account\" asp-action=\"index\"></a>";
+        Assert.Equal(expectedLink, backToAccountLink);
     }
 
 
