@@ -32,11 +32,11 @@ namespace Manero.Controllers
         }
         public IActionResult Register()
         {
-            return View();
+            return View("Register");
         }
         public IActionResult Created()
         {
-            return View();
+            return View("Created");
         }
 
         [Authorize]
