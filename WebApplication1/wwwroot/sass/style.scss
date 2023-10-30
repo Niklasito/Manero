@@ -1,41 +1,33 @@
-//mixins
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+footer #menu {
+  display: flex;
+  background-color: white;
+}
+footer #menu nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+footer #menu nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  border-top: 1px solid #dbe3f5;
+  margin: auto;
+}
+footer #menu nav ul li {
+  list-style: none;
+  padding: 0.7rem;
+}
+footer #menu nav ul li a {
+  text-decoration: none;
+  color: #626262;
+  font-size: 1.2rem;
+}
 
-@import "./mixins/buttons.scss";
-@import "./mixins/colors.scss";
-@import "./mixins/fonts.scss";
-
-
-
-@import "./mixins/mixins.scss";
-
-
-
-//components
-
-
-@import "./components/signUp";
-@import "./components/myProfile";
-@import "./components/signIn";
-
-@import "./components/header";
-@import "./components/_Footer";
-
-
-@import "./components/accountCreated";
-@import "./components/socialMedia.scss";
-@import "./components/_homepagepart1.scss";
-
-@import "./components/_onboarding.scss";
-
-
-@import "./components/horizontalLine";
-@import "./components/_myAddress.scss";
-@import "./components/_bestSellers.scss";
-@import "components/_myAddress.scss";
-@import "components/_editProfile.scss";
-@import "components/_promoCodes.scss";
-@import "components/_orderHistory.scss";
-
-
-
-
+/*# sourceMappingURL=style.scss.map */
