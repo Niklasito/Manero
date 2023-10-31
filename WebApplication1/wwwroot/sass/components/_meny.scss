@@ -1,8 +1,5 @@
 footer {
     width: 100vw;
-    height: auto;
-    position: relative;
-    margin-top: 1380px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +7,7 @@ footer {
     #menu {
         width: 80%;
         border-radius: 25px;
-        position: absolute;
+        
 
         nav {
             padding: 10px;
