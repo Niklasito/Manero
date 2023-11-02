@@ -26,7 +26,7 @@
             <label class="sign-in-label-checkbox" asp-for="RememberMe"></label>
             <span asp-validation-for="RememberMe"></span>
         </div>
-        <a class="sign-in-forgot-password">Forgot password?</a>
+        <a class="sign-in-forgot-password" asp-controller="account" asp-action="register">Forgot password?</a>
     </div>
     <div class="sign-in-form-div">
         <button class="sign-in-input" type="submit">Sign in</button>

@@ -55,6 +55,14 @@ namespace Manero.Controllers
         }
 
         [Authorize]
+
+        public IActionResult LoginForm()
+        {
+            ViewData["LoginFormLink"] = "<a asp-controller=\"account\" asp-action=\"register\">";
+            return View("LoginForm");
+        }
+
+        [Authorize]
         public IActionResult EditProfile()
         {
             return View();
