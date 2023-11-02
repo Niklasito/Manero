@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using Manero.Helpers.Dtos;
 using Manero.Models.Entities.LinkEntities;
 
 namespace Manero.Models.Entities
@@ -6,7 +7,7 @@ namespace Manero.Models.Entities
     public class ProductEntity
     {
         public int Id { get; set; }
-        public Guid ArticleNumber { get; set; } = Guid.NewGuid();
+        public string ArticleNumber { get; set; } = null!;
         public string Name { get; set; } = null!;
         public string Description { get; set; } = null!;
 
@@ -24,6 +25,19 @@ namespace Manero.Models.Entities
 
         public ICollection<ProductReviewEntity> ProductReviews { get; set; } = new HashSet<ProductReviewEntity>();
 
+
+        public static implicit operator ProductModel(ProductEntity? entity)
+        {
+            return new ProductModel
+            {
+                Id = entity!.Id,
+                ArticleNumber = entity.ArticleNumber,
+                Name = entity.Name,
+                Description = entity.Description,
+                Price = entity.Price,
+                
+            };
+        }
 
     }
 
