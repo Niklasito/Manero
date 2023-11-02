@@ -16,7 +16,7 @@ x.UseSqlServer(
     projectFilePath +
     builder.Configuration.GetConnectionString("DynamicPartTwo")));
 
-builder.Services.AddScoped<AuthenticationService>();
+builder.Services.AddScoped<InterfaceAuthenticationService, AuthenticationService>();
 
 builder.Services.AddIdentity<ManeroUser, IdentityRole>(x =>
 {

@@ -1,6 +1,14 @@
 ﻿using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
+using Manero.Controllers;
+using Manero.Models.ViewModels;
+using Microsoft.AspNetCore.Mvc;
+using System.Linq.Expressions;
+using Manero.Helpers.Services;
+using Manero.Models.Entities.Identity;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 
 namespace Manero.Test.Tests.Peter.javascript;
 
@@ -52,7 +60,7 @@ public class Register
             string currentUrl = _driver.Url;
             Assert.Equal("https://localhost:7003/Account/Created", currentUrl);
 
-            System.Threading.Thread.Sleep(3000);
+            Thread.Sleep(3000);
         }
 
     }
