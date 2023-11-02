@@ -12,11 +12,11 @@ namespace Manero.Controllers
     public  class AccountController : Controller
     {
 
-        private readonly AuthenticationService _auth;
+        private readonly InterfaceAuthenticationService _auth;
         private readonly SignInManager<ManeroUser> _signInManager;
 
 
-        public AccountController(AuthenticationService auth, SignInManager<ManeroUser> signInManager)
+        public AccountController(InterfaceAuthenticationService auth, SignInManager<ManeroUser> signInManager)
         {
             _auth = auth;
             _signInManager = signInManager;

@@ -242,6 +242,52 @@ public class ControllerRedirectToActionTests
     #endregion
 
 
+    #region Products -> My profile
+
+    [Fact]
+
+    public void Logged_In_User_Navigates_From_Products_Page_To_My_Profile_Page()
+    {
+        //Arrange
+        var _signInManagerMock = new Mock<SignInManager<ManeroUser>>(
+            new Mock<UserManager<ManeroUser>>(
+                new Mock<IUserStore<ManeroUser>>().Object,
+                null!, null!, null!, null!, null!, null!, null!, null!
+            ).Object,
+            new HttpContextAccessor(),
+            new Mock<IUserClaimsPrincipalFactory<ManeroUser>>().Object,
+            null!, null!, null!, null!
+        );
+
+        var _authServiceMock = new Mock<AuthenticationService>();
+
+        _signInManagerMock.Setup(x => x.IsSignedIn(It.IsAny<ClaimsPrincipal>())).Returns(true);
+
+        var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object);
+        //Act
+
+        var result = controller.Index() as ViewResult;
+
+        //Assert
+
+        Assert.IsType<ViewResult>(result);
+        var viewResult = (ViewResult)result;
+        Assert.Equal("Index", viewResult.ViewName);
+        var backToAccountLink = viewResult.ViewData["backToAccountLink"] as string;
+        var expectedLink = "<a asp-controller=\"account\" asp-action=\"index\"></a>";
+        Assert.Equal(expectedLink, backToAccountLink);
+
+
+        //Assert
+
+
+
+    }
+
+
+
+    #endregion
+
 }
 
 
