@@ -33,6 +33,7 @@ namespace Manero.Controllers
         }
         public IActionResult Register()
         {
+            ViewData["RegisterLink"] = "<a asp-controller=\"account\" asp-action=\"register\">";
             return View("Register");
         }
         public IActionResult Created()
