@@ -41,21 +41,80 @@ public class ProductService
         return products;
     }
 
-    public async Task<IEnumerable<ProductModel>> GetProductsWithImagesAsync()
+    public async Task<IEnumerable<ProductModel>> GetProductsWithImagesCategoriesAndTagsAsync()
+   
     {
-         var products = await _context.ProductImages
-         .Include(x => x.ImageEntity)
-         .Select(x => new ProductModel
-         {
-             Id = x.ProductEntity.Id,
-             Name = x.ProductEntity.Name,
-             ArticleNumber = x.ProductEntity.ArticleNumber,
-             Description = x.ProductEntity.Description,
-             Price = x.ProductEntity.Price,
-             ImageUrl = x.ImageEntity.ImageUrl
-         })
+        var products = await _context.Products
+            .Include(x => x.ProductImages)
+            .Include(x => x.ProductCategories)
+            .Include(x => x.ProductTags)
+            .Select(x => new ProductModel
+            {
+                Id = x.Id,
+                Name = x.Name,
+                ArticleNumber = x.ArticleNumber,
+                Description = x.Description,
+                Price = x.Price,
+                ImageUrl = x.ProductImages.FirstOrDefault() != null
+                    ? x.ProductImages.First().ImageEntity.ImageUrl
+                    : null,
+                Categories = x.ProductCategories.Select(x => new CategoriesModel
+                {
+                    CategoryId = x.CategoryEntity.Id,
+                    CategoryName = x.CategoryEntity.Name
+                }).ToList(),
+                Tags = x.ProductTags.Select(x => new TagsModel
+                {
+                    TagsId = x.TagEntity.Id,
+                    TagName = x.TagEntity.Name
+                }).ToList(),
+            })
+            .ToListAsync();
+
+        return products;
+    }
+
+    public async Task<IEnumerable<ProductModel>> GetBestSellingProductsAsync()
+    {
+        var products = await _context.Products
+         .Include(x => x.ProductTags)
+         .Include(x => x.ProductImages)
+         .ThenInclude(x => x.ImageEntity)
+         .Where(x => x.ProductTags.Any(tag => tag.TagId == 1))
          .ToListAsync();
 
-            return products;
+        return products.Select(item => new ProductModel
+        {
+            Id = item.Id,
+            Name = item.Name,
+            ArticleNumber = item.ArticleNumber,
+            Description = item.Description,
+            Price = item.Price,
+            ImageUrl = item.ProductImages
+                .Select(x => x.ImageEntity.ImageUrl)
+                .FirstOrDefault()
+        }).ToList();
+    }
+
+    public async Task<IEnumerable<ProductModel>> GetFeaturedProductsAsync()
+    {
+        var products = await _context.Products
+         .Include(x => x.ProductTags)
+         .Include(x => x.ProductImages)
+         .ThenInclude(x => x.ImageEntity)
+         .Where(x => x.ProductTags.Any(tag => tag.TagId == 2))
+         .ToListAsync();
+
+        return products.Select(item => new ProductModel
+        {
+            Id = item.Id,
+            Name = item.Name,
+            ArticleNumber = item.ArticleNumber,
+            Description = item.Description,
+            Price = item.Price,
+            ImageUrl = item.ProductImages
+                .Select(x => x.ImageEntity.ImageUrl)
+                .FirstOrDefault()
+        }).ToList();
     }
 }

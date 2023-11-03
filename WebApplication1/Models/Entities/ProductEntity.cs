@@ -35,6 +35,7 @@ namespace Manero.Models.Entities
                 Name = entity.Name,
                 Description = entity.Description,
                 Price = entity.Price,
+
                 
             };
         }

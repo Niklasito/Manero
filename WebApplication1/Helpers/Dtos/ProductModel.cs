@@ -13,6 +13,9 @@ public class ProductModel
 
         public ICollection<ImagesModel> Images { get; set; } = new HashSet<ImagesModel>();
 
+        public ICollection<CategoriesModel> Categories { get; set; } = new HashSet<CategoriesModel>();
+
+        public ICollection<TagsModel> Tags { get; set; } = new HashSet<TagsModel>();
 
 
 }
