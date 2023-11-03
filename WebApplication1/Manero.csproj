@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="EntityFrameworkCoreMock.Moq" Version="2.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.12" />
     <PackageReference Include="microsoft.aspnetcore.identity.ui" Version="7.0.12" />
     <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="7.0.12" />
