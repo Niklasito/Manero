@@ -77,23 +77,26 @@ public class ProductService
     public async Task<IEnumerable<ProductModel>> GetBestSellingProductsAsync()
     {
         var products = await _context.Products
-         .Include(x => x.ProductTags)
-         .Include(x => x.ProductImages)
-         .ThenInclude(x => x.ImageEntity)
-         .Where(x => x.ProductTags.Any(tag => tag.TagId == 1))
-         .ToListAsync();
-
-        return products.Select(item => new ProductModel
-        {
-            Id = item.Id,
-            Name = item.Name,
-            ArticleNumber = item.ArticleNumber,
-            Description = item.Description,
-            Price = item.Price,
-            ImageUrl = item.ProductImages
-                .Select(x => x.ImageEntity.ImageUrl)
-                .FirstOrDefault()
-        }).ToList();
+       .Include(x => x.ProductTags)
+       .Where(x => x.ProductTags.Any(tag => tag.TagId == 1))
+       .Select(x => new ProductModel
+       {
+           Id = x.Id,
+           Name = x.Name,
+           ArticleNumber = x.ArticleNumber,
+           Description = x.Description,
+           Price = x.Price,
+           ImageUrl = x.ProductImages.FirstOrDefault() != null
+               ? x.ProductImages.First().ImageEntity.ImageUrl
+               : null,
+           Tags = x.ProductTags.Select(x => new TagsModel
+           {
+               TagsId = x.TagEntity.Id,
+               TagName = x.TagEntity.Name
+           }).ToList(),
+       })
+       .ToListAsync();
+        return products;
     }
 
     public async Task<IEnumerable<ProductModel>> GetFeaturedProductsAsync()
