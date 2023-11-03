@@ -80,4 +80,75 @@ public class ProductServiceTests
 
         }
     }
+
+
+    [Fact]
+    public async Task Get_All_Products_Async_Should_Return_Products()
+    {
+
+        //Arrange
+        var options = new DbContextOptionsBuilder<DataContext>()
+           .UseInMemoryDatabase(databaseName: "FakeDb")
+           .Options;
+
+        using (var context = new DataContext(options))
+        {
+            context.Database.EnsureCreated();
+
+            var products = new List<ProductEntity>
+            {
+                new ProductEntity
+                {
+                    Id = 1,
+                    Name = "Test Product",
+                    Description = "This is a test description",
+                    Price = 99,
+                    ArticleNumber = "123456",
+
+                },
+                new ProductEntity
+                {
+                    Id = 2,
+                    Name = "Test Product 2",
+                    Description = "This is a second test description",
+                    Price = 100,
+                    ArticleNumber = "987654",
+
+                }
+            };
+            context.Products.AddRange(products);
+            context.SaveChanges();
+
+            var productRepo = new ProductRepository(context);
+            var productService = new ProductService(context, productRepo);
+
+            //Act
+
+            var result = await productService.GetAllProductsAsync();
+
+
+            //Assert
+
+            var singleProduct = result.First();
+
+            Assert.NotNull(result);
+            Assert.IsType<List<ProductModel>>(result);
+            Assert.Equal(singleProduct.Name, products.First().Name);
+            Assert.Equal(singleProduct.Id, products.First().Id);
+            Assert.Equal(singleProduct.Description, products.First().Description);
+            Assert.Equal(singleProduct.Price, products.First().Price);
+            Assert.Equal(singleProduct.ArticleNumber, products.First().ArticleNumber);
+
+            var multipleProducts = result.ToList();
+
+            Assert.NotEmpty(multipleProducts);
+            Assert.Equal(2, multipleProducts.Count());
+            Assert.Equal("Test Product", multipleProducts[0].Name);
+            Assert.Equal("Test Product 2", multipleProducts[1].Name);
+            Assert.Equal("123456", multipleProducts[0].ArticleNumber);
+            Assert.Equal("987654", multipleProducts[1].ArticleNumber);
+
+        }
+
+    }
 }
