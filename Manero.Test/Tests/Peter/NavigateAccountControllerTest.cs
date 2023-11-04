@@ -106,4 +106,34 @@ public class NavigateAccountControllerTest
         Assert.NotNull(viewModel);
         Assert.Equal("/", viewModel!.ReturnUrl);
     }
+
+    [Fact]
+
+    public void User_Navigaye_To_EditProfile_From_MyProfile()
+    {
+        // Arrange
+        var authMock = new Mock<InterfaceAuthenticationService>();
+        var signInManagerMock = new Mock<SignInManager<ManeroUser>>(
+            new Mock<UserManager<ManeroUser>>(
+                new Mock<IUserStore<ManeroUser>>().Object,
+                null!, null!, null!, null!, null!, null!, null!, null!
+            ).Object,
+            new HttpContextAccessor(),
+            new Mock<IUserClaimsPrincipalFactory<ManeroUser>>().Object,
+            null!, null!, null!, null!
+        );
+
+        var controller = new AccountController(authMock.Object, signInManagerMock.Object);
+
+        //Act
+        var result = controller.EditProfile() as ViewResult;
+
+        //Assert
+        Assert.IsType<ViewResult>(result);
+        var viewResult = (ViewResult)result;
+        Assert.Equal("EditProfile", viewResult.ViewName);
+        var editProfileLink = viewResult.ViewData["EditProfileLink"] as string;
+        var expectedLink = "<a asp-controller=\"account\" asp-action=\"editprofile\">";
+        Assert.Equal(expectedLink, editProfileLink);
+    }
 }
