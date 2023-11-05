@@ -58,7 +58,8 @@ namespace Manero.Controllers
         [Authorize]
         public IActionResult EditProfile()
         {
-            return View();
+            ViewData["EditProfileLink"] = "<a asp-controller=\"account\" asp-action=\"editprofile\">";
+            return View("EditProfile");
         }
 
         [Authorize]
