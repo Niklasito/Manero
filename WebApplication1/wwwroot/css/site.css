@@ -1934,3 +1934,56 @@ footer #menu nav {
   font-weight: 700;
   color: white;
 }
+
+.payment-method-card {
+  background-color: #853779;
+  border-radius: 30px;
+  min-width: 350px;
+  height: 225px;
+  padding: 30px;
+  margin-right: 20px;
+}
+
+.payment-method-card-container {
+  width: 100%;
+}
+
+.payment-method-card-container h3 {
+  font-family: "Mulish", sans-serif;
+}
+
+.payment-method-card-container h4 {
+  font-family: "Mulish", sans-serif;
+}
+
+.payment-method-card-container p {
+  font-family: "Mulish", sans-serif;
+}
+
+.payment-method-card-container a {
+  text-decoration: none;
+  color: black;
+}
+
+.payment-method-card-row {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+.payment-method-card h3 {
+  color: white;
+}
+
+.payment-method-card h4 {
+  color: white;
+}
+
+.payment-method-card p {
+  color: white;
+  margin-bottom: 0rem;
+}

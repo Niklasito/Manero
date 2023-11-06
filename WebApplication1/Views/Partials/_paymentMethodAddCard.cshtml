@@ -1,0 +1,58 @@
+﻿<div class="order-history-container container">
+    <div class="order-history-top-container container">
+        <div class="order-history-top-row row">
+            <div class="order-history-chevron-holder col-3 col-md-4">
+                <a asp-controller="account" asp-action="paymentmethod">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+            </div>
+            <div class="order-history-heading-holder col-8 col-md-4">
+                <h5 class="order-history-heading">Add a new card</h5>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="container d-flex justify-content-center">
+        <div class="payment-method-card">
+            <h3>VISA</h3>
+            <h4 id="card-number" class="mt-4"></h4>
+            <div class="row mt-4">
+                <div class="col mt-2">
+                    <p id="card-name"></p>
+                    <p id="card-last-name"></p>
+                </div>
+                <div class="col mt-2">
+                    <p>exp. end</p>
+                    <p id="card-date"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row m-3">
+            <label for="payment-method-card-number">Card Number</label>
+            <input id="payment-method-card-number"
+                   type="text"
+                   inputmode="numeric"
+                   pattern="[0-9\s]{13,16}"
+                   maxlength="16" />
+        </div>
+        <div class="row m-3">
+            <label for="payment-method-card-name">Name</label>
+            <input id="payment-method-card-name" type="text">
+        </div>
+        <div class="row m-3">
+            <label for="payment-method-date">Expiry Date</label>
+            <input type="month" id="payment-method-date" min="2023-10" value="2023-10" />
+        </div>
+        <div class="row m-3">
+            <label for="payment-method-cvv">CVV</label>
+            <input id ="payment-method-cvv" type="password" maxlength="3">
+        </div>
+        <div class="row d-flex justify-content-center">
+            <a href="#" class="account-created-button account-created-font-mulish d-flex align-items-center justify-content-center text-decoration-none">Add Card</a>
+        </div>
+    </div>
+</div>
+<script src="~/js/paymentmethod/paymentmethod.js"></script>

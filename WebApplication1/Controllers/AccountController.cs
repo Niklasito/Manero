@@ -67,6 +67,19 @@ namespace Manero.Controllers
             return View("MyPromocodes");
         }
 
+        [Authorize]
+        public IActionResult PaymentMethod()
+        {
+            return View("PaymentMethod");
+        }
+
+        [Authorize]
+        public IActionResult AddPaymentMethod()
+        {
+            return View("PaymentMethodAddCard");
+        }
+
+
         [HttpPost]
         public async Task<IActionResult> Register(UserCreateAccountViewModel viewModel)
         {
