@@ -204,6 +204,33 @@
 .my-profile-container .my-profile-image-holder {
   display: flex;
   justify-content: center;
+  position: relative;
+}
+.my-profile-container .my-profile-image-holder .my-profile-image-big-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18dvh;
+  width: 18dvh;
+  border-radius: 9dvh;
+  background-color: #DBE3F5;
+}
+.my-profile-container .my-profile-image-holder .my-profile-image-big-circle .my-profile-image {
+  width: 15dvh;
+  height: 15dvh;
+  border-radius: 7.5dvh;
+}
+.my-profile-container .my-profile-image-holder .my-profile-small-circle {
+  height: 5dvh;
+  width: 5dvh;
+  background-color: #DBE3F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.5dvh;
+  position: absolute;
+  right: 0;
+  bottom: 1dvh;
 }
 .my-profile-container .my-profile-info-holder {
   margin-top: 3vh;

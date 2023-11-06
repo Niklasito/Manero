@@ -213,17 +213,9 @@ namespace Manero.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CategoryEntityId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductEntityId")
-                        .HasColumnType("int");
-
                     b.HasKey("ProductId", "CategoryId");
 
-                    b.HasIndex("CategoryEntityId");
-
-                    b.HasIndex("ProductEntityId");
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("ProductCategories");
                 });
@@ -251,17 +243,9 @@ namespace Manero.Migrations
                     b.Property<int>("ImageId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ImageEntityId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductEntityId")
-                        .HasColumnType("int");
-
                     b.HasKey("ProductId", "ImageId");
 
-                    b.HasIndex("ImageEntityId");
-
-                    b.HasIndex("ProductEntityId");
+                    b.HasIndex("ImageId");
 
                     b.ToTable("ProductImages");
                 });
@@ -289,17 +273,9 @@ namespace Manero.Migrations
                     b.Property<int>("ReviewId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductEntityId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ReviewEntityId")
-                        .HasColumnType("int");
-
                     b.HasKey("ProductId", "ReviewId");
 
-                    b.HasIndex("ProductEntityId");
-
-                    b.HasIndex("ReviewEntityId");
+                    b.HasIndex("ReviewId");
 
                     b.ToTable("ProductReviews");
                 });
@@ -312,17 +288,9 @@ namespace Manero.Migrations
                     b.Property<int>("SaleCategoryId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductEntityId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SaleCategoryEntityId")
-                        .HasColumnType("int");
-
                     b.HasKey("ProductId", "SaleCategoryId");
 
-                    b.HasIndex("ProductEntityId");
-
-                    b.HasIndex("SaleCategoryEntityId");
+                    b.HasIndex("SaleCategoryId");
 
                     b.ToTable("ProductSaleCategories");
                 });
@@ -335,40 +303,24 @@ namespace Manero.Migrations
                     b.Property<int>("SizeId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductEntityId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SizeEntityId")
-                        .HasColumnType("int");
-
                     b.HasKey("ProductId", "SizeId");
 
-                    b.HasIndex("ProductEntityId");
-
-                    b.HasIndex("SizeEntityId");
+                    b.HasIndex("SizeId");
 
                     b.ToTable("ProductSizes");
                 });
 
             modelBuilder.Entity("Manero.Models.Entities.LinkEntities.ProductTagEntity", b =>
                 {
-                    b.Property<int>("TagId")
-                        .HasColumnType("int");
-
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductEntityId")
+                    b.Property<int>("TagId")
                         .HasColumnType("int");
 
-                    b.Property<int>("TagEntityId")
-                        .HasColumnType("int");
+                    b.HasKey("ProductId", "TagId");
 
-                    b.HasKey("TagId", "ProductId");
-
-                    b.HasIndex("ProductEntityId");
-
-                    b.HasIndex("TagEntityId");
+                    b.HasIndex("TagId");
 
                     b.ToTable("ProductTags");
                 });
@@ -791,13 +743,13 @@ namespace Manero.Migrations
                 {
                     b.HasOne("Manero.Models.Entities.CategoryEntity", "CategoryEntity")
                         .WithMany("ProductCategories")
-                        .HasForeignKey("CategoryEntityId")
+                        .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Manero.Models.Entities.ProductEntity", "ProductEntity")
                         .WithMany("ProductCategories")
-                        .HasForeignKey("ProductEntityId")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -829,13 +781,13 @@ namespace Manero.Migrations
                 {
                     b.HasOne("Manero.Models.Entities.ImageEntity", "ImageEntity")
                         .WithMany("ProductImages")
-                        .HasForeignKey("ImageEntityId")
+                        .HasForeignKey("ImageId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Manero.Models.Entities.ProductEntity", "ProductEntity")
                         .WithMany("ProductImages")
-                        .HasForeignKey("ProductEntityId")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -867,13 +819,13 @@ namespace Manero.Migrations
                 {
                     b.HasOne("Manero.Models.Entities.ProductEntity", "ProductEntity")
                         .WithMany("ProductReviews")
-                        .HasForeignKey("ProductEntityId")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Manero.Models.Entities.ReviewEntity", "ReviewEntity")
                         .WithMany("ProductReviews")
-                        .HasForeignKey("ReviewEntityId")
+                        .HasForeignKey("ReviewId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -886,13 +838,13 @@ namespace Manero.Migrations
                 {
                     b.HasOne("Manero.Models.Entities.ProductEntity", "ProductEntity")
                         .WithMany("ProductSaleCategories")
-                        .HasForeignKey("ProductEntityId")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Manero.Models.Entities.SaleCategoryEntity", "SaleCategoryEntity")
                         .WithMany("ProductSaleCategories")
-                        .HasForeignKey("SaleCategoryEntityId")
+                        .HasForeignKey("SaleCategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -905,13 +857,13 @@ namespace Manero.Migrations
                 {
                     b.HasOne("Manero.Models.Entities.ProductEntity", "ProductEntity")
                         .WithMany("ProductSizes")
-                        .HasForeignKey("ProductEntityId")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Manero.Models.Entities.SizeEntity", "SizeEntity")
                         .WithMany("ProductSizes")
-                        .HasForeignKey("SizeEntityId")
+                        .HasForeignKey("SizeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -924,13 +876,13 @@ namespace Manero.Migrations
                 {
                     b.HasOne("Manero.Models.Entities.ProductEntity", "ProductEntity")
                         .WithMany("ProductTags")
-                        .HasForeignKey("ProductEntityId")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Manero.Models.Entities.TagEntity", "TagEntity")
                         .WithMany("ProductTags")
-                        .HasForeignKey("TagEntityId")
+                        .HasForeignKey("TagId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
