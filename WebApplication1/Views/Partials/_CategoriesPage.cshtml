@@ -6,9 +6,7 @@
                 <i class="fa-solid fa-bars-staggered"></i>
             </div>
             <div class="categories-searchbar-holder col-8">
-                <i class="fa-light fa-search"></i>
-                <input type="text" placeholder="Search">
-
+                <form asp-controller="Products" asp-action="Search" method="get"><i class="fa-light fa-search"></i><input type="text" placeholder="Search"></form>
             </div>
             <div class="categories-basket-holder col-2">
                 <i class="fa-light fa-shopping-basket"></i>
