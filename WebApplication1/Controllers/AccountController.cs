@@ -33,6 +33,7 @@ namespace Manero.Controllers
         }
         public IActionResult Register()
         {
+            ViewData["RegisterLink"] = "<a asp-controller=\"account\" asp-action=\"register\">";
             return View("Register");
         }
         public IActionResult Created()
@@ -57,7 +58,8 @@ namespace Manero.Controllers
         [Authorize]
         public IActionResult EditProfile()
         {
-            return View();
+            ViewData["EditProfileLink"] = "<a asp-controller=\"account\" asp-action=\"editprofile\">";
+            return View("EditProfile");
         }
 
         [Authorize]
@@ -66,6 +68,19 @@ namespace Manero.Controllers
             ViewData["MyPromocodesLink"] = "<a asp-controller=\"account\" asp-action=\"mypromocodes\">";
             return View("MyPromocodes");
         }
+
+        [Authorize]
+        public IActionResult PaymentMethod()
+        {
+            return View("PaymentMethod");
+        }
+
+        [Authorize]
+        public IActionResult AddPaymentMethod()
+        {
+            return View("PaymentMethodAddCard");
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> Register(UserCreateAccountViewModel viewModel)

@@ -6,7 +6,8 @@ namespace Manero.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            ViewData["HomeLink"] = "<a asp-controller=\"home\" asp-action=\"index\"></a>";
+            return View("Index");
         }
 
 

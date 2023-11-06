@@ -1,73 +1,45 @@
-﻿<section class="best-sellers-container container mt-5">
+﻿@using Manero.Helpers.Dtos;
+@using Manero.Helpers.Services;
+@model List<ProductModel>
+
+@{
+    var products = await productService.GetBestSellingProductsAsync();
+}
+
+<section class="best-sellers-container container mt-5">
     <div class="row d-flex justify-content-center">
         <div class="col p-3">
-            <h3 class="best-sellers-font fw-bold">Best sellers</h3>
+            <h3 class="best-sellers-font fw-bold">Best Sellers</h3>
         </div>
         <div class="col p-3 d-flex justify-content-end align-items-center">
             <a href="#" class="best-sellers-font best-sellers-link">View All ></a>
         </div>
     </div>
-    <a href="#" class="row best-sellers-link">
-        <div class="col p-3">
-            <img class="best-sellers-img" src="../images/pexels-anne-r-3908800.jpg">
-        </div>
-        <div class="col p-3 d-flex">
-            <div class="col">
-                <p class="best-sellers-font">Hand bag</p>
-                <p class="best-sellers-font">$24.95</p>
-                <div class="best-sellers-stars">
-                    <i class="fa-solid fa-star fa-2xs"></i>
-                    <i class="fa-solid fa-star fa-2xs"></i>
-                    <i class="fa-solid fa-star fa-2xs"></i>
-                    <i class="fa-regular fa-star fa-2xs"></i>
-                    <i class="fa-regular fa-star fa-2xs"></i>
+
+    @foreach(var product in products.Take(3))   
+    {
+            <a href="#" class="row best-sellers-link">
+            <div class="col p-3">
+                <img class="best-sellers-img" src="@product.ImageUrl?.ToString()">
+            </div>
+            <div class="col p-3 d-flex">
+                <div class="col">
+                    <p>@product.Name</p>
+                    <p class="best-sellers-font">$@product.Price.ToString("0.00")</p>
+                    <div class="best-sellers-stars">
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-solid fa-star fa-2xs"></i>
+                        <i class="fa-regular fa-star fa-2xs"></i>
+                        <i class="fa-regular fa-star fa-2xs"></i>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-regular fa-heart mt-3"></i>
                 </div>
             </div>
-            <div>
-                <i class="fa-regular fa-heart mt-3"></i>
-            </div>
-        </div>
-    </a>
-    <a href="#" class="row best-sellers-link">
-        <div class="col p-3">
-            <img class="best-sellers-img" src="../images/pexels-mart-production-9558567.jpg">
-        </div>
-        <div class="col p-3 d-flex">
-            <div class="col">
-                <p class="best-sellers-font">T-Shirt</p>
-                <p class="best-sellers-font">$24.95</p>
-                <div class="best-sellers-stars">
-                    <i class="fa-solid fa-star fa-2xs"></i>
-                    <i class="fa-solid fa-star fa-2xs"></i>
-                    <i class="fa-solid fa-star fa-2xs"></i>
-                    <i class="fa-regular fa-star fa-2xs"></i>
-                    <i class="fa-regular fa-star fa-2xs"></i>
-                </div>
-            </div>
-            <div>
-                <i class="fa-regular fa-heart mt-3"></i>
-            </div>
-        </div>
-    </a>
-    <a href="#" class="row best-sellers-link">
-        <div class="col p-3">
-            <img class="best-sellers-img" src="../images/pexels-dom-j-45982.jpg">
-        </div>
-        <div class="col p-3 d-flex">
-            <div class="col">
-                <p class="best-sellers-font">Shirt</p>
-                <p class="best-sellers-font">$24.95</p>
-                <div class="best-sellers-stars">
-                    <i class="fa-solid fa-star fa-2xs"></i>
-                    <i class="fa-solid fa-star fa-2xs"></i>
-                    <i class="fa-solid fa-star fa-2xs"></i>
-                    <i class="fa-regular fa-star fa-2xs"></i>
-                    <i class="fa-regular fa-star fa-2xs"></i>
-                </div>
-            </div>
-            <div>
-                <i class="fa-regular fa-heart mt-3"></i>
-            </div>
-        </div>
-        <a>
+        </a>
+        
+    }
+
 </section>

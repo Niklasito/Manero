@@ -1,3 +1,4 @@
+using Manero.Helpers.Repositories;
 using Manero.Helpers.Services;
 using Manero.Models.Contexts;
 using Manero.Models.Entities.Identity;
@@ -16,8 +17,11 @@ x.UseSqlServer(
     projectFilePath +
     builder.Configuration.GetConnectionString("DynamicPartTwo")));
 
-builder.Services.AddScoped<InterfaceAuthenticationService, AuthenticationService>();
 
+builder.Services.AddScoped<ProductRepository>();
+builder.Services.AddScoped<ProductService>();
+
+builder.Services.AddScoped<InterfaceAuthenticationService, AuthenticationService>();
 builder.Services.AddIdentity<ManeroUser, IdentityRole>(x =>
 {
     x.SignIn.RequireConfirmedAccount = false;

@@ -22,8 +22,12 @@
     <section class="my-profile-image-section">
         <div class="my-profile-image-container container-fluid">
             <div class="my-profile-image-holder">
-                <img class="my-profile-profile-image" src="/images/myProfile_profileimg.png" alt="#">
-
+                <div class="my-profile-image-big-circle">
+                    <img class="my-profile-image" src="#" alt="#">
+                </div>
+                <div class="my-profile-small-circle">
+                    <a asp-controller="account" asp-action="editprofile"><i class="fa-regular fa-pen"></i></a>
+                </div>
             </div>
             <div class="my-profile-info-holder">
                 @if (signInManager.IsSignedIn(User))
@@ -54,7 +58,7 @@
             </div>
             </a>
             
-            <a href="#">
+            <a asp-controller="account" asp-action="paymentmethod">
                 <div class="my-profile-options-row">
                     <div class="my-profile-small-holders col-12 col-md-6 col-lg-6">
                         <div class="my-profile-icons-holder col-3 col-md-1">
