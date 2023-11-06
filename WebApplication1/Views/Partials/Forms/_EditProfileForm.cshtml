@@ -1,15 +1,19 @@
 ﻿@model EditProfileViewModel
 
+@{
+    ViewData["userName"] = User.FindFirst("DisplayName")?.Value;
+    var userEmail = userManager.GetUserName(User);
+}
 
 <form class="edit-profile-form" method="post" novalidate
 >
     <div class="edit-profile-form-div">
         <label class="edit-profile-label" asp-for="User.Name"></label>
-        <input class="edit-profile-input" asp-for="User.Name">
+        <input class="edit-profile-input" value="@ViewData["userName"]" asp-for="User.Name">
     </div>
     <div class="edit-profile-form-div">
         <label class="edit-profile-label" asp-for="User.Email"></label>
-        <input class="edit-profile-input" asp-for="User.Email">
+        <input class="edit-profile-input" value="@userEmail" asp-for="User.Email">
     </div>
     <div class="edit-profile-form-div">
         <label class="edit-profile-label" asp-for="User.PhoneNumber"></label>
