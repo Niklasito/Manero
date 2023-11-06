@@ -17,7 +17,7 @@ public class ForegetPassword
 {
     [Fact]
 
-    public void LogIn_User_To_Change_Password()
+    public void LogIn_User_To_Forget_Password()
     {
         //Arrange
 
