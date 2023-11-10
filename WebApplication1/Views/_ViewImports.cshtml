@@ -6,6 +6,8 @@
 @using Microsoft.AspNetCore.Identity;
 @using Manero.Models.Entities.Identity;
 @using Manero.Models.ViewModels;
+@using Manero.Helpers.Dtos;
 @inject UserManager<ManeroUser> userManager
 @inject SignInManager<ManeroUser> signInManager
 @inject ProductService productService;
+@inject InterfaceEdietProfileService editProfile;

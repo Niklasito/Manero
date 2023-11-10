@@ -15,6 +15,11 @@ public class AccountControllerLogInTest
     {
         // Arrange
         var authMock = new Mock<InterfaceAuthenticationService>();
+        var editMock = new Mock<InterfaceEdietProfileService>();
+        var userManagerMock = new Mock<UserManager<ManeroUser>>(
+        new Mock<IUserStore<ManeroUser>>().Object,
+        null!, null!, null!, null!, null!, null!, null!, null!
+        );
         var signInManagerMock = new Mock<SignInManager<ManeroUser>>(
             new Mock<UserManager<ManeroUser>>(
                 new Mock<IUserStore<ManeroUser>>().Object,
@@ -28,7 +33,7 @@ public class AccountControllerLogInTest
 
         authMock.Setup(x => x.LogInAsync(It.IsAny<UserLoginViewModel>())).ReturnsAsync(true);
 
-        var controller = new AccountController(authMock.Object, signInManagerMock.Object);
+        var controller = new AccountController(authMock.Object, signInManagerMock.Object, editMock.Object, userManagerMock.Object);
 
         // Act
         var result = await controller.LogIn(new UserLoginViewModel());

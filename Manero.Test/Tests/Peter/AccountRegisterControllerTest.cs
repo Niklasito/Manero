@@ -19,6 +19,11 @@ namespace Manero.Test.Tests.Peter
         {
             // Arrange
             var authMock = new Mock<InterfaceAuthenticationService>();
+            var editMock = new Mock<InterfaceEdietProfileService>();
+            var userManagerMock = new Mock<UserManager<ManeroUser>>(
+            new Mock<IUserStore<ManeroUser>>().Object,
+            null!, null!, null!, null!, null!, null!, null!, null!
+            );
             var signInManagerMock = new Mock<SignInManager<ManeroUser>>(
                 new Mock<UserManager<ManeroUser>>(
                     new Mock<IUserStore<ManeroUser>>().Object,
@@ -32,7 +37,7 @@ namespace Manero.Test.Tests.Peter
             authMock.Setup(x => x.UserAlreadyExistsAsync(It.IsAny<Expression<Func<ManeroUser, bool>>>())).ReturnsAsync(false);
             authMock.Setup(x => x.RegisterUserAsync(It.IsAny<UserCreateAccountViewModel>())).ReturnsAsync(true);
 
-            var controller = new AccountController(authMock.Object, signInManagerMock.Object);
+            var controller = new AccountController(authMock.Object, signInManagerMock.Object, editMock.Object, userManagerMock.Object);
 
             // Act
             var result = await controller.Register(new UserCreateAccountViewModel());
@@ -49,6 +54,11 @@ namespace Manero.Test.Tests.Peter
         {
             // Arrange
             var authMock = new Mock<InterfaceAuthenticationService>();
+            var editMock = new Mock<InterfaceEdietProfileService>();
+            var userManagerMock = new Mock<UserManager<ManeroUser>>(
+            new Mock<IUserStore<ManeroUser>>().Object,
+            null!, null!, null!, null!, null!, null!, null!, null!
+            );
             var signInManagerMock = new Mock<SignInManager<ManeroUser>>(
                 new Mock<UserManager<ManeroUser>>(
                     new Mock<IUserStore<ManeroUser>>().Object,
@@ -62,7 +72,7 @@ namespace Manero.Test.Tests.Peter
             authMock.Setup(x => x.UserAlreadyExistsAsync(It.IsAny<Expression<Func<ManeroUser, bool>>>())).ReturnsAsync(true);
 
 
-            var controller = new AccountController(authMock.Object, signInManagerMock.Object);
+            var controller = new AccountController(authMock.Object, signInManagerMock.Object, editMock.Object, userManagerMock.Object);
 
             // Act
             var result = await controller.Register(new UserCreateAccountViewModel { Email = "existing@example.com" });
@@ -79,6 +89,11 @@ namespace Manero.Test.Tests.Peter
         {
             // Arrange
             var authMock = new Mock<InterfaceAuthenticationService>();
+            var editMock = new Mock<InterfaceEdietProfileService>();
+            var userManagerMock = new Mock<UserManager<ManeroUser>>(
+            new Mock<IUserStore<ManeroUser>>().Object,
+            null!, null!, null!, null!, null!, null!, null!, null!
+            );
             var signInManagerMock = new Mock<SignInManager<ManeroUser>>(
                 new Mock<UserManager<ManeroUser>>(
                     new Mock<IUserStore<ManeroUser>>().Object,
@@ -92,7 +107,7 @@ namespace Manero.Test.Tests.Peter
             authMock.Setup(x => x.UserAlreadyExistsAsync(It.IsAny<Expression<Func<ManeroUser, bool>>>())).ReturnsAsync(false);
             authMock.Setup(x => x.RegisterUserAsync(It.IsAny<UserCreateAccountViewModel>())).ReturnsAsync(false);
 
-            var controller = new AccountController(authMock.Object, signInManagerMock.Object);
+            var controller = new AccountController(authMock.Object, signInManagerMock.Object, editMock.Object, userManagerMock.Object);
 
             var invalidModel = new UserCreateAccountViewModel
             {

@@ -11,7 +11,7 @@ public interface InterfaceUserService
     Task<ManeroUser> GetUserInfoAsync(string Email);
 }
 
-public class UserService 
+public class UserService : InterfaceUserService
 {
     private readonly UserManager<ManeroUser> _userManager;
     private readonly DataContext _context;

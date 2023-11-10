@@ -1,4 +1,5 @@
-﻿using Manero.Helpers.Services;
+﻿using EntityFrameworkCoreMock;
+using Manero.Helpers.Services;
 using Manero.Models.Contexts;
 using Manero.Models.Entities.Identity;
 using Manero.Models.ViewModels;
@@ -30,7 +31,10 @@ public class AuthenticationServiceTests
                 new Mock<IUserClaimsPrincipalFactory<ManeroUser>>().Object,
                 null!, null!, null!, null!);
 
-            var authService = new AuthenticationService(userManagerMock.Object, signInManagerMock.Object);
+            var dbContextMock = new Mock<DataContext>(options);
+
+
+            var authService = new AuthenticationService(userManagerMock.Object, signInManagerMock.Object, dbContextMock.Object);
 
 
             var user = new ManeroUser { Email = "mail@domain.com", UserName = "mail@domain.com" };
@@ -75,7 +79,10 @@ public class AuthenticationServiceTests
                 new Mock<IUserClaimsPrincipalFactory<ManeroUser>>().Object,
                 null!, null!, null!, null!);
 
-            var authService = new AuthenticationService(userManagerMock.Object, signInManagerMock.Object);
+            var dbContextMock = new Mock<DataContext>(options);
+
+
+            var authService = new AuthenticationService(userManagerMock.Object, signInManagerMock.Object, dbContextMock.Object);
 
             userManagerMock.Setup(u => u.FindByEmailAsync(It.IsAny<string>())).ReturnsAsync((ManeroUser)null!);
 
