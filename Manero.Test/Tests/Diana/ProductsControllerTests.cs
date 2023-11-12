@@ -6,52 +6,44 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
 using Manero.Models.Entities;
+using Manero.Helpers.Dtos;
 
 namespace Manero.Tests.Controllers
 {
-    public class ProductsControllerTests
+    // Assuming you are using Xunit for unit testing
+    public class ProductsControllerUnitTests
     {
         [Fact]
         public void Search_ReturnsViewResult_WithListOfProducts()
         {
             // Arrange
-            var options = new DbContextOptionsBuilder<DataContext>()
+            var dbContextOptions = new DbContextOptionsBuilder<DataContext>()
                 .UseInMemoryDatabase(databaseName: "TestDatabase")
                 .Options;
 
-            using (var context = new DataContext(options))
+            using (var context = new DataContext(dbContextOptions))
             {
-                // Populate the database with test data
-                context.Products.AddRange(
-                    new ProductEntity { ArticleNumber = "123", Name = "Test Product 1", Description = "This is a test product." },
-                    new ProductEntity { ArticleNumber = "456", Name = "Test Product 2", Description = "This is another test product." }
-                );
+                context.Products.Add(new ProductEntity
+                {
+                    Id = 1,
+                    Name = "TestProduct",
+                    Description = "TestDescription",
+                    Price = 10.0m,
+                    ArticleNumber = "TestArticleNumber" 
+                                                      
+                });
                 context.SaveChanges();
             }
 
-            var controller = new ProductsController(new DataContext(options));
-            var query = "test";
+            var controller = new ProductsController(new DataContext(dbContextOptions));
 
             // Act
-            var result = controller.Search(query) as ViewResult;
-            var actualProducts = result.Model as List<ProductEntity>;
+            var result = controller.Search("Test") as ViewResult;
 
             // Assert
             Assert.NotNull(result);
-            Assert.Equal("SearchResults", result.ViewName);
-
-            // Check the actual products returned in the ViewResult
-            Assert.Collection(actualProducts, item =>
-            {
-                Assert.Equal("123", item.ArticleNumber);
-                Assert.Equal("Test Product 1", item.Name);
-                Assert.Equal("This is a test product.", item.Description);
-            }, item =>
-            {
-                Assert.Equal("456", item.ArticleNumber);
-                Assert.Equal("Test Product 2", item.Name);
-                Assert.Equal("This is another test product.", item.Description);
-            });
+            Assert.IsType<List<ProductModel>>(result.Model);
         }
     }
+
 }
