@@ -859,14 +859,11 @@ footer #menu nav a:active {
   height: 110dvh;
   padding-bottom: 40px;
 }
-  
-        @media (min-width: 1920px) {
-            .Featured-products .containter {
-                width: 65vw;
-                justify-content: center;
-            }
-        }
-    
+@media (min-width: 1200px) {
+  .Featured-products .containter {
+    margin-left: 15vw;
+  }
+}
 .Featured-products .containter .title {
   display: flex;
   justify-content: space-between;
