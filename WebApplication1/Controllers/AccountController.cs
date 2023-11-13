@@ -45,6 +45,18 @@ namespace Manero.Controllers
             return View("Created");
         }
 
+        public IActionResult ForgetPassword()
+        {
+            ViewData["ForgetPasswordLink"] = "<a asp-controller=\"account\" asp-action=\"forgetpassword\">";
+            return View("ForgetPassword");
+        }
+
+        public IActionResult ChangePassword()
+        {
+            ViewData["ChangePasswordLink"] = "<a asp-controller=\"account\" asp-action=\"changepassword\">";
+            return View("ChangePassword");
+        }
+
         [Authorize]
         public IActionResult MyAddress()
         {
