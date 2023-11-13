@@ -19,7 +19,8 @@
     </div>
     <div class="edit-profile-form-div">
         <label class="edit-profile-label" asp-for="@Model.Email"></label>
-        <input class="edit-profile-input" value="@userEmail" asp-for="@Model.Email">
+        <input class="edit-profile-input" value="@userEmail" asp-for="@Model.Email" onkeyup="validate(event)">
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     <div class="edit-profile-form-div">
         <label class="edit-profile-label" asp-for="@Model.PhoneNumber"></label>
