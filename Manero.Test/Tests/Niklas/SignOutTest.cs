@@ -16,6 +16,11 @@ namespace Manero.Test.Tests.Niklas
         public async Task LogOut_When_User_Is_Signed_In_Returns_Redirect_To_Home_Page()
         {
             // Arrange
+            var editMock = new Mock<InterfaceEdietProfileService>();
+            var userManagerMock = new Mock<UserManager<ManeroUser>>(
+            new Mock<IUserStore<ManeroUser>>().Object,
+            null!, null!, null!, null!, null!, null!, null!, null!
+            );
             var authenticationServiceMock = new Mock<AuthenticationService>();
             var signInManagerMock = new Mock<SignInManager<ManeroUser>>(
                 new Mock<UserManager<ManeroUser>>(
@@ -27,7 +32,7 @@ namespace Manero.Test.Tests.Niklas
                 null!, null!, null!, null!
             );
         
-            var controller = new AccountController(authenticationServiceMock.Object, signInManagerMock.Object);
+            var controller = new AccountController(authenticationServiceMock.Object, signInManagerMock.Object, editMock.Object, userManagerMock.Object);
             
             signInManagerMock.Setup(m => m.IsSignedIn(It.IsAny<ClaimsPrincipal>())).Returns(true);
 

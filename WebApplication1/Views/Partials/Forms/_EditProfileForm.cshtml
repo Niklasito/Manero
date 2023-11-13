@@ -1,27 +1,47 @@
-﻿@model EditProfileViewModel
+﻿@model EditProfileModel
+@using Microsoft.EntityFrameworkCore
 
 @{
     ViewData["userName"] = User.FindFirst("DisplayName")?.Value;
     var userEmail = userManager.GetUserName(User);
+    var profileId = userManager.GetUserId(User);
+    var user = await userManager.GetUserAsync(User);
+    var userPhoneNumber = await userManager.GetPhoneNumberAsync(user!);
+    var userAddressEntities = await editProfile.GetOneAddressesOfOneUserAsync(profileId!);
 }
 
-<form class="edit-profile-form" method="post" novalidate
->
+<form class="edit-profile-form" method="post" novalidate>
+    <div asp-validation-summary="ModelOnly"></div>
+    <input type="hidden" asp-for="ProfileId" value="@profileId" />
     <div class="edit-profile-form-div">
-        <label class="edit-profile-label" asp-for="User.Name"></label>
-        <input class="edit-profile-input" value="@ViewData["userName"]" asp-for="User.Name">
+        <label class="edit-profile-label" asp-for="@Model.ProfileName"></label>
+        <input class="edit-profile-input" value="@ViewData["userName"]" asp-for="@Model.ProfileName">
     </div>
     <div class="edit-profile-form-div">
-        <label class="edit-profile-label" asp-for="User.Email"></label>
-        <input class="edit-profile-input" value="@userEmail" asp-for="User.Email">
+        <label class="edit-profile-label" asp-for="@Model.Email"></label>
+        <input class="edit-profile-input" value="@userEmail" asp-for="@Model.Email">
     </div>
     <div class="edit-profile-form-div">
-        <label class="edit-profile-label" asp-for="User.PhoneNumber"></label>
-        <input class="edit-profile-input" asp-for="User.PhoneNumber">
+        <label class="edit-profile-label" asp-for="@Model.PhoneNumber"></label>
+        @if(userPhoneNumber != null)
+        {
+            <input class="edit-profile-input" value="@userPhoneNumber" asp-for="@Model.PhoneNumber">
+        }
+        else
+        {
+            <input class="edit-profile-input" asp-for="@Model.PhoneNumber">
+        }
     </div>
     <div class="edit-profile-form-div">
-        <label class="edit-profile-label" asp-for="Address.City"></label>
-        <input class="edit-profile-input" asp-for="Address.City">
+        <label class="edit-profile-label" asp-for="@Model.City"></label>
+        @if (userAddressEntities != null)
+        {
+            <input class="edit-profile-input" value="@userAddressEntities!.City" asp-for="@Model.City">
+        }
+        else
+        {
+            <input class="edit-profile-input" asp-for="@Model.City">
+        }    
     </div>
     <div class="edit-profile-form-div">
         <button class="edit-profile-input" type="submit">save changes</button>

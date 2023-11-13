@@ -1,5 +1,8 @@
-﻿using Manero.Models.Entities;
+﻿using Manero.Helpers.Dtos;
+using Manero.Models.Contexts;
+using Manero.Models.Entities;
 using Manero.Models.Entities.Identity;
+using Manero.Models.Entities.LinkEntities;
 using Manero.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -19,16 +22,18 @@ public class AuthenticationService : InterfaceAuthenticationService
 {
     private readonly UserManager<ManeroUser> _userManager = null!;
     private readonly SignInManager<ManeroUser> _signInManager =null!;
+    private readonly DataContext _context;
 
 
     public AuthenticationService()
     {
         
     }
-    public AuthenticationService(UserManager<ManeroUser> userManager, SignInManager<ManeroUser> signInManager)
+    public AuthenticationService(UserManager<ManeroUser> userManager, SignInManager<ManeroUser> signInManager, DataContext context)
     {
         _userManager = userManager;
         _signInManager = signInManager;
+        _context = context;
     }
 
     public async Task<bool> UserAlreadyExistsAsync(Expression<Func<ManeroUser, bool>> expression)

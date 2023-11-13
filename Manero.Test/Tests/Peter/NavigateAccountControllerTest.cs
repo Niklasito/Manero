@@ -1,10 +1,12 @@
 ﻿using Manero.Controllers;
+using Manero.Helpers.Dtos;
 using Manero.Helpers.Services;
 using Manero.Models.Entities.Identity;
 using Manero.Models.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Manero.Test.Tests.Peter;
 
@@ -53,7 +55,12 @@ public class NavigateAccountControllerTest
     public void User_Navigaye_To_SignUp_From_SignIn()
     {
         // Arrange
+        var editMock = new Mock<InterfaceEdietProfileService>();
         var authMock = new Mock<InterfaceAuthenticationService>();
+        var userManagerMock = new Mock<UserManager<ManeroUser>>(
+        new Mock<IUserStore<ManeroUser>>().Object,
+        null!, null!, null!, null!, null!, null!, null!, null!
+        );
         var signInManagerMock = new Mock<SignInManager<ManeroUser>>(
             new Mock<UserManager<ManeroUser>>(
                 new Mock<IUserStore<ManeroUser>>().Object,
@@ -64,7 +71,7 @@ public class NavigateAccountControllerTest
             null!, null!, null!, null!
         );
 
-        var controller = new AccountController(authMock.Object, signInManagerMock.Object);
+        var controller = new AccountController(authMock.Object, signInManagerMock.Object, editMock.Object, userManagerMock.Object);
 
         //Act
         var result = controller.Register() as ViewResult;
@@ -83,7 +90,12 @@ public class NavigateAccountControllerTest
     public void User_Navigaye_To_SignIn_From_SignUp()
     {
         // Arrange
+        var editMock = new Mock<InterfaceEdietProfileService>();
         var authMock = new Mock<InterfaceAuthenticationService>();
+        var userManagerMock = new Mock<UserManager<ManeroUser>>(
+        new Mock<IUserStore<ManeroUser>>().Object,
+        null!, null!, null!, null!, null!, null!, null!, null!
+        );
         var signInManagerMock = new Mock<SignInManager<ManeroUser>>(
             new Mock<UserManager<ManeroUser>>(
                 new Mock<IUserStore<ManeroUser>>().Object,
@@ -94,7 +106,7 @@ public class NavigateAccountControllerTest
             null!, null!, null!, null!
         );
 
-        var controller = new AccountController(authMock.Object, signInManagerMock.Object);
+        var controller = new AccountController(authMock.Object, signInManagerMock.Object, editMock.Object, userManagerMock.Object);
 
         //Act
         var result = controller.LogIn() as ViewResult;
@@ -112,7 +124,12 @@ public class NavigateAccountControllerTest
     public void User_Navigaye_To_EditProfile_From_MyProfile()
     {
         // Arrange
+        var editMock = new Mock<InterfaceEdietProfileService>();
         var authMock = new Mock<InterfaceAuthenticationService>();
+        var userManagerMock = new Mock<UserManager<ManeroUser>>(
+        new Mock<IUserStore<ManeroUser>>().Object,
+        null!, null!, null!, null!, null!, null!, null!, null!
+        );
         var signInManagerMock = new Mock<SignInManager<ManeroUser>>(
             new Mock<UserManager<ManeroUser>>(
                 new Mock<IUserStore<ManeroUser>>().Object,
@@ -123,7 +140,9 @@ public class NavigateAccountControllerTest
             null!, null!, null!, null!
         );
 
-        var controller = new AccountController(authMock.Object, signInManagerMock.Object);
+        signInManagerMock.Setup(x => x.IsSignedIn(It.IsAny<ClaimsPrincipal>())).Returns(true);
+
+        var controller = new AccountController(authMock.Object, signInManagerMock.Object, editMock.Object, userManagerMock.Object);
 
         //Act
         var result = controller.EditProfile() as ViewResult;
@@ -136,4 +155,5 @@ public class NavigateAccountControllerTest
         var expectedLink = "<a asp-controller=\"account\" asp-action=\"editprofile\">";
         Assert.Equal(expectedLink, editProfileLink);
     }
+
 }

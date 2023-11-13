@@ -25,7 +25,11 @@ public class ControllerRedirectToActionTests
     {
         //arange
 
-
+        var editMock = new Mock<InterfaceEdietProfileService>();
+        var userManagerMock = new Mock<UserManager<ManeroUser>>(
+        new Mock<IUserStore<ManeroUser>>().Object,
+        null!, null!, null!, null!, null!, null!, null!, null!
+        );
         var _signInManagerMock = new Mock<SignInManager<ManeroUser>>(
                 new Mock<UserManager<ManeroUser>>(
                     new Mock<IUserStore<ManeroUser>>().Object,
@@ -40,7 +44,7 @@ public class ControllerRedirectToActionTests
 
         _signInManagerMock.Setup(x => x.IsSignedIn(It.IsAny<ClaimsPrincipal>())).Returns(true);
 
-        var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object);
+        var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object, editMock.Object, userManagerMock.Object);
 
 
         //act
@@ -63,6 +67,11 @@ public class ControllerRedirectToActionTests
     {
 
         //Arrange
+        var editMock = new Mock<InterfaceEdietProfileService>();
+        var userManagerMock = new Mock<UserManager<ManeroUser>>(
+        new Mock<IUserStore<ManeroUser>>().Object,
+        null!, null!, null!, null!, null!, null!, null!, null!
+        );
         var _signInManagerMock = new Mock<SignInManager<ManeroUser>>(
             new Mock<UserManager<ManeroUser>>(
                 new Mock<IUserStore<ManeroUser>>().Object,
@@ -77,7 +86,7 @@ public class ControllerRedirectToActionTests
 
         _signInManagerMock.Setup(x => x.IsSignedIn(It.IsAny<ClaimsPrincipal>())).Returns(true);
 
-        var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object);
+        var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object, editMock.Object, userManagerMock.Object);
 
         //Act
         var result = controller.Index() as ViewResult;
@@ -101,6 +110,11 @@ public class ControllerRedirectToActionTests
     {
 
         //Arrange
+        var editMock = new Mock<InterfaceEdietProfileService>();
+        var userManagerMock = new Mock<UserManager<ManeroUser>>(
+        new Mock<IUserStore<ManeroUser>>().Object,
+        null!, null!, null!, null!, null!, null!, null!, null!
+        );
         var _signInManagerMock = new Mock<SignInManager<ManeroUser>>(
             new Mock<UserManager<ManeroUser>>(
                 new Mock<IUserStore<ManeroUser>>().Object,
@@ -115,7 +129,7 @@ public class ControllerRedirectToActionTests
 
         _signInManagerMock.Setup(x => x.IsSignedIn(It.IsAny<ClaimsPrincipal>())).Returns(true);
 
-        var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object);
+        var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object, editMock.Object, userManagerMock.Object);
         //Act
 
         var result = controller.MyPromocodes() as ViewResult;
@@ -135,6 +149,11 @@ public class ControllerRedirectToActionTests
     public void Logged_In_User_Navigates_Back_From_My_Promocodes_Page_To_My_Profile_Page()
     {
         //Arrange
+        var editMock = new Mock<InterfaceEdietProfileService>();
+        var userManagerMock = new Mock<UserManager<ManeroUser>>(
+        new Mock<IUserStore<ManeroUser>>().Object,
+        null!, null!, null!, null!, null!, null!, null!, null!
+        );
         var _signInManagerMock = new Mock<SignInManager<ManeroUser>>(
             new Mock<UserManager<ManeroUser>>(
                 new Mock<IUserStore<ManeroUser>>().Object,
@@ -149,7 +168,7 @@ public class ControllerRedirectToActionTests
 
         _signInManagerMock.Setup(x => x.IsSignedIn(It.IsAny<ClaimsPrincipal>())).Returns(true);
 
-        var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object);
+        var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object, editMock.Object, userManagerMock.Object);
         //Act
 
         var result = controller.Index() as ViewResult;
@@ -174,6 +193,11 @@ public class ControllerRedirectToActionTests
     public void Logged_In_User_Navigates_From_My_Profile_Page_To_My_Order_History_Page()
     {
         //Arrange
+        var editMock = new Mock<InterfaceEdietProfileService>();
+        var userManagerMock = new Mock<UserManager<ManeroUser>>(
+        new Mock<IUserStore<ManeroUser>>().Object,
+        null!, null!, null!, null!, null!, null!, null!, null!
+        );
         var _signInManagerMock = new Mock<SignInManager<ManeroUser>>(
             new Mock<UserManager<ManeroUser>>(
                 new Mock<IUserStore<ManeroUser>>().Object,
@@ -188,7 +212,7 @@ public class ControllerRedirectToActionTests
 
         _signInManagerMock.Setup(x => x.IsSignedIn(It.IsAny<ClaimsPrincipal>())).Returns(true);
 
-        var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object);
+        var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object, editMock.Object, userManagerMock.Object);
         //Act
 
         var result = controller.OrderHistory() as ViewResult;
@@ -207,6 +231,11 @@ public class ControllerRedirectToActionTests
     public void Logged_In_User_Navigates_Back_From_Order_History_Page_To_My_Profile_Page()
     {
         //Arrange
+        var editMock = new Mock<InterfaceEdietProfileService>();
+        var userManagerMock = new Mock<UserManager<ManeroUser>>(
+        new Mock<IUserStore<ManeroUser>>().Object,
+        null!, null!, null!, null!, null!, null!, null!, null!
+        );
         var _signInManagerMock = new Mock<SignInManager<ManeroUser>>(
             new Mock<UserManager<ManeroUser>>(
                 new Mock<IUserStore<ManeroUser>>().Object,
@@ -221,7 +250,7 @@ public class ControllerRedirectToActionTests
 
         _signInManagerMock.Setup(x => x.IsSignedIn(It.IsAny<ClaimsPrincipal>())).Returns(true);
 
-        var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object);
+        var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object, editMock.Object, userManagerMock.Object);
         //Act
 
         var result = controller.Index() as ViewResult;
@@ -249,6 +278,11 @@ public class ControllerRedirectToActionTests
     public void Logged_In_User_Navigates_From_Products_Page_To_My_Profile_Page()
     {
         //Arrange
+        var editMock = new Mock<InterfaceEdietProfileService>();
+        var userManagerMock = new Mock<UserManager<ManeroUser>>(
+        new Mock<IUserStore<ManeroUser>>().Object,
+        null!, null!, null!, null!, null!, null!, null!, null!
+        );
         var _signInManagerMock = new Mock<SignInManager<ManeroUser>>(
             new Mock<UserManager<ManeroUser>>(
                 new Mock<IUserStore<ManeroUser>>().Object,
@@ -263,7 +297,7 @@ public class ControllerRedirectToActionTests
 
         _signInManagerMock.Setup(x => x.IsSignedIn(It.IsAny<ClaimsPrincipal>())).Returns(true);
 
-        var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object);
+        var controller = new AccountController(_authServiceMock.Object, _signInManagerMock.Object, editMock.Object, userManagerMock.Object);
         //Act
 
         var result = controller.Index() as ViewResult;

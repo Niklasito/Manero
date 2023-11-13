@@ -1,4 +1,5 @@
-﻿using Manero.Helpers.Services;
+﻿using Manero.Helpers.Dtos;
+using Manero.Helpers.Services;
 using Manero.Models.Entities.Identity;
 using Manero.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -14,13 +15,16 @@ namespace Manero.Controllers
 
         private readonly InterfaceAuthenticationService _auth;
         private readonly SignInManager<ManeroUser> _signInManager;
+        private readonly InterfaceEdietProfileService _editProfile;
+        private readonly UserManager<ManeroUser> _userManager;
 
 
-        public AccountController(InterfaceAuthenticationService auth, SignInManager<ManeroUser> signInManager)
+        public AccountController(InterfaceAuthenticationService auth, SignInManager<ManeroUser> signInManager, InterfaceEdietProfileService editProfile, UserManager<ManeroUser> userManager)
         {
             _auth = auth;
             _signInManager = signInManager;
-            
+            _editProfile=editProfile;
+            _userManager=userManager;
         }
 
 
@@ -141,6 +145,27 @@ namespace Manero.Controllers
                 return RedirectToAction("Index", "Home");
             }
             return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditProfile(EditProfileModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                if (await _editProfile.UpdateUserAsync(model))
+                {
+                    await _signInManager.SignOutAsync();
+
+                    var user = await _userManager.FindByIdAsync(model.ProfileId);
+                    await _signInManager.SignInAsync(user!, isPersistent: false);
+
+                    return RedirectToAction("Index", "Account");
+                }
+
+                ModelState.AddModelError("", "Incorrect Name or e-mail");
+            }
+
+            return View(model);
         }
     }
 }
