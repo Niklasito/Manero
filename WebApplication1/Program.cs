@@ -20,6 +20,8 @@ x.UseSqlServer(
 
 builder.Services.AddScoped<ProductRepository>();
 builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<Manero.Models.ViewModels.Cart>();
+
 
 builder.Services.AddScoped<InterfaceAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<InterfaceEdietProfileService, EditProfileService>();

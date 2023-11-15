@@ -1,12 +1,13 @@
 ﻿<div class="categories-main-container container-fluid" style="padding-left: 0; padding-right: 0;">
 
+
     <div class="categories-headroom container">
         <div class="categories-headroom-row row">
             <div class="categories-burger-meny-holder col-2">
                 <i class="fa-solid fa-bars-staggered"></i>
             </div>
             <div class="categories-searchbar-holder col-8">
-                <form asp-controller="Products" asp-action="Search" method="get"><i class="fa-light fa-search"></i><input type="text" placeholder="Search"></form>
+                <form asp-controller="Products" asp-action="Search" method="get"><i class="fa-light fa-search"></i><input type="text" placeholder="Search" name="query"></form>
             </div>
             <div class="categories-basket-holder col-2">
                 <i class="fa-light fa-shopping-basket"></i>
@@ -23,7 +24,8 @@
             <div class="categories-carousel-row">
                 <a href="#">
                     <div class="categories-carousel-tags-holder tags-holder-active">
-                        <h6>MEN</h6>
+                        <h6>MEN</h6>            
+
                     </div>
                 </a>
                 <a href="#">

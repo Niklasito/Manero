@@ -1,4 +1,6 @@
-﻿namespace Manero.Helpers.Dtos;
+﻿using Manero.Models.Entities;
+
+namespace Manero.Helpers.Dtos;
 
 public class ProductModel
 {
@@ -16,6 +18,5 @@ public class ProductModel
         public ICollection<CategoriesModel> Categories { get; set; } = new HashSet<CategoriesModel>();
 
         public ICollection<TagsModel> Tags { get; set; } = new HashSet<TagsModel>();
-
-
+    public ImageEntity? PrimaryImage { get; internal set; }
 }
