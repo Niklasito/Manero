@@ -42,6 +42,6 @@ app.UseRouting();
 app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Onboarding}/{action=Welcome}/{id?}");
+    pattern: "{controller=Onboarding}/{action=Index}/{id?}");
 
 app.Run();

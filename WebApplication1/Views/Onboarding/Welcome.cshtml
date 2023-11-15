@@ -4,18 +4,55 @@
 @{
     ViewData["Title"] = "Welcome To Manero";
 }
-<head>
-    <meta http-equiv="Refresh" content="5;/Onboarding/Index">
-</head>
 
 
-<section class="welcome-section">
-    <div class="welcome-ring">
-        <div class="welcome-circle">
-            <div class="welcome-content">
-                <div class="welcome-rectangle"></div>
-                <h1 class="welcome-header">MANERO</h1>
+
+<section class="onboarding-section">
+
+
+    <div class="onboarding-ring">
+        <div class="onboarding-circle">
+
+            <div class="onboarding-content">
+                <div class="rectangle"></div>
+
+
+
+
+
+                <div id="onboarding-carousel" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#onboarding-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#onboarding-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#onboarding-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <h1 class="onboarding-header">Welcome To Manero!</h1>
+                            <p class="onboarding-description">Labore sunt culpa exepteur culpa ipsum. Labore occaecat ex nisi mollit.</p>
+                            <a asp-controller="home" asp-action="index" class="btn btn-dark rounded-pill onboarding-button">GET STARTED</a>
+                        </div>
+                        <div class="carousel-item">
+                            <h1 class="onboarding-header">Easy Track Order!</h1>
+                            <p class="onboarding-description">Labore sunt culpa exepteur culpa ipsum. Labore occaecat ex nisi mollit.</p>
+                            <a asp-controller="home" asp-action="index" class="btn btn-dark rounded-pill onboarding-button">GET STARTED</a>
+                        </div>
+                        <div class="carousel-item">
+                            <h1 class="onboarding-header">Door To Door Delivery!</h1>
+                            <p class="onboarding-description">Labore sunt culpa exepteur culpa ipsum. Labore occaecat ex nisi mollit.</p>
+                            <a asp-controller="home" asp-action="index" class="btn btn-dark rounded-pill onboarding-button">GET STARTED</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="onboarding-line"></div>
+
             </div>
+
         </div>
     </div>
+
+
+
 </section>
