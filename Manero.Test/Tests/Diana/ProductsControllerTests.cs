@@ -10,13 +10,11 @@ using Manero.Helpers.Dtos;
 
 namespace Manero.Tests.Controllers
 {
-    // Assuming you are using Xunit for unit testing
     public class ProductsControllerUnitTests
     {
         [Fact]
         public void Search_ReturnsViewResult_WithListOfProducts()
         {
-            // Arrange
             var dbContextOptions = new DbContextOptionsBuilder<DataContext>()
                 .UseInMemoryDatabase(databaseName: "TestDatabase")
                 .Options;
@@ -37,10 +35,8 @@ namespace Manero.Tests.Controllers
 
             var controller = new ProductsController(new DataContext(dbContextOptions));
 
-            // Act
             var result = controller.Search("Test") as ViewResult;
 
-            // Assert
             Assert.NotNull(result);
             Assert.IsType<List<ProductModel>>(result.Model);
         }

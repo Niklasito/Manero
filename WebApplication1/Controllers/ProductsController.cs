@@ -3,6 +3,7 @@ using Manero.Models.Contexts;
 using System.Linq;
 using Manero.Models.Entities;
 using Manero.Helpers.Dtos;
+using System.Collections.Generic;
 
 namespace Manero.Controllers
 {
@@ -37,7 +38,5 @@ namespace Manero.Controllers
 
             return View("SearchResults", products);
         }
-
     }
 }
-

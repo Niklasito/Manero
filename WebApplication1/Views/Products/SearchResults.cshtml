@@ -16,6 +16,11 @@
                     <p>Price: @product.Price</p>
                     <img src="@product.PrimaryImage?.ImageUrl" alt="Product Image" width="100" height="100"> 
 
+                    <form method="post" asp-action="AddToCart" asp-controller="Cart">
+                        <input type="hidden" name="productId" value="@product.Id" />
+                        <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                        <button type="button" class="add-to-wishlist-btn">Add to Wishlist</button>
+                    </form>
                 </div>
             </li>
         }
@@ -25,5 +30,5 @@ else
 {
     <p>No results found.</p>
 }
-<!-- Inside SearchResults.cshtml -->
 <a asp-controller="Products" asp-action="Index">Back to Search</a>
+<Partial name="/Views/Partials/_meny.cshtml" />
