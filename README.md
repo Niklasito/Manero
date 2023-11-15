@@ -2,13 +2,13 @@
 
 Välkommen till vårt projekt Manero. Detta är en inlämnigsuppgift i kursen Projekt för grupp 3 från klass Win22-Halmstad.
 
-##Beskrivning
+##  Beskrivning
 
 Vi har tillsammans, genom agilt arbete i projektform, skapat en påhittad e-handelslösning kallad Manero.
 Projektet är inte helt färdigt men det finns delar av projektet är klara och fungerande.
 
 
-##Arbetsgång
+## Arbetsgång
 
 Gruppen valde att dela upp arbetet i två repositories. Ett för design där vi enbart ägnat oss åt design: https://github.com/Niklasito/Projektarbete_design
 samt detta repository.
@@ -24,7 +24,7 @@ Som databaslösning har vi valt en SQL databas och som ORM använder vi oss av E
 ![image](https://github.com/Niklasito/Manero/assets/110826266/cf1a8047-496f-471c-89c8-33d2f2362460)
 
 
-##Gruppmedlemar
+## Gruppmedlemar
 
 Niklas Andersson
 Peter Rydén
