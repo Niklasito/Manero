@@ -87,12 +87,14 @@ namespace Manero.Controllers
         [Authorize]
         public IActionResult PaymentMethod()
         {
+            ViewData["PaymentMethodsLink"] = "<a asp-controller=\"account\" asp-action=\"paymentmethod\">";
             return View("PaymentMethod");
         }
 
         [Authorize]
         public IActionResult AddPaymentMethod()
         {
+            ViewData["AddPaymentMethodsLink"] = "<a asp-controller=\"account\" asp-action=\"addpaymentmethod\">";
             return View("PaymentMethodAddCard");
         }
 
