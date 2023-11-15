@@ -26,8 +26,9 @@ Som databaslösning har vi valt en SQL databas och som ORM använder vi oss av E
 
 ## Gruppmedlemar
 
-Niklas Andersson
-Peter Rydén
-Eliana Makdisy
-Joakim Larsson
-Johnnie Eliasson
+Niklas Andersson,
+Peter Rydén,
+Eliana Makdisy,
+Joakim Larsson,
+Johnnie Eliasson,
+Diana Hogescu.
