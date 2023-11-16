@@ -34,6 +34,10 @@ function cardNameFormatting(input) {
 function cardNumberFormatting(input) {
     let formattedInput = "";
     for (let i = 0; i < input.length; i++) {
+        if (isNaN(parseInt(input[i]))) {
+            cardNumberInput.value = cardNumberInput.value.slice(0, -1);
+            return;
+        }
         formattedInput += input[i];
         if ((i + 1) % 4 === 0) {
             formattedInput += " ";
@@ -54,4 +58,4 @@ function cardDateFormatting(input) {
     cardDate.innerHTML = formattedInput;
 }
 
-document.addEventListener("change", updateCardDetails);
+document.addEventListener("keyup", updateCardDetails);

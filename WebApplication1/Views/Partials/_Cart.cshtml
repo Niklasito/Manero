@@ -1,0 +1,29 @@
+﻿@model Manero.Models.ViewModels.Cart
+
+<h2>Shopping Cart</h2>
+
+@if (TempData["AddedToCartMessage"] != null)
+{
+    <div>@TempData["AddedToCartMessage"]</div>
+}
+
+@if (Model.Items.Any())
+{
+    <ul>
+        @foreach (var product in Model.Items)
+        {
+            <li>
+                <div>
+                    <strong>@product.Name</strong>
+                    <p>Price: @product.Price.ToString("C")</p>
+                </div>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Your cart is empty.</p>
+}
+
+<p>Total: @Model.CalculateTotal().ToString("C")</p>

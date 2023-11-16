@@ -20,8 +20,11 @@ x.UseSqlServer(
 
 builder.Services.AddScoped<ProductRepository>();
 builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<Manero.Models.ViewModels.Cart>();
+
 
 builder.Services.AddScoped<InterfaceAuthenticationService, AuthenticationService>();
+builder.Services.AddScoped<InterfaceEdietProfileService, EditProfileService>();
 builder.Services.AddIdentity<ManeroUser, IdentityRole>(x =>
 {
     x.SignIn.RequireConfirmedAccount = false;
@@ -41,6 +44,6 @@ app.UseRouting();
 app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Onboarding}/{action=Welcome}/{id?}");
+    pattern: "{controller=Onboarding}/{action=Index}/{id?}");
 
 app.Run();
