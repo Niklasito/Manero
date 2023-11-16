@@ -21,8 +21,8 @@ public class CardDetailsFormattingTest : IClassFixture<ChromeDriverFixture>
             IWebElement emailInput = _driver.FindElement(By.Id("Email"));
             IWebElement passwordInput = _driver.FindElement(By.Id("Password"));
             IWebElement signInButton = _driver.FindElement(By.ClassName("sign-in-input"));
-            emailInput.SendKeys("jocke@mail.se");
-            passwordInput.SendKeys("Bytmig123!");
+            emailInput.SendKeys("mail@domain.com");
+            passwordInput.SendKeys("BytMig123!");
             signInButton.SendKeys(Keys.Enter);
         }
         _driver.Navigate().GoToUrl("https://localhost:7003/account/addPaymentMethod");
@@ -41,8 +41,8 @@ public class CardDetailsFormattingTest : IClassFixture<ChromeDriverFixture>
             IWebElement emailInput = _driver.FindElement(By.Id("Email"));
             IWebElement passwordInput = _driver.FindElement(By.Id("Password"));
             IWebElement signInButton = _driver.FindElement(By.ClassName("sign-in-input"));
-            emailInput.SendKeys("jocke@mail.se");
-            passwordInput.SendKeys("Bytmig123!");
+            emailInput.SendKeys("mail@domain.com");
+            passwordInput.SendKeys("BytMig123!");
             signInButton.SendKeys(Keys.Enter);
         }
         _driver.Navigate().GoToUrl("https://localhost:7003/account/addPaymentMethod");
